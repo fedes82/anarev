@@ -1,0 +1,94 @@
+2018-08-06 23:35:37,931 - MainProcess - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "revisador.py", line 68, in <module>
+    import urllib2
+ModuleNotFoundError: No module named 'urllib2'
+2018-08-06 23:38:45,728 - MainProcess - INFO - cargar_mojon_gui ok
+2018-08-06 23:38:45,728 - MainProcess - INFO - ---------------------------------------------------
+2018-08-06 23:38:45,728 - MainProcess - INFO - Inicio Programa Revisador
+2018-08-06 23:38:45,869 - MainProcess - INFO - __init__ ok
+2018-08-06 23:40:38,963 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-08-06 23:40:45,735 - MainProcess - INFO - cargar_mojon_gui ok
+2018-08-06 23:40:45,735 - MainProcess - INFO - ---------------------------------------------------
+2018-08-06 23:40:45,735 - MainProcess - INFO - Inicio Programa Revisador
+2018-08-06 23:40:45,891 - MainProcess - INFO - __init__ ok
+2018-08-06 23:40:57,663 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-08-06 23:41:22,027 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-08-06 23:44:49,059 - MainProcess - INFO - cargar_mojon_gui ok
+2018-08-06 23:44:49,059 - MainProcess - INFO - ---------------------------------------------------
+2018-08-06 23:44:49,059 - MainProcess - INFO - Inicio Programa Revisador
+2018-08-06 23:44:49,184 - MainProcess - INFO - __init__ ok
+2018-08-06 23:44:57,356 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-08-06 23:44:57,372 - MainProcess - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "revisador.py", line 240, in abrir_sesion
+    if zipfile.is_zipfile(archivo_anax):
+  File "C:\Users\fedeprueba\AppData\Local\Programs\Python\Python36\lib\zipfile.py", line 185, in is_zipfile
+    with open(filename, "rb") as fp:
+TypeError: expected str, bytes or os.PathLike object, not tuple
+2018-08-06 23:46:59,309 - MainProcess - INFO - cargar_mojon_gui ok
+2018-08-06 23:46:59,309 - MainProcess - INFO - ---------------------------------------------------
+2018-08-06 23:46:59,309 - MainProcess - INFO - Inicio Programa Revisador
+2018-08-06 23:46:59,434 - MainProcess - INFO - __init__ ok
+2018-08-06 23:47:28,831 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-08-06 23:47:28,847 - MainProcess - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "revisador.py", line 241, in abrir_sesion
+    if zipfile.is_zipfile(archivo_anax):
+  File "C:\Users\fedeprueba\AppData\Local\Programs\Python\Python36\lib\zipfile.py", line 185, in is_zipfile
+    with open(filename, "rb") as fp:
+TypeError: expected str, bytes or os.PathLike object, not tuple
+2018-08-06 23:48:29,400 - MainProcess - INFO - cargar_mojon_gui ok
+2018-08-06 23:48:29,400 - MainProcess - INFO - ---------------------------------------------------
+2018-08-06 23:48:29,400 - MainProcess - INFO - Inicio Programa Revisador
+2018-08-06 23:48:29,572 - MainProcess - INFO - __init__ ok
+2018-08-06 23:48:37,475 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-08-06 23:48:38,366 - MainProcess - INFO - abrir_sesion ok
+2018-08-06 23:49:24,473 - MainProcess - INFO - [Exportar img] - Exporto imagenes a: C\
+2018-08-06 23:49:24,488 - MainProcess - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "revisador.py", line 466, in exportar_img
+    copy2(os.path.join(self.dirtemp,imagen),dirdest_img)
+  File "C:\Users\fedeprueba\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 257, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\fedeprueba\AppData\Local\Programs\Python\Python36\lib\shutil.py", line 121, in copyfile
+    with open(dst, 'wb') as fdst:
+OSError: [Errno 22] Invalid argument: 'C\\'
+2018-08-06 23:50:34,138 - MainProcess - INFO - cargar_mojon_gui ok
+2018-08-06 23:50:34,138 - MainProcess - INFO - ---------------------------------------------------
+2018-08-06 23:50:34,138 - MainProcess - INFO - Inicio Programa Revisador
+2018-08-06 23:50:34,278 - MainProcess - INFO - __init__ ok
+2018-08-06 23:50:41,751 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-08-06 23:50:42,246 - MainProcess - INFO - abrir_sesion ok
+2018-08-06 23:50:53,462 - MainProcess - INFO - [Exportar img] - Exporto imagenes a: C:/Users/fedeprueba/Desktop/tt\
+2018-08-06 23:51:45,104 - MainProcess - INFO - [Exportar map] - Exporto mapas a: C:/Users/fedeprueba/Desktop/tt\
+2018-08-06 23:52:03,079 - MainProcess - INFO - [Exportar CSV] Guardo .csv en archivo ('C:/Users/fedeprueba/Desktop/tt/fewes.csv', '*.csv')
+2018-08-06 23:52:03,079 - MainProcess - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "revisador.py", line 501, in exportar_csv
+    with open(fileName,'w',newline='') as f:  #es necesario el modo binario por que usa \n\r para nueva linea y con 'w' solo queda un espacio de mas
+OSError: [Errno 22] Invalid argument: "('C:/Users/fedeprueba/Desktop/tt/fewes.csv', '*.csv')"
+2018-08-06 23:53:45,858 - MainProcess - INFO - cargar_mojon_gui ok
+2018-08-06 23:53:45,858 - MainProcess - INFO - ---------------------------------------------------
+2018-08-06 23:53:45,858 - MainProcess - INFO - Inicio Programa Revisador
+2018-08-06 23:53:46,014 - MainProcess - INFO - __init__ ok
+2018-08-06 23:53:54,041 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-08-06 23:53:54,478 - MainProcess - INFO - abrir_sesion ok
+2018-08-06 23:54:17,539 - MainProcess - INFO - [Exportar CSV] Guardo .csv en archivo C:/Users/fedeprueba/Desktop/tt/rertetr.csv
+2018-08-06 23:55:56,854 - MainProcess - INFO - [Exportar todo] - Exporto imagenes a: C:/Users/fedeprueba/Desktop/tt/rew
+2018-08-07 00:09:37,170 - MainProcess - INFO - cargar_mojon_gui ok
+2018-08-07 00:09:37,202 - MainProcess - INFO - ---------------------------------------------------
+2018-08-07 00:09:37,202 - MainProcess - INFO - Inicio Programa Revisador
+2018-08-07 00:09:37,311 - MainProcess - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "revisador.py", line 580, in <module>
+    main()
+  File "revisador.py", line 574, in main
+    form = RevisadorApp()
+  File "revisador.py", line 165, in __init__
+    self.setWindowIcon(QtGui.QIcon(QtGui.QPixmap('img_default/icono.ico')))
+NameError: name 'QtGui' is not defined
+2018-08-07 00:10:22,092 - MainProcess - INFO - cargar_mojon_gui ok
+2018-08-07 00:10:22,092 - MainProcess - INFO - ---------------------------------------------------
+2018-08-07 00:10:22,092 - MainProcess - INFO - Inicio Programa Revisador
+2018-08-07 00:10:22,248 - MainProcess - INFO - __init__ ok

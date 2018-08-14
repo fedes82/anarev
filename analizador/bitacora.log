@@ -1,0 +1,659 @@
+2018-08-06 00:02:47,889 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 349, in <module>
+    class RevisadorApp(QtGui.QMainWindow, interface5.Ui_MainWindow):
+NameError: name 'interface5' is not defined
+2018-08-06 00:03:15,014 - INFO - ---------------------------------------------------
+2018-08-06 00:03:15,014 - INFO - Inicio Programa Revisador
+2018-08-06 00:03:15,090 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 00:05:03,799 - INFO - ---------------------------------------------------
+2018-08-06 00:05:03,799 - INFO - Inicio Programa Revisador
+2018-08-06 00:05:03,873 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 00:09:02,670 - INFO - [Abrir Sesion] - Abro carpeta: /home/fede/Escritorio/SESIONES/4324
+2018-08-06 00:09:02,671 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-06 00:09:02,675 - INFO - [crear_lista_mojones] Cargue 14 mojones
+2018-08-06 00:09:02,676 - INFO - [play] Desactivo avance automatico
+2018-08-06 00:09:02,799 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 00:09:34,663 - INFO - [play] Activo avance automatico
+2018-08-06 00:09:37,369 - INFO - [play] Desactivo avance automatico
+2018-08-06 00:10:17,350 - INFO - ---------------------------------------------------
+2018-08-06 00:10:17,350 - INFO - Inicio Programa Revisador
+2018-08-06 00:10:17,420 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 00:10:25,053 - INFO - [Abrir Sesion] - Abro carpeta: /home/fede/Escritorio/SESIONES/999
+2018-08-06 00:10:25,053 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-06 00:10:25,098 - INFO - [crear_lista_mojones] Cargue 76 mojones
+2018-08-06 00:10:25,099 - INFO - [play] Desactivo avance automatico
+2018-08-06 00:10:25,152 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 00:10:56,385 - INFO - ---------------------------------------------------
+2018-08-06 00:10:56,385 - INFO - Inicio Programa Revisador
+2018-08-06 00:10:56,457 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 00:11:04,874 - INFO - [Abrir Sesion] - Abro carpeta: /home/fede/Escritorio/SESIONES/222
+2018-08-06 00:11:04,875 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-06 00:11:18,158 - INFO - [crear_lista_mojones] Cargue 4227 mojones
+2018-08-06 00:11:18,159 - INFO - [play] Desactivo avance automatico
+2018-08-06 00:11:18,307 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 00:11:24,517 - INFO - [play] Activo avance automatico
+2018-08-06 00:11:26,108 - INFO - [play] Desactivo avance automatico
+2018-08-06 00:11:27,661 - INFO - [play] Activo avance automatico
+2018-08-06 00:11:29,793 - INFO - [play] Desactivo avance automatico
+2018-08-06 00:11:33,822 - INFO - [play] Activo avance automatico
+2018-08-06 00:11:36,669 - INFO - [play] Desactivo avance automatico
+2018-08-06 00:11:37,649 - INFO - [play] Activo avance automatico
+2018-08-06 00:11:38,623 - INFO - [play] Desactivo avance automatico
+2018-08-06 00:14:20,860 - INFO - ---------------------------------------------------
+2018-08-06 00:14:20,860 - INFO - Inicio Programa Revisador
+2018-08-06 00:14:21,106 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 00:14:31,145 - INFO - [Abrir Sesion] - Abro carpeta: /home/fede/Escritorio/SESIONES/32e32e
+2018-08-06 00:14:31,146 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-06 00:14:31,149 - INFO - [crear_lista_mojones] Cargue 8 mojones
+2018-08-06 00:14:31,152 - INFO - [play] Desactivo avance automatico
+2018-08-06 00:14:31,283 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 00:14:35,510 - INFO - [play] Activo avance automatico
+2018-08-06 00:15:07,723 - INFO - [play] Desactivo avance automatico
+2018-08-06 00:20:52,430 - INFO - ---------------------------------------------------
+2018-08-06 00:20:52,430 - INFO - Inicio Programa Revisador
+2018-08-06 00:20:52,506 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 00:21:47,509 - INFO - [salir] Cierro programa
+2018-08-06 00:21:49,739 - INFO - ---------------------------------------------------
+2018-08-06 00:21:49,739 - INFO - Inicio Programa Revisador
+2018-08-06 00:21:49,810 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 00:23:20,901 - INFO - [salir] Cierro programa
+2018-08-06 00:23:24,401 - INFO - ---------------------------------------------------
+2018-08-06 00:23:24,401 - INFO - Inicio Programa Revisador
+2018-08-06 00:23:24,474 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 00:25:50,151 - INFO - ---------------------------------------------------
+2018-08-06 00:25:50,151 - INFO - Inicio Programa Revisador
+2018-08-06 00:25:50,197 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 00:26:31,821 - INFO - [Abrir Sesion] - Abro carpeta: C:/Users/pela/Desktop/SESIONES/s1
+2018-08-06 00:26:31,960 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-06 00:26:31,993 - INFO - [play] Desactivo avance automatico
+2018-08-06 00:26:32,164 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 00:26:40,476 - INFO - [play] Activo avance automatico
+2018-08-06 00:27:06,746 - INFO - [play] Desactivo avance automatico
+2018-08-06 00:27:25,128 - INFO - [salir] Cierro programa
+2018-08-06 00:32:20,524 - INFO - [salir] Cierro programa
+2018-08-06 00:59:09,628 - INFO - ---------------------------------------------------
+2018-08-06 00:59:09,628 - INFO - Inicio Programa Revisador
+2018-08-06 00:59:09,676 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 01:00:24,282 - INFO - [salir] Cierro programa
+2018-08-06 01:00:27,266 - INFO - ---------------------------------------------------
+2018-08-06 01:00:27,266 - INFO - Inicio Programa Revisador
+2018-08-06 01:00:27,296 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 01:00:37,282 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 635, in abrir_sesion2
+    dialogo_abrir = MyWindow()
+  File "analizador.py", line 132, in __init__
+    self.indexRoot = self.model.index(self.model.myComputer())
+TypeError: arguments did not match any overloaded call:
+  index(self, int, int, parent: QModelIndex = QModelIndex()): argument 1 has unexpected type 'QVariant'
+  index(self, QString, column: int = 0): argument 1 has unexpected type 'QVariant'
+2018-08-06 01:06:42,673 - INFO - [salir] Cierro programa
+2018-08-06 01:06:44,970 - INFO - ---------------------------------------------------
+2018-08-06 01:06:44,970 - INFO - Inicio Programa Revisador
+2018-08-06 01:06:45,000 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 01:06:57,589 - INFO - [salir] Cierro programa
+2018-08-06 01:07:11,778 - INFO - ---------------------------------------------------
+2018-08-06 01:07:11,792 - INFO - Inicio Programa Revisador
+2018-08-06 01:07:11,825 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 01:07:13,635 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 635, in abrir_sesion2
+    dialogo_abrir = MyWindow()
+  File "analizador.py", line 132, in __init__
+    self.indexRoot = self.model.index(self.model.myComputer())
+TypeError: arguments did not match any overloaded call:
+  index(self, int, int, parent: QModelIndex = QModelIndex()): argument 1 has unexpected type 'QVariant'
+  index(self, QString, column: int = 0): argument 1 has unexpected type 'QVariant'
+2018-08-06 19:54:05,348 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 121, in <module>
+    class MyWindow(QtGui.QDialog):
+AttributeError: module 'PyQt5.QtGui' has no attribute 'QDialog'
+2018-08-06 19:54:25,661 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 121, in <module>
+    class MyWindow(QtWidgets.QDialog):
+NameError: name 'QtWidgets' is not defined
+2018-08-06 19:54:42,317 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 350, in <module>
+    class RevisadorApp(QtGui.QMainWindow, interface.Ui_MainWindow):
+AttributeError: module 'PyQt5.QtGui' has no attribute 'QMainWindow'
+2018-08-06 19:55:14,098 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 350, in <module>
+    class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
+NameError: name 'interface' is not defined
+2018-08-06 19:55:22,848 - INFO - ---------------------------------------------------
+2018-08-06 19:55:22,848 - INFO - Inicio Programa Revisador
+2018-08-06 19:55:22,848 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 829, in <module>
+    main()
+  File "5analizador.py", line 822, in main
+    app = QtGui.QApplication(sys.argv)
+AttributeError: module 'PyQt5.QtGui' has no attribute 'QApplication'
+2018-08-06 19:55:45,799 - INFO - ---------------------------------------------------
+2018-08-06 19:55:45,799 - INFO - Inicio Programa Revisador
+2018-08-06 19:55:45,846 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 829, in <module>
+    main()
+  File "5analizador.py", line 823, in main
+    form = RevisadorApp()
+  File "5analizador.py", line 367, in __init__
+    self.setupUi(self)
+  File "E:\Documentos\ingenia\revwin-1-0\analizador\interface5.py", line 31, in setupUi
+    self.centralwidget = QtGui.QWidget(MainWindow)
+AttributeError: module 'PyQt5.QtGui' has no attribute 'QWidget'
+2018-08-06 19:57:44,768 - INFO - ---------------------------------------------------
+2018-08-06 19:57:44,768 - INFO - Inicio Programa Revisador
+2018-08-06 19:57:44,784 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 829, in <module>
+    main()
+  File "5analizador.py", line 823, in main
+    form = RevisadorApp()
+  File "5analizador.py", line 367, in __init__
+    self.setupUi(self)
+  File "E:\Documentos\ingenia\revwin-1-0\analizador\interface5.py", line 56, in setupUi
+    sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
+AttributeError: module 'PyQt5.QtGui' has no attribute 'QSizePolicy'
+2018-08-06 19:58:44,252 - INFO - ---------------------------------------------------
+2018-08-06 19:58:44,252 - INFO - Inicio Programa Revisador
+2018-08-06 19:58:44,612 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 829, in <module>
+    main()
+  File "5analizador.py", line 823, in main
+    form = RevisadorApp()
+  File "5analizador.py", line 367, in __init__
+    self.setupUi(self)
+  File "E:\Documentos\ingenia\revwin-1-0\analizador\interface5.py", line 88, in setupUi
+    self.lblimg1 = ScaledLabel(self.centralwidget)
+  File "E:\Documentos\ingenia\revwin-1-0\analizador\scaledlabel5.py", line 14, in __init__
+    QtGui.QLabel.__init__(self)
+NameError: name 'QtGui' is not defined
+2018-08-06 19:59:37,877 - INFO - ---------------------------------------------------
+2018-08-06 19:59:37,877 - INFO - Inicio Programa Revisador
+2018-08-06 19:59:37,893 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 829, in <module>
+    main()
+  File "5analizador.py", line 823, in main
+    form = RevisadorApp()
+  File "5analizador.py", line 367, in __init__
+    self.setupUi(self)
+  File "E:\Documentos\ingenia\revwin-1-0\analizador\interface5.py", line 117, in setupUi
+    icon = QtWidgets.QIcon()
+AttributeError: module 'PyQt5.QtWidgets' has no attribute 'QIcon'
+2018-08-06 20:00:13,613 - INFO - ---------------------------------------------------
+2018-08-06 20:00:13,613 - INFO - Inicio Programa Revisador
+2018-08-06 20:00:13,628 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 829, in <module>
+    main()
+  File "5analizador.py", line 823, in main
+    form = RevisadorApp()
+  File "5analizador.py", line 367, in __init__
+    self.setupUi(self)
+  File "E:\Documentos\ingenia\revwin-1-0\analizador\interface5.py", line 118, in setupUi
+    icon.addPixmap(QtWidgets.QPixmap(_fromUtf8("img_default/1leftarrow.png")), QtWidgets.QIcon.Normal, QtWidgets.QIcon.Off)
+AttributeError: module 'PyQt5.QtWidgets' has no attribute 'QPixmap'
+2018-08-06 20:01:45,082 - INFO - ---------------------------------------------------
+2018-08-06 20:01:45,082 - INFO - Inicio Programa Revisador
+2018-08-06 20:01:47,458 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 829, in <module>
+    main()
+  File "5analizador.py", line 823, in main
+    form = RevisadorApp()
+  File "5analizador.py", line 367, in __init__
+    self.setupUi(self)
+  File "E:\Documentos\ingenia\revwin-1-0\analizador\interface5.py", line 195, in setupUi
+    self.retranslateUi(MainWindow)
+  File "E:\Documentos\ingenia\revwin-1-0\analizador\interface5.py", line 199, in retranslateUi
+    MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
+  File "E:\Documentos\ingenia\revwin-1-0\analizador\interface5.py", line 23, in _translate
+    return QtGui.QApplication.translate(context, text, disambig)
+AttributeError: module 'PyQt5.QtGui' has no attribute 'QApplication'
+2018-08-06 20:03:04,162 - INFO - ---------------------------------------------------
+2018-08-06 20:03:04,162 - INFO - Inicio Programa Revisador
+2018-08-06 20:03:04,474 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:03:09,164 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 635, in abrir_sesion2
+    dialogo_abrir = MyWindow()
+  File "5analizador.py", line 129, in __init__
+    self.model = QtGui.QFileSystemModel(self)
+AttributeError: module 'PyQt5.QtGui' has no attribute 'QFileSystemModel'
+2018-08-06 20:05:52,719 - INFO - [salir] Cierro programa
+2018-08-06 20:05:52,719 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 461, in salir
+    QtWidgets.qApp.quit()
+AttributeError: module 'PyQt5.QtGui' has no attribute 'qApp'
+2018-08-06 20:05:55,664 - INFO - [salir] Cierro programa
+2018-08-06 20:09:20,172 - INFO - ---------------------------------------------------
+2018-08-06 20:09:20,172 - INFO - Inicio Programa Revisador
+2018-08-06 20:09:20,360 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:09:42,945 - INFO - [Abrir Sesion] - Abro carpeta: C:/Users/pela/Desktop/SESIONES/s2
+2018-08-06 20:09:42,954 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-06 20:09:42,961 - INFO - [crear_lista_mojones] Cargue 5 mojones
+2018-08-06 20:09:42,964 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:09:44,001 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:09:44,002 - INFO - [cargar_info] no se encontro info.txt
+2018-08-06 20:10:12,713 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/r32
+2018-08-06 20:10:12,715 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-06 20:10:12,759 - INFO - [crear_lista_mojones] Cargue 173 mojones
+2018-08-06 20:10:12,766 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:10:12,904 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:10:21,471 - INFO - [play] Activo avance automatico
+2018-08-06 20:10:33,173 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:10:47,329 - INFO - [play] Activo avance automatico
+2018-08-06 20:11:09,823 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:11:25,931 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/ultimA
+2018-08-06 20:11:25,933 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-06 20:11:25,937 - INFO - [crear_lista_mojones] Cargue 19 mojones
+2018-08-06 20:11:25,940 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:11:26,180 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:11:28,634 - INFO - [play] Activo avance automatico
+2018-08-06 20:11:35,856 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:11:39,607 - INFO - [agregar_evento] Agregue evento 000050m DEBUG-34.8390124996,-54.557091 -- F 1 
+2018-08-06 20:11:53,594 - INFO - [agregar_evento] Agregue evento 000070m DEBUG-34.7479457319,-55.375599 -- B S 
+2018-08-06 20:11:57,707 - INFO - [agregar_evento] Agregue evento 000100m DEBUG-34.2030322108,-55.379730 -- F 1 78
+2018-08-06 20:12:02,792 - INFO - [agregar_evento] Agregue evento 000120m DEBUG-34.6307675933,-54.278192 -- F 1 78
+2018-08-06 20:12:04,558 - INFO - [agregar_evento] Agregue evento 000120m DEBUG-34.6307675933,-54.278192 -- F 1 785
+2018-08-06 20:12:06,473 - INFO - [agregar_evento] Agregue evento 000120m DEBUG-34.6307675933,-54.278192 -- E A 
+2018-08-06 20:12:13,402 - INFO - [agregar_evento] Agregue evento 000070m DEBUG-34.7479457319,-55.375599 -- E A 
+2018-08-06 20:12:19,017 - INFO - [agregar_evento] Agregue evento 000170m DEBUG-33.4414556307,-55.620820 -- E A 
+2018-08-06 20:12:38,917 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 514, in exportar_anax
+    filName += '.anax'
+UnboundLocalError: local variable 'filName' referenced before assignment
+2018-08-06 20:12:56,804 - INFO - [salir] Cierro programa
+2018-08-06 20:13:42,900 - INFO - ---------------------------------------------------
+2018-08-06 20:13:42,900 - INFO - Inicio Programa Revisador
+2018-08-06 20:13:43,025 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:14:28,798 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/r4
+2018-08-06 20:14:28,801 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-06 20:14:28,845 - INFO - [crear_lista_mojones] Cargue 250 mojones
+2018-08-06 20:14:28,848 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:14:29,017 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:14:39,775 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 555, in agregar_evento
+    parametro = str(self.lstParametros.currentItem().text()[0])
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-08-06 20:14:40,968 - INFO - [agregar_evento] Agregue evento 000000m DEBUG-34.0290657391,-55.301897 -- E A 
+2018-08-06 20:14:44,183 - INFO - [agregar_evento] Agregue evento 000120m DEBUG-34.7012184512,-55.990356 -- B S 
+2018-08-06 20:14:47,786 - INFO - [agregar_evento] Agregue evento 000240m DEBUG-34.3517582609,-55.73451 -- F 1 
+2018-08-06 20:14:54,035 - INFO - [agregar_evento] Agregue evento 000360m DEBUG-33.0070133348,-55.033390 -- B S 
+2018-08-06 20:14:57,278 - INFO - [agregar_evento] Agregue evento 000480m DEBUG-33.9223096568,-55.132317 -- F 1 
+2018-08-06 20:15:12,320 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 514, in exportar_anax
+    filName += '.anax'
+UnboundLocalError: local variable 'filName' referenced before assignment
+2018-08-06 20:15:46,059 - INFO - [salir] Cierro programa
+2018-08-06 20:15:49,715 - INFO - ---------------------------------------------------
+2018-08-06 20:15:49,715 - INFO - Inicio Programa Revisador
+2018-08-06 20:15:49,872 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:16:09,571 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/222
+2018-08-06 20:16:09,584 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-06 20:16:27,934 - INFO - [crear_lista_mojones] Cargue 4227 mojones
+2018-08-06 20:16:27,937 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:16:28,294 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:16:36,020 - INFO - [play] Activo avance automatico
+2018-08-06 20:16:45,211 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:16:47,074 - INFO - [play] Activo avance automatico
+2018-08-06 20:16:50,272 - INFO - [agregar_evento] Agregue evento 000490m DEBUG-33.2310734001,-54.441328 -- B S 
+2018-08-06 20:16:51,343 - INFO - [agregar_evento] Agregue evento 000510m DEBUG-33.294962826,-55.218656 -- B S 
+2018-08-06 20:16:51,832 - INFO - [agregar_evento] Agregue evento 000530m DEBUG-33.7788875377,-54.170755 -- B S 
+2018-08-06 20:16:52,531 - INFO - [agregar_evento] Agregue evento 000560m DEBUG-34.8851669579,-55.743688 -- B S 
+2018-08-06 20:16:53,352 - INFO - [agregar_evento] Agregue evento 000600m DEBUG-34.0237698035,-55.788182 -- B S 
+2018-08-06 20:16:54,451 - INFO - [agregar_evento] Agregue evento 000650m DEBUG-34.5234895854,-55.555602 -- B S 
+2018-08-06 20:16:55,314 - INFO - [agregar_evento] Agregue evento 000690m DEBUG-33.6636314653,-55.658986 -- B S 
+2018-08-06 20:16:56,075 - INFO - [agregar_evento] Agregue evento 000720m DEBUG-33.2733919677,-54.024726 -- B S 
+2018-08-06 20:16:56,530 - INFO - [agregar_evento] Agregue evento 000740m DEBUG-34.5063256515,-55.145283 -- B S 
+2018-08-06 20:16:57,176 - INFO - [agregar_evento] Agregue evento 000770m DEBUG-33.8169084738,-55.882087 -- B S 
+2018-08-06 20:16:58,313 - INFO - [agregar_evento] Agregue evento 000820m DEBUG-33.9491774053,-55.332509 -- B S 
+2018-08-06 20:17:01,490 - INFO - [agregar_evento] Agregue evento 000950m DEBUG-34.7942775621,-54.462933 -- F 1 453
+2018-08-06 20:17:04,791 - INFO - [agregar_evento] Agregue evento 001090m DEBUG-33.1158087706,-55.489073 -- F 3 453
+2018-08-06 20:17:06,564 - INFO - [agregar_evento] Agregue evento 001180m DEBUG-33.870984263,-54.499836 -- E A 
+2018-08-06 20:17:08,386 - INFO - [agregar_evento] Agregue evento 001260m DEBUG-33.076144985,-55.089748 -- E M 
+2018-08-06 20:17:08,639 - INFO - [agregar_evento] Agregue evento 001270m DEBUG-33.076144985,-55.089748 -- E M 
+2018-08-06 20:17:10,190 - INFO - [agregar_evento] Agregue evento 001350m DEBUG-34.1418582039,-55.768103 -- B S 
+2018-08-06 20:17:12,196 - INFO - [agregar_evento] Agregue evento 001430m DEBUG-33.1436064927,-55.051653 -- F 1 453
+2018-08-06 20:17:13,711 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:17:28,533 - INFO - [Exportar ANAX] Guardo .anax en archivo ('C:/Users/pela/Desktop/expo/otrosa.anax', '*.anax').anax
+2018-08-06 20:17:28,533 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 523, in exportar_anax
+    with zipfile.ZipFile(fileName,'w') as zip:
+  File "C:\Program Files (x86)\Python37-32\lib\zipfile.py", line 1182, in __init__
+    self.fp = io.open(file, filemode)
+OSError: [Errno 22] Invalid argument: "('C:/Users/pela/Desktop/expo/otrosa.anax', '*.anax').anax"
+2018-08-06 20:19:53,898 - INFO - [salir] Cierro programa
+2018-08-06 20:19:56,601 - INFO - ---------------------------------------------------
+2018-08-06 20:19:56,616 - INFO - Inicio Programa Revisador
+2018-08-06 20:19:56,804 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:20:11,621 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/222
+2018-08-06 20:20:11,699 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-06 20:20:11,704 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:20:11,815 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:20:29,204 - INFO - [Exportar ANAX] Guardo .anax en archivo ('C:/Users/pela/Desktop/expo/wert.anax', '*.anax').anax
+2018-08-06 20:20:29,220 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 524, in exportar_anax
+    with zipfile.ZipFile(fileName,'w') as zip:
+  File "C:\Program Files (x86)\Python37-32\lib\zipfile.py", line 1182, in __init__
+    self.fp = io.open(file, filemode)
+OSError: [Errno 22] Invalid argument: "('C:/Users/pela/Desktop/expo/wert.anax', '*.anax').anax"
+2018-08-06 20:21:24,535 - INFO - [salir] Cierro programa
+2018-08-06 20:21:27,520 - INFO - ---------------------------------------------------
+2018-08-06 20:21:27,520 - INFO - Inicio Programa Revisador
+2018-08-06 20:21:27,676 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:21:38,626 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/222
+2018-08-06 20:21:38,685 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-06 20:21:38,689 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:21:38,808 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:21:48,046 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 514, in exportar_anax
+    if not fileName.lower().endswith('.anax'):
+AttributeError: 'tuple' object has no attribute 'lower'
+2018-08-06 20:22:14,574 - INFO - [salir] Cierro programa
+2018-08-06 20:23:42,858 - INFO - ---------------------------------------------------
+2018-08-06 20:23:42,858 - INFO - Inicio Programa Revisador
+2018-08-06 20:23:43,077 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:23:52,807 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/222
+2018-08-06 20:23:52,917 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-06 20:23:52,937 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:23:53,102 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:24:03,065 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 515, in exportar_anax
+    if not fileName.lower().endswith('.anax'):
+AttributeError: 'tuple' object has no attribute 'lower'
+2018-08-06 20:24:58,178 - INFO - [salir] Cierro programa
+2018-08-06 20:25:00,178 - INFO - ---------------------------------------------------
+2018-08-06 20:25:00,178 - INFO - Inicio Programa Revisador
+2018-08-06 20:25:00,381 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:25:09,231 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/222
+2018-08-06 20:25:09,326 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-06 20:25:09,372 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:25:09,561 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:25:19,907 - INFO - [Exportar ANAX] Guardo .anax en archivo C:/Users/pela/Desktop/expo/3232.anax
+2018-08-06 20:25:46,651 - INFO - [Exportar CSV] Guardo .csv en archivo ('C:/Users/pela/Desktop/expo/fews.csv', '*.csv')
+2018-08-06 20:25:46,651 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 545, in exportar_csv
+    with open(fileName,'wb') as f:  #es necesario el modo binario por que usa \n\r para nueva linea y con 'w' solo queda un espacio de mas
+OSError: [Errno 22] Invalid argument: "('C:/Users/pela/Desktop/expo/fews.csv', '*.csv')"
+2018-08-06 20:27:03,508 - INFO - [salir] Cierro programa
+2018-08-06 20:27:05,664 - INFO - ---------------------------------------------------
+2018-08-06 20:27:05,664 - INFO - Inicio Programa Revisador
+2018-08-06 20:27:05,836 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:27:15,609 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/222
+2018-08-06 20:27:15,657 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-06 20:27:15,673 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:27:15,755 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:27:23,798 - INFO - [Exportar CSV] Guardo .csv en archivo (
+2018-08-06 20:27:23,798 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "5analizador.py", line 545, in exportar_csv
+    writer.writerow( ['Dist Progresiva','Latitud','Longitud','Parametro','Categoria','Valor'])
+TypeError: a bytes-like object is required, not 'str'
+2018-08-06 20:31:08,599 - INFO - [salir] Cierro programa
+2018-08-06 20:31:10,583 - INFO - ---------------------------------------------------
+2018-08-06 20:31:10,583 - INFO - Inicio Programa Revisador
+2018-08-06 20:31:10,739 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:31:19,820 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/222
+2018-08-06 20:31:19,884 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-06 20:31:19,889 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:31:19,982 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:31:27,520 - INFO - [Exportar CSV] Guardo .csv en archivo (
+2018-08-06 20:32:27,445 - INFO - [salir] Cierro programa
+2018-08-06 20:33:25,508 - INFO - ---------------------------------------------------
+2018-08-06 20:33:25,508 - INFO - Inicio Programa Revisador
+2018-08-06 20:33:25,680 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:33:34,935 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/222
+2018-08-06 20:33:34,989 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-06 20:33:34,997 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:33:35,077 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:33:45,754 - INFO - [Exportar CSV] Guardo .csv en archivo (
+2018-08-06 20:35:26,458 - INFO - [salir] Cierro programa
+2018-08-06 20:35:33,489 - INFO - ---------------------------------------------------
+2018-08-06 20:35:33,489 - INFO - Inicio Programa Revisador
+2018-08-06 20:35:33,677 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:35:44,213 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/222
+2018-08-06 20:35:44,291 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-06 20:35:44,304 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:35:44,415 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:35:55,093 - INFO - [Exportar CSV] Guardo .csv en archivo (
+2018-08-06 20:44:47,110 - INFO - [salir] Cierro programa
+2018-08-06 20:44:51,876 - INFO - ---------------------------------------------------
+2018-08-06 20:44:51,876 - INFO - Inicio Programa Revisador
+2018-08-06 20:44:53,907 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:45:12,217 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/222
+2018-08-06 20:45:12,266 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-06 20:45:12,273 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:45:12,352 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:45:32,068 - INFO - [Exportar CSV] Guardo .csv en archivo (
+2018-08-06 20:46:16,832 - INFO - [salir] Cierro programa
+2018-08-06 20:46:19,223 - INFO - ---------------------------------------------------
+2018-08-06 20:46:19,223 - INFO - Inicio Programa Revisador
+2018-08-06 20:46:19,395 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:47:08,113 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/222
+2018-08-06 20:47:08,159 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-06 20:47:08,163 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:47:08,231 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:47:20,460 - INFO - [Exportar CSV] Guardo .csv en archivo (
+2018-08-06 20:48:34,674 - INFO - [salir] Cierro programa
+2018-08-06 20:48:36,958 - INFO - ---------------------------------------------------
+2018-08-06 20:48:36,958 - INFO - Inicio Programa Revisador
+2018-08-06 20:48:37,115 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:48:47,673 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/222
+2018-08-06 20:48:47,752 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-06 20:48:47,756 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:48:47,901 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:48:55,632 - INFO - [Exportar CSV] Guardo .csv en archivo (
+2018-08-06 20:52:42,164 - INFO - [salir] Cierro programa
+2018-08-06 20:52:44,601 - INFO - ---------------------------------------------------
+2018-08-06 20:52:44,601 - INFO - Inicio Programa Revisador
+2018-08-06 20:52:44,789 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:55:33,429 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/222
+2018-08-06 20:55:33,476 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-06 20:55:33,480 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:55:33,559 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:55:41,093 - INFO - [Exportar CSV] Guardo .csv en archivo (
+2018-08-06 20:59:06,948 - INFO - [salir] Cierro programa
+2018-08-06 20:59:09,792 - INFO - ---------------------------------------------------
+2018-08-06 20:59:09,792 - INFO - Inicio Programa Revisador
+2018-08-06 20:59:09,948 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:59:19,980 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/222
+2018-08-06 20:59:20,036 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-06 20:59:20,040 - INFO - [play] Desactivo avance automatico
+2018-08-06 20:59:20,143 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 20:59:29,581 - INFO - [Exportar CSV] Guardo .csv en archivo C
+2018-08-06 21:10:01,197 - INFO - [salir] Cierro programa
+2018-08-06 21:10:13,775 - INFO - ---------------------------------------------------
+2018-08-06 21:10:13,775 - INFO - Inicio Programa Revisador
+2018-08-06 21:10:13,947 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 21:10:23,103 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/222
+2018-08-06 21:10:23,155 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-06 21:10:23,159 - INFO - [play] Desactivo avance automatico
+2018-08-06 21:10:23,241 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 21:10:32,320 - INFO - [Exportar CSV] Guardo .csv en archivo C:/Users/pela/Desktop/expo/ewfewfefewf.csv
+2018-08-06 21:14:16,454 - INFO - [salir] Cierro programa
+2018-08-06 21:14:19,219 - INFO - ---------------------------------------------------
+2018-08-06 21:14:19,219 - INFO - Inicio Programa Revisador
+2018-08-06 21:14:19,360 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 21:14:41,502 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/222
+2018-08-06 21:14:41,552 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-06 21:14:41,560 - INFO - [play] Desactivo avance automatico
+2018-08-06 21:14:41,639 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 21:15:00,902 - INFO - [Exportar CSV] Guardo .csv en archivo E:/Escritorio/nuevolinea.csv
+2018-08-06 21:15:57,221 - INFO - [salir] Cierro programa
+2018-08-06 21:23:47,790 - INFO - ---------------------------------------------------
+2018-08-06 21:23:47,790 - INFO - Inicio Programa Revisador
+2018-08-06 21:23:47,915 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 21:24:30,922 - INFO - [Abrir Sesion] - Abro carpeta: C:/Users/pela/Desktop/SESIONES/s1
+2018-08-06 21:24:31,140 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-06 21:24:31,144 - INFO - [play] Desactivo avance automatico
+2018-08-06 21:24:32,028 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 21:24:44,946 - INFO - [play] Activo avance automatico
+2018-08-06 21:24:52,919 - INFO - [play] Desactivo avance automatico
+2018-08-06 21:25:00,876 - INFO - [agregar_evento] Agregue evento 000240m -34.564392755,-59.0367 -- E M 
+2018-08-06 21:25:18,452 - INFO - [agregar_evento] Agregue evento 000300m -34.56382256,-59.03669 -- F 3 223
+2018-08-06 21:25:23,667 - INFO - [guardar_sesion] Ya existe el archivo sesion.pkl, lo sobreescribo
+2018-08-06 21:25:54,583 - INFO - [Exportar ANAX] Guardo .anax en archivo C:/Users/pela/Desktop/expo/esionlaplata.anax
+2018-08-06 21:25:58,347 - INFO - [salir] Cierro programa
+2018-08-06 22:22:49,626 - INFO - ---------------------------------------------------
+2018-08-06 22:22:49,720 - INFO - Inicio Programa Revisador
+2018-08-06 22:22:50,141 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 22:23:10,812 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/r32
+2018-08-06 22:23:10,814 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-06 22:23:10,854 - INFO - [crear_lista_mojones] Cargue 173 mojones
+2018-08-06 22:23:10,855 - INFO - [play] Desactivo avance automatico
+2018-08-06 22:23:11,157 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 22:23:13,607 - INFO - No hay eventos - btnEventSig
+2018-08-06 22:23:14,124 - INFO - No hay eventos - btnEventSig
+2018-08-06 22:23:37,119 - INFO - [play] Activo avance automatico
+2018-08-06 22:23:38,972 - INFO - [agregar_evento] Agregue evento 000590m DEBUG-34.386784299,-55.646838 -- E A 
+2018-08-06 22:23:39,718 - INFO - [agregar_evento] Agregue evento 000610m DEBUG-34.386784299,-55.646838 -- E A 
+2018-08-06 22:23:45,628 - INFO - [play] Desactivo avance automatico
+2018-08-06 22:23:46,065 - INFO - [play] Activo avance automatico
+2018-08-06 22:23:48,021 - INFO - [agregar_evento] Agregue evento 000810m DEBUG-34.3401037427,-55.865596 -- B S 
+2018-08-06 22:23:48,555 - INFO - [agregar_evento] Agregue evento 000850m DEBUG-33.1874085528,-55.136006 -- B S 
+2018-08-06 22:23:48,896 - INFO - [agregar_evento] Agregue evento 000880m DEBUG-33.1694559026,-54.492900 -- B S 
+2018-08-06 22:23:49,310 - INFO - [agregar_evento] Agregue evento 000920m DEBUG-33.0047814138,-55.570137 -- B S 
+2018-08-06 22:23:49,878 - INFO - [agregar_evento] Agregue evento 000970m DEBUG-33.6283245165,-54.11335 -- B S 
+2018-08-06 22:23:50,191 - INFO - [agregar_evento] Agregue evento 000990m DEBUG-33.8987863841,-54.82274 -- B S 
+2018-08-06 22:23:50,538 - INFO - [agregar_evento] Agregue evento 001020m DEBUG-34.8034174367,-55.069478 -- B S 
+2018-08-06 22:23:50,877 - INFO - [agregar_evento] Agregue evento 001040m DEBUG-33.2766285737,-54.734697 -- B S 
+2018-08-06 22:23:51,258 - INFO - [agregar_evento] Agregue evento 001060m DEBUG-33.7658885187,-55.622493 -- B S 
+2018-08-06 22:23:51,657 - INFO - [agregar_evento] Agregue evento 001090m DEBUG-34.673814796,-54.130636 -- B S 
+2018-08-06 22:23:52,078 - INFO - [agregar_evento] Agregue evento 001120m DEBUG-34.3381156684,-55.859594 -- B S 
+2018-08-06 22:23:52,522 - INFO - [agregar_evento] Agregue evento 001150m DEBUG-33.4535064885,-54.372970 -- B S 
+2018-08-06 22:23:54,384 - INFO - [play] Desactivo avance automatico
+2018-08-06 22:24:15,256 - INFO - [Exportar CSV] Guardo .csv en archivo E:/Escritorio/borrar.csv
+2018-08-06 22:24:26,699 - INFO - [Exportar ANAX] Guardo .anax en archivo E:/Escritorio/borrar.anax
+2018-08-06 22:26:59,148 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 456, in salir
+    _fromUtf8(mensaje),
+NameError: name '_fromUtf8' is not defined
+2018-08-06 22:29:27,804 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 456, in salir
+    _fromUtf8(mensaje),
+NameError: name '_fromUtf8' is not defined
+2018-08-06 22:30:21,287 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 456, in salir
+    _fromUtf8(mensaje),
+NameError: name '_fromUtf8' is not defined
+2018-08-06 22:30:44,568 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 440, in closeEvent
+    self.salir()
+  File "analizador.py", line 456, in salir
+    _fromUtf8(mensaje),
+NameError: name '_fromUtf8' is not defined
+2018-08-06 22:30:49,443 - INFO - ---------------------------------------------------
+2018-08-06 22:30:49,443 - INFO - Inicio Programa Revisador
+2018-08-06 22:30:49,615 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 22:31:00,725 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/22121
+2018-08-06 22:31:00,725 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-06 22:31:00,726 - INFO - [crear_lista_mojones] Cargue 0 mojones
+2018-08-06 22:31:00,726 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 812, in saltar_a_valor
+    self.cargar_mojon_gui(self.indice)
+  File "analizador.py", line 729, in cargar_mojon_gui
+    if os.path.isfile(os.path.join(self.dirsesion,self.mojones[indice].archivos_img[0])):
+IndexError: list index out of range
+2018-08-06 22:31:00,727 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 812, in saltar_a_valor
+    self.cargar_mojon_gui(self.indice)
+  File "analizador.py", line 729, in cargar_mojon_gui
+    if os.path.isfile(os.path.join(self.dirsesion,self.mojones[indice].archivos_img[0])):
+IndexError: list index out of range
+2018-08-06 22:31:00,728 - INFO - [play] Desactivo avance automatico
+2018-08-06 22:31:00,728 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 656, in abrir_sesion2
+    self.cargar_mojon_gui(self.indice)
+  File "analizador.py", line 729, in cargar_mojon_gui
+    if os.path.isfile(os.path.join(self.dirsesion,self.mojones[indice].archivos_img[0])):
+IndexError: list index out of range
+2018-08-06 22:31:17,035 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/r43r43r32r
+2018-08-06 22:31:17,036 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-06 22:31:17,040 - INFO - [crear_lista_mojones] Cargue 30 mojones
+2018-08-06 22:31:17,040 - INFO - [play] Desactivo avance automatico
+2018-08-06 22:31:17,173 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 22:31:20,148 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 555, in agregar_evento
+    parametro = str(self.lstParametros.currentItem().text()[0])
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-08-06 22:31:22,186 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 555, in agregar_evento
+    parametro = str(self.lstParametros.currentItem().text()[0])
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-08-06 22:31:23,261 - INFO - [agregar_evento] Agregue evento 000000m DEBUG-33.85704887,-55.592682 -- B S 
+2018-08-06 22:31:28,309 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 440, in closeEvent
+    self.salir()
+  File "analizador.py", line 456, in salir
+    _fromUtf8(mensaje),
+NameError: name '_fromUtf8' is not defined
+2018-08-06 22:33:10,288 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 84, in <module>
+    _fromUtf8 = QtCore.QString.fromUtf8
+AttributeError: module 'PyQt5.QtCore' has no attribute 'QString'
+2018-08-06 22:34:50,822 - INFO - ---------------------------------------------------
+2018-08-06 22:34:50,822 - INFO - Inicio Programa Revisador
+2018-08-06 22:34:50,947 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 22:35:02,976 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/andaporfi
+2018-08-06 22:35:02,977 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-06 22:35:02,988 - INFO - [crear_lista_mojones] Cargue 60 mojones
+2018-08-06 22:35:02,989 - INFO - [play] Desactivo avance automatico
+2018-08-06 22:35:03,240 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 22:35:04,437 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 556, in agregar_evento
+    parametro = str(self.lstParametros.currentItem().text()[0])
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-08-06 22:35:07,224 - INFO - [agregar_evento] Agregue evento 000000m DEBUG-34.0522510821,-54.286769 -- B S 
+2018-08-06 22:35:16,338 - INFO - [salir] Cierro programa
+2018-08-06 22:37:14,950 - INFO - ---------------------------------------------------
+2018-08-06 22:37:14,950 - INFO - Inicio Programa Revisador
+2018-08-06 22:37:15,077 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 22:37:25,215 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/r32
+2018-08-06 22:37:25,216 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-06 22:37:25,242 - INFO - [crear_lista_mojones] Cargue 173 mojones
+2018-08-06 22:37:25,242 - INFO - [play] Desactivo avance automatico
+2018-08-06 22:37:25,418 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 22:37:28,918 - INFO - [agregar_evento] Agregue evento 000000m DEBUG-34.9189368649,-54.846865 -- E A 
+2018-08-06 22:37:36,876 - INFO - [salir] Cierro programa
+2018-08-06 22:40:49,760 - INFO - ---------------------------------------------------
+2018-08-06 22:40:49,776 - INFO - Inicio Programa Revisador
+2018-08-06 22:40:49,901 - INFO - hab botones e n fun Habilitar_botones
+2018-08-06 22:41:05,855 - INFO - [salir] Cierro programa
+2018-08-07 00:28:20,172 - INFO - ---------------------------------------------------
+2018-08-07 00:28:20,172 - INFO - Inicio Programa Revisador
+2018-08-07 00:28:20,313 - INFO - hab botones e n fun Habilitar_botones
+2018-08-07 00:28:46,427 - INFO - [salir] Cierro programa
+2018-08-07 00:29:19,349 - INFO - ---------------------------------------------------
+2018-08-07 00:29:19,349 - INFO - Inicio Programa Revisador
+2018-08-07 00:29:19,489 - INFO - hab botones e n fun Habilitar_botones
+2018-08-07 00:29:22,160 - INFO - [salir] Cierro programa
