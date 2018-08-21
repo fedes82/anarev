@@ -347,6 +347,9 @@ E = ['A','M','B']
 #onda dictgral ={ 'exudacion':dictexudacion, 'bacheo':dictbacheo }
 dict_parametros = {'Exudacion':[False,['A','M','B']],'Bacheo':[False,['S','P','R']],'Fisuras':[True,['1','2','3','4','5']]}
 
+with open('perfiles/default.json','r') as file:
+    dict_parametros = json.loads(file.read())
+print('los param son',dict_parametros)
 DEBUG = True
 
 ##para serializacion con json
@@ -400,9 +403,11 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
         self.tbtnPlay.clicked.connect(self.play)
         self.timerPlay = QTimer()
         self.timerPlay.timeout.connect(self.btn_Siguiente)
-
+        
         self.lstParametros.currentItemChanged.connect(self.seleccion_parametro)
-
+        
+    #### cargo la lista de parametros
+        self.cargar_parametros()
     ##  para el menu
         self.actionAbrir.setShortcut('Ctrl+A')
         self.actionAbrir.setStatusTip('Abrir sesión')
@@ -445,6 +450,11 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
     def closeEvent(self, event):
         print( "User has clicked the red x on the main window")
         self.salir()
+        
+    def cargar_parametros(self):
+        self.lstParametros.clear()
+        for key in dict_parametros:
+            self.lstParametros.addItem(key)
         
     def Habilitar_botones(self,estado):
         self.btnSiguiente.setEnabled(estado)

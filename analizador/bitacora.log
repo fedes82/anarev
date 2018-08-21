@@ -657,3 +657,5 @@ AttributeError: 'NoneType' object has no attribute 'text'
 2018-08-07 00:29:19,349 - INFO - Inicio Programa Revisador
 2018-08-07 00:29:19,489 - INFO - hab botones e n fun Habilitar_botones
 2018-08-07 00:29:22,160 - INFO - [salir] Cierro programa
+2018-08-20 19:17:02,822 - INFO - [salir] Cierro programa
+2018-08-20 19:35:20,846 - INFO - [salir] Cierro programa
