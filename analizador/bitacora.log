@@ -657,5 +657,31 @@ AttributeError: 'NoneType' object has no attribute 'text'
 2018-08-07 00:29:19,349 - INFO - Inicio Programa Revisador
 2018-08-07 00:29:19,489 - INFO - hab botones e n fun Habilitar_botones
 2018-08-07 00:29:22,160 - INFO - [salir] Cierro programa
+2018-08-20 19:16:43,610 - INFO - ---------------------------------------------------
+2018-08-20 19:16:43,625 - INFO - Inicio Programa Revisador
+2018-08-20 19:16:55,329 - INFO - hab botones e n fun Habilitar_botones
 2018-08-20 19:17:02,822 - INFO - [salir] Cierro programa
+2018-08-20 19:18:23,236 - INFO - ---------------------------------------------------
+2018-08-20 19:18:23,253 - INFO - Inicio Programa Revisador
+2018-08-20 19:18:29,212 - INFO - hab botones e n fun Habilitar_botones
+2018-08-20 19:20:59,878 - INFO - [salir] Cierro programa
+2018-08-20 19:21:12,118 - INFO - ---------------------------------------------------
+2018-08-20 19:21:12,119 - INFO - Inicio Programa Revisador
+2018-08-20 19:21:12,248 - INFO - hab botones e n fun Habilitar_botones
 2018-08-20 19:35:20,846 - INFO - [salir] Cierro programa
+2018-08-20 19:35:33,018 - INFO - ---------------------------------------------------
+2018-08-20 19:35:33,018 - INFO - Inicio Programa Revisador
+2018-08-20 19:35:33,143 - INFO - hab botones e n fun Habilitar_botones
+2018-08-20 19:35:44,790 - INFO - [salir] Cierro programa
+2018-08-22 19:27:10,500 - INFO - ---------------------------------------------------
+2018-08-22 19:27:10,723 - INFO - Inicio Programa Revisador
+2018-08-22 19:27:10,984 - INFO - hab botones e n fun Habilitar_botones
+2018-08-22 19:27:48,588 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/andaporfi
+2018-08-22 19:27:48,590 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-22 19:27:48,619 - INFO - [crear_lista_mojones] Cargue 60 mojones
+2018-08-22 19:27:48,622 - INFO - [play] Desactivo avance automatico
+2018-08-22 19:27:48,707 - INFO - hab botones e n fun Habilitar_botones
+2018-08-22 19:27:55,871 - INFO - [agregar_evento] Agregue evento 000020m DEBUG-34.8393662657,-55.48595 -- F 3 543
+2018-08-22 19:28:04,535 - INFO - [agregar_evento] Agregue evento 000020m DEBUG-34.8393662657,-55.48595 -- E A 
+2018-08-22 19:47:38,452 - INFO - [agregar_evento] Agregue evento 000030m DEBUG-34.8393662657,-55.48595 -- E A 
+2018-08-22 19:47:42,328 - INFO - [eliminar_evento] Elimino en prog 000030 - evento ['E', 'A', '']

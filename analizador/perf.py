@@ -19,6 +19,12 @@ import pprint
     
 #    def __init__(self,parent=None):
 
+def sanitizar_diccionario(dic_org):
+    if dic_org == {'Exudacion':[False,['A','M','B']],'Bacheo':[False,['S','P','R']],'Fisuras':[True,['1','2','3','4','5']]}:
+        return {'Exudacion':['E',['A','M','B'],''] , 'Bacheo':['B',['S','P','R'],''] , 'Fisuras':['F',['1','2','3','4','5'],'']}
+    else: 
+        return dic_org
+
 class MyWindow(QtWidgets.QDialog):
     """Los perfiles son diccionarios el, default es
     dict_parametros = {'Exudacion':[False,['A','M','B']],'Bacheo':[False,['S','P','R']],'Fisuras':[True,['1','2','3','4','5']]}
@@ -94,7 +100,7 @@ class MyWindow(QtWidgets.QDialog):
         self.buttonBox.accepted.connect(self.accept)
         self.buttonBox.rejected.connect(self.reject)
         QtCore.QMetaObject.connectSlotsByName(self)
-       
+        
         
         ###-------------------------------------------------######
                 #connects
@@ -205,7 +211,7 @@ class MyWindow(QtWidgets.QDialog):
     
     def cargar_diccionario(self,archivo):
         with open(archivo,'r') as file:
-            self.perfil_Actual = json.loads(file.read())
+            self.perfil_Actual =sanitizar_diccionario( json.loads(file.read()))
         
     def cargar_parametros(self):
         self.lstParametros.clear()
@@ -218,6 +224,7 @@ class MyWindow(QtWidgets.QDialog):
             arbol += key +' - Cod: '+ str(dictionary[key][0])+'\n'#, dictionary[key][0] +'\n'
             for item in dictionary[key][1]:
                 arbol += '\t-- ' + item + '\n'
+            arbol +='\n'
         print(arbol)
         return arbol
         
