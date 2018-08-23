@@ -15,94 +15,164 @@ import json
 import pprint
 #import perfiles5
 
-#class ProfilesWindow(QtWidgets.QMainWindow, perfiles5.Ui_Dialog):
-    
-#    def __init__(self,parent=None):
 
-def sanitizar_diccionario(dic_org):
-    if dic_org == {'Exudacion':[False,['A','M','B']],'Bacheo':[False,['S','P','R']],'Fisuras':[True,['1','2','3','4','5']]}:
-        return {'Exudacion':['E',['A','M','B'],''] , 'Bacheo':['B',['S','P','R'],''] , 'Fisuras':['F',['1','2','3','4','5'],'']}
-    else: 
-        return dic_org
+
+dict_parametros = {'Exudacion':['E',{'Alto':'A','Medio':'M','Bajo':'B'}],
+                    'Bacheo':['B',{'Superficial':'S','Profundo':'P','Reparado':'R'}],
+                    'Fisuras':['F',{'1':'1','2':'2','3':'3','4':'4','5':'5'}] }
 
 class MyWindow(QtWidgets.QDialog):
     """Los perfiles son diccionarios el, default es
     dict_parametros = {'Exudacion':[False,['A','M','B']],'Bacheo':[False,['S','P','R']],'Fisuras':[True,['1','2','3','4','5']]}
-    o sea, de la forma { 'Nombre_de_Parametro':['codigo',['categoria1','categoria2'],'valor']}
+    o sea, de la forma { 'Nombre_de_Parametro1':['cod_param1',['nombre_cat1':'cod_Cat','nombre_cat2':'cod_cat2']}
     """
     def __init__(self, parent=None):
        # global app
         super(MyWindow, self).__init__(parent)
-        self.resize(754, 532)
+        self.resize(754, 583)
+        self.gridLayout_4 = QtWidgets.QGridLayout(self)
+        self.gridLayout_4.setObjectName("gridLayout_4")
+        self.groupBox_3 = QtWidgets.QGroupBox(self)
+        self.groupBox_3.setObjectName("groupBox_3")
+        self.gridLayout_3 = QtWidgets.QGridLayout(self.groupBox_3)
+        self.gridLayout_3.setObjectName("gridLayout_3")
+        self.lblPerfil = QtWidgets.QTextBrowser(self.groupBox_3)
+        self.lblPerfil.setAutoFormatting(QtWidgets.QTextEdit.AutoBulletList)
+        self.lblPerfil.setObjectName("lblPerfil")
+        self.gridLayout_3.addWidget(self.lblPerfil, 0, 1, 1, 1)
+        self.gridLayout_4.addWidget(self.groupBox_3, 2, 1, 2, 4)
+        self.btnExpPerfil = QtWidgets.QPushButton(self)
+        self.btnExpPerfil.setObjectName("btnExpPerfil")
+        self.gridLayout_4.addWidget(self.btnExpPerfil, 1, 4, 1, 1)
+        spacerItem = QtWidgets.QSpacerItem(93, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_4.addItem(spacerItem, 0, 1, 1, 1)
+        self.btnNuevoPerfil = QtWidgets.QPushButton(self)
+        self.btnNuevoPerfil.setObjectName("btnNuevoPerfil")
+        self.gridLayout_4.addWidget(self.btnNuevoPerfil, 0, 2, 1, 1)
+        self.groupBox_2 = QtWidgets.QGroupBox(self)
+        self.groupBox_2.setObjectName("groupBox_2")
+        self.gridLayout = QtWidgets.QGridLayout(self.groupBox_2)
+        self.gridLayout.setObjectName("gridLayout")
+        self.btnDelCat = QtWidgets.QPushButton(self.groupBox_2)
+        self.btnDelCat.setMaximumSize(QtCore.QSize(32, 32))
+        self.btnDelCat.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("img_default/edit_remove.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btnDelCat.setIcon(icon)
+        self.btnDelCat.setObjectName("btnDelCat")
+        self.gridLayout.addWidget(self.btnDelCat, 1, 3, 1, 1)
+        self.btnAddCat = QtWidgets.QPushButton(self.groupBox_2)
+        self.btnAddCat.setMaximumSize(QtCore.QSize(32, 32))
+        self.btnAddCat.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("img_default/edit_add.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btnAddCat.setIcon(icon1)
+        self.btnAddCat.setObjectName("btnAddCat")
+        self.gridLayout.addWidget(self.btnAddCat, 0, 3, 1, 1)
+        self.lnCategorias = QtWidgets.QLineEdit(self.groupBox_2)
+        self.lnCategorias.setText("")
+        self.lnCategorias.setObjectName("lnCategorias")
+        self.gridLayout.addWidget(self.lnCategorias, 0, 2, 1, 1)
+        self.tblCategorias = QtWidgets.QTableWidget(self.groupBox_2)
+        self.tblCategorias.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.tblCategorias.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
+        self.tblCategorias.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+        self.tblCategorias.setObjectName("tblCategorias")
+        self.tblCategorias.setColumnCount(2)
+        self.tblCategorias.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tblCategorias.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tblCategorias.setHorizontalHeaderItem(1, item)
+        self.tblCategorias.horizontalHeader().setVisible(True)
+        self.tblCategorias.horizontalHeader().setDefaultSectionSize(50)
+        self.tblCategorias.horizontalHeader().setHighlightSections(True)
+        self.tblCategorias.horizontalHeader().setMinimumSectionSize(50)
+        self.tblCategorias.horizontalHeader().setStretchLastSection(True)
+        self.tblCategorias.verticalHeader().setVisible(False)
+        self.gridLayout.addWidget(self.tblCategorias, 1, 0, 1, 3)
+        self.lnCodeCat = QtWidgets.QLineEdit(self.groupBox_2)
+        self.lnCodeCat.setMaximumSize(QtCore.QSize(50, 16777215))
+        self.lnCodeCat.setObjectName("lnCodeCat")
+        self.gridLayout.addWidget(self.lnCodeCat, 0, 0, 1, 1)
+        self.gridLayout_4.addWidget(self.groupBox_2, 3, 0, 2, 1)
+        self.btnImpPerfil = QtWidgets.QPushButton(self)
+        self.btnImpPerfil.setObjectName("btnImpPerfil")
+        self.gridLayout_4.addWidget(self.btnImpPerfil, 0, 4, 1, 1)
+        self.pushButton = QtWidgets.QPushButton(self)
+        self.pushButton.setObjectName("pushButton")
+        self.gridLayout_4.addWidget(self.pushButton, 1, 2, 1, 1)
+        spacerItem1 = QtWidgets.QSpacerItem(36, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_4.addItem(spacerItem1, 1, 3, 1, 1)
+        spacerItem2 = QtWidgets.QSpacerItem(36, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_4.addItem(spacerItem2, 0, 3, 1, 1)
+        spacerItem3 = QtWidgets.QSpacerItem(93, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_4.addItem(spacerItem3, 1, 1, 1, 1)
+        self.combPerfil = QtWidgets.QComboBox(self)
+        self.combPerfil.setObjectName("combPerfil")
+        self.gridLayout_4.addWidget(self.combPerfil, 1, 0, 1, 1)
+        self.label = QtWidgets.QLabel(self)
+        self.label.setObjectName("label")
+        self.gridLayout_4.addWidget(self.label, 0, 0, 1, 1)
+        self.groupBox = QtWidgets.QGroupBox(self)
+        self.groupBox.setObjectName("groupBox")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.groupBox)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.lnCodeParam = QtWidgets.QLineEdit(self.groupBox)
+        self.lnCodeParam.setMaximumSize(QtCore.QSize(50, 16777215))
+        self.lnCodeParam.setObjectName("lnCodeParam")
+        self.gridLayout_2.addWidget(self.lnCodeParam, 0, 0, 1, 1)
+        self.btnAddParam = QtWidgets.QPushButton(self.groupBox)
+        self.btnAddParam.setMaximumSize(QtCore.QSize(32, 32))
+        self.btnAddParam.setText("")
+        self.btnAddParam.setIcon(icon1)
+        self.btnAddParam.setObjectName("btnAddParam")
+        self.gridLayout_2.addWidget(self.btnAddParam, 0, 2, 1, 2)
+        self.btnDelParam = QtWidgets.QPushButton(self.groupBox)
+        self.btnDelParam.setMaximumSize(QtCore.QSize(32, 32))
+        self.btnDelParam.setText("")
+        self.btnDelParam.setIcon(icon)
+        self.btnDelParam.setObjectName("btnDelParam")
+        self.gridLayout_2.addWidget(self.btnDelParam, 1, 3, 1, 1)
+        self.lnNombreParam = QtWidgets.QLineEdit(self.groupBox)
+        self.lnNombreParam.setObjectName("lnNombreParam")
+        self.gridLayout_2.addWidget(self.lnNombreParam, 0, 1, 1, 1)
+        self.tblParametros = QtWidgets.QTableWidget(self.groupBox)
+        self.tblParametros.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.tblParametros.setProperty("showDropIndicator", True)
+        self.tblParametros.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
+        self.tblParametros.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+        self.tblParametros.setShowGrid(True)
+        self.tblParametros.setObjectName("tblParametros")
+        self.tblParametros.setColumnCount(2)
+        self.tblParametros.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tblParametros.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tblParametros.setHorizontalHeaderItem(1, item)
+        self.tblParametros.horizontalHeader().setCascadingSectionResizes(False)
+        self.tblParametros.horizontalHeader().setDefaultSectionSize(50)
+        self.tblParametros.horizontalHeader().setSortIndicatorShown(False)
+        self.tblParametros.horizontalHeader().setStretchLastSection(True)
+        self.tblParametros.verticalHeader().setVisible(False)
+        self.tblParametros.verticalHeader().setCascadingSectionResizes(False)
+        self.gridLayout_2.addWidget(self.tblParametros, 1, 0, 1, 2)
+        self.gridLayout_4.addWidget(self.groupBox, 2, 0, 1, 1)
         self.buttonBox = QtWidgets.QDialogButtonBox(self)
-        self.buttonBox.setGeometry(QtCore.QRect(180, 480, 521, 32))
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
         self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
         self.buttonBox.setObjectName("buttonBox")
-        self.combPerfil = QtWidgets.QComboBox(self)
-        self.combPerfil.setGeometry(QtCore.QRect(130, 20, 231, 33))
-        self.combPerfil.setObjectName("combPerfil")
-        self.label = QtWidgets.QLabel(self)
-        self.label.setGeometry(QtCore.QRect(60, 30, 56, 17))
-        self.label.setObjectName("label")
-        self.btnImpPerfil = QtWidgets.QPushButton(self)
-        self.btnImpPerfil.setGeometry(QtCore.QRect(500, 50, 131, 27))
-        self.btnImpPerfil.setObjectName("btnImpPerfil")
-        self.btnExpPerfil = QtWidgets.QPushButton(self)
-        self.btnExpPerfil.setGeometry(QtCore.QRect(500, 20, 131, 27))
-        self.btnExpPerfil.setObjectName("btnExpPerfil")
-        self.lblPerfil = QtWidgets.QTextBrowser(self)
-        self.lblPerfil.setGeometry(QtCore.QRect(450, 130, 271, 331))
-        self.lblPerfil.setFrameShape(QtWidgets.QFrame.Panel)
-        self.lblPerfil.setObjectName("lblPerfil")
-        self.btnNuevoPerfil = QtWidgets.QPushButton(self)
-        self.btnNuevoPerfil.setGeometry(QtCore.QRect(380, 20, 85, 27))
-        self.btnNuevoPerfil.setObjectName("btnNuevoPerfil")
-        self.label_4 = QtWidgets.QLabel(self)
-        self.label_4.setGeometry(QtCore.QRect(510, 100, 161, 17))
-        self.label_4.setObjectName("label_4")
-        self.groupBox = QtWidgets.QGroupBox(self)
-        self.groupBox.setGeometry(QtCore.QRect(30, 70, 311, 241))
-        self.groupBox.setObjectName("groupBox")
-        self.lnNombreParam = QtWidgets.QLineEdit(self.groupBox)
-        self.lnNombreParam.setGeometry(QtCore.QRect(10, 60, 113, 27))
-        self.lnNombreParam.setObjectName("lnNombreParam")
-        self.lnCodeParam = QtWidgets.QLineEdit(self.groupBox)
-        self.lnCodeParam.setGeometry(QtCore.QRect(190, 60, 31, 27))
-        self.lnCodeParam.setObjectName("lnCodeParam")
-        self.btnAddParam = QtWidgets.QPushButton(self.groupBox)
-        self.btnAddParam.setGeometry(QtCore.QRect(240, 60, 41, 27))
-        self.btnAddParam.setObjectName("btnAddParam")
-        self.btnDelParam = QtWidgets.QPushButton(self.groupBox)
-        self.btnDelParam.setGeometry(QtCore.QRect(230, 150, 31, 27))
-        self.btnDelParam.setObjectName("btnDelParam")
-        
-        self.groupBox_2 = QtWidgets.QGroupBox(self)
-        self.groupBox_2.setGeometry(QtCore.QRect(40, 320, 341, 191))
-        self.groupBox_2.setObjectName("groupBox_2")
-        self.lnCategorias = QtWidgets.QLineEdit(self.groupBox_2)
-        self.lnCategorias.setGeometry(QtCore.QRect(10, 30, 113, 27))
-        self.lnCategorias.setObjectName("lnCategorias")
-        self.btnAddCat = QtWidgets.QPushButton(self.groupBox_2)
-        self.btnAddCat.setGeometry(QtCore.QRect(130, 30, 31, 27))
-        self.btnAddCat.setObjectName("btnAddCat")
-        self.btnDelCat = QtWidgets.QPushButton(self.groupBox_2)
-        self.btnDelCat.setGeometry(QtCore.QRect(250, 90, 31, 27))
-        self.btnDelCat.setObjectName("btnDelCat")
-        self.lstCategorias = QtWidgets.QListWidget(self.groupBox_2)
-        self.lstCategorias.setGeometry(QtCore.QRect(10, 70, 221, 101))
-        self.lstParametros = QtWidgets.QListWidget(self.groupBox)
-        self.lstParametros.setGeometry(QtCore.QRect(10, 100, 191, 121))
-        self.lstCategorias.setObjectName("lstCategorias")
-        self.lstParametros.setObjectName("lstParametros")
-        
+        self.gridLayout_4.addWidget(self.buttonBox, 4, 4, 1, 1)
+
         self.retranslateUi()
         self.buttonBox.accepted.connect(self.accept)
         self.buttonBox.rejected.connect(self.reject)
         QtCore.QMetaObject.connectSlotsByName(self)
         
+
         
         ###-------------------------------------------------######
+        
                 #connects
         self.btnDelCat.clicked.connect(self.btn_DelCat)
         self.btnImpPerfil.clicked.connect(self.btn_ImpPerfil)
@@ -111,29 +181,43 @@ class MyWindow(QtWidgets.QDialog):
         self.btnAddCat.clicked.connect(self.btn_AddCat)
         self.btnNuevoPerfil.clicked.connect(self.btn_NuevoPerfil)
         self.btnExpPerfil.clicked.connect(self.btn_ExpPerfil)
-        self.lstParametros.currentItemChanged.connect(self.seleccion_parametro)
+        self.tblParametros.currentItemChanged.connect(self.seleccion_parametro)
     #cargo el default
 
         self.cargar_diccionario('perfiles/default.json')
         self.actualizar_todo()
-        self.lstParametros.setCurrentRow(0)
-        
+        self.tblParametros.setCurrentCell(0,0)
+       # self.tblCategorias.setHorizontalHeaderLabels(['Codigo','Nombre de Categoria'])
+       # self.tblParametros.setHorizontalHeaderLabels(['Codigo','Nombre de Categoria'])
         
     def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
         self.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.label.setText(_translate("Dialog", "Perfil"))
-        self.btnImpPerfil.setText(_translate("Dialog", "Importar Perfil"))
+        self.groupBox_3.setTitle(_translate("Dialog", "Previsualizacion del Perfil"))
+        self.lblPerfil.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.btnExpPerfil.setText(_translate("Dialog", "Exportar Perfil"))
-        self.lblPerfil.setText(_translate("Dialog", "TextLabel"))
         self.btnNuevoPerfil.setText(_translate("Dialog", "Nuevo Perfil"))
-        self.label_4.setText(_translate("Dialog", "Previsualizacion del perfil"))
-        self.groupBox.setTitle(_translate("Dialog", "Parametros"))
-        self.btnAddParam.setText(_translate("Dialog", "++"))
-        self.btnDelParam.setText(_translate("Dialog", "--"))
         self.groupBox_2.setTitle(_translate("Dialog", "Categorias"))
-        self.btnAddCat.setText(_translate("Dialog", "++"))
-        self.btnDelCat.setText(_translate("Dialog", "--"))
+        self.lnCategorias.setPlaceholderText(_translate("Dialog", "Nombre de categoria"))
+        item = self.tblCategorias.horizontalHeaderItem(0)
+        item.setText(_translate("Dialog", "Codigo"))
+        item = self.tblCategorias.horizontalHeaderItem(1)
+        item.setText(_translate("Dialog", "Categoria"))
+        self.lnCodeCat.setPlaceholderText(_translate("Dialog", "COD"))
+        self.btnImpPerfil.setText(_translate("Dialog", "Importar Perfil"))
+        self.pushButton.setText(_translate("Dialog", "Borrar Perfil"))
+        self.label.setText(_translate("Dialog", "Perfil Actual"))
+        self.groupBox.setTitle(_translate("Dialog", "Parametros"))
+        self.lnCodeParam.setPlaceholderText(_translate("Dialog", "COD"))
+        self.lnNombreParam.setPlaceholderText(_translate("Dialog", "Nombre de parametro"))
+        item = self.tblParametros.horizontalHeaderItem(0)
+        item.setText(_translate("Dialog", "Codigo"))
+        item = self.tblParametros.horizontalHeaderItem(1)
+        item.setText(_translate("Dialog", "Parametro"))
         
 
 
@@ -142,88 +226,115 @@ class MyWindow(QtWidgets.QDialog):
         self.lnNombreParam = QtWidgets.QLineEdit(self.groupBox)
         self.lnCodeParam = QtWidgets.QLineEdit(self.groupBox)
         self.lnCategorias
-        self.lstCategorias = QtWidgets.QListView(self.groupBox_2)
+        self.tblCategorias = QtWidgets.QListView(self.groupBox_2)
         self.combPerfil = QtWidgets.QComboBox(Dialog)
        """
-#        self.buttonBox.accepted.connect(Dialog.accept)
-#        self.buttonBox.rejected.connect(Dialog.reject)
+
     def btn_DelCat(self):
-        if self.lstParametros.currentItem():
-            actual_param = str(self.lstParametros.currentItem().text())
-            if self.lstCategorias.currentItem():
-                del self.perfil_Actual[actual_param][1][self.lstCategorias.currentRow()]
-                self.lstCategorias.takeItem(self.lstCategorias.currentRow())
+        if self.tblParametros.currentItem():
+            actual_param = self.tblParametros.item(self.tblParametros.currentRow(),1).text()
+            if self.tblCategorias.currentItem():
+                item = self.tblCategorias.item(self.tblCategorias.currentRow(),1).text()
+                del self.perfil_Actual[actual_param][1][item]
+                self.tblCategorias.removeRow(self.tblCategorias.currentRow())
                 self.actualizar_arbol()
         
     def btn_DelParam(self):
-        print('entre a del')
-        self.lstCategorias.clear()
-        if self.lstParametros.currentItem():
-           # print('current', str(self.lstParametros.currentItem().text()))
-            actual = str(self.lstParametros.currentItem().text())
-            del self.perfil_Actual[actual]
-            self.lstParametros.takeItem(self.lstParametros.currentRow())
+        if self.tblParametros.currentItem():
+            self.tblCategorias.clearContents()
+            actual_param = self.tblParametros.item(self.tblParametros.currentRow(),1).text()
+            del self.perfil_Actual[actual_param]
+            self.tblParametros.removeRow(self.tblParametros.currentRow())
             self.actualizar_arbol()
         
     def btn_ExpPerfil(self):
-        pass
+        arch_json = QtWidgets.QFileDialog.getSaveFileName(self, 'Ingrese nombre y destino', '/' , filter='*.json')[0]
+        if arch_json:
+            if not arch_json.lower().endswith('.json'):
+                arch_json += '.json'
+            print('[Exportar Perfil] Guardo .json en archivo {}'.format( arch_json) )
+        else:
+            return
+        with open(arch_json,'w') as archivo:
+            json.dump(self.perfil_Actual,archivo)
+            print('exporto a archivo:',arch_json)
         
     def btn_ImpPerfil(self):
         pass
     def btn_NuevoPerfil(self):
         pass
     def btn_AddParam(self):
-        if self.lnNombreParam.text():
+        if self.lnNombreParam.text() and self.lnCodeParam.text():
             print (self.lnNombreParam.text())
-            self.perfil_Actual[self.lnNombreParam.text()]=[self.lnCodeParam.text(),[],'']
+            self.perfil_Actual[self.lnNombreParam.text()]=[self.lnCodeParam.text(),{}]
             self.lnNombreParam.setText('')
             self.lnCodeParam.setText('')
             self.actualizar_todo()
-            print(self.lstParametros.count())
-            self.lstParametros.setCurrentRow(self.lstParametros.count()-1)
+            #print(self.tblParametros.count())
+            self.tblParametros.setCurrentCell(self.tblParametros.rowCount()-1,1)
     
-    def btn_AddCat(self):
+    def btn_AddCat(self):   #cambiar line edit por lnCodeCat 
         print(self.lnCategorias.text())
-        if self.lstParametros.currentItem():
-            parametro_seleccionado = self.lstParametros.currentItem().text()
-            if self.lnCategorias.text():
-                self.perfil_Actual[parametro_seleccionado][1].append(self.lnCategorias.text())
+        if self.tblParametros.currentItem():
+            parametro_seleccionado = self.tblParametros.item(self.tblParametros.currentRow(),1).text()
+            if self.lnCategorias.text() and self.lnCodeCat.text() :
+                self.perfil_Actual[parametro_seleccionado][1][self.lnCategorias.text()] = self.lnCodeCat.text()
                 self.cargar_categorias()
                 self.actualizar_arbol()
                 self.lnCategorias.setText('')
+                self.lnCodeCat.setText('')
         
-      #  parametro = str(self.lstParametros.currentItem().text()[0])
-      #  nombre = self.lstParametros.currentItem().text()
+      #  parametro = str(self.tblParametros.currentItem().text()[0])
+      #  nombre = self.tblParametros.currentItem().text()
       #  categoria = str(self.combValorParam.currentText())
         
     def seleccion_parametro(self):
         self.cargar_categorias()
     
     def cargar_categorias(self):
-        self.lstCategorias.clear()
-        if self.lstParametros.currentItem():
-            parametro_seleccionado = self.lstParametros.currentItem().text()
-          #  print(dir(self.lstParametros.currentItem()))
-          #  print (self.lstParametros.currentItem())
-            for item in self.perfil_Actual[parametro_seleccionado][1]:
-                self.lstCategorias.addItem(item)
+        self.tblCategorias.clearContents()
+        self.tblCategorias.setRowCount(0)
+        #self.tblParametros.setRowCount(len(self.perfil_Actual))
+        if self.tblParametros.currentItem():
+            parametro_seleccionado = self.tblParametros.item(self.tblParametros.currentRow(),1).text()
+          #  print(dir(self.tblParametros.currentItem()))
+          #  print (self.tblParametros.currentItem())
+            dic_cat=self.perfil_Actual[parametro_seleccionado][1]
+            for i, nom_categoria in enumerate(dic_cat):
+                #parsear evento
+                self.tblCategorias.insertRow(i)
+                codigo = dic_cat[nom_categoria]
+                self.tblCategorias.setItem(i, 0, QtWidgets.QTableWidgetItem(codigo)) 
+                self.tblCategorias.setItem(i, 1, QtWidgets.QTableWidgetItem(nom_categoria)) 
+   
     
     
     def cargar_diccionario(self,archivo):
         with open(archivo,'r') as file:
-            self.perfil_Actual =sanitizar_diccionario( json.loads(file.read()))
+            self.perfil_Actual = json.loads(file.read())
+            
+        self.perfil_Actual = dict_parametros #sacar depues de debug
         
     def cargar_parametros(self):
-        self.lstParametros.clear()
-        for key in self.perfil_Actual:
-            self.lstParametros.addItem(key)
+        self.tblParametros.clearContents()
+         #lleno tabla
+        self.tblParametros.setRowCount(len(self.perfil_Actual))
+        for i, nom_parametro in enumerate(self.perfil_Actual):
+            #parsear evento
+            codigo = self.perfil_Actual[nom_parametro][0]
+            self.tblParametros.setItem(i, 0, QtWidgets.QTableWidgetItem(codigo)) 
+            self.tblParametros.setItem(i, 1, QtWidgets.QTableWidgetItem(nom_parametro)) 
     
     def crear_Arbol(self,dictionary):
         arbol=''
-        for key in dictionary:
-            arbol += key +' - Cod: '+ str(dictionary[key][0])+'\n'#, dictionary[key][0] +'\n'
-            for item in dictionary[key][1]:
-                arbol += '\t-- ' + item + '\n'
+        print('el dic es: \n',dictionary)
+        for nom_parametro in dictionary:
+            arbol += nom_parametro +' - Cod: '+ str(dictionary[nom_parametro][0])+'\n' #el codigo del param
+            dict_categorias = dictionary[nom_parametro][1]
+            print( 'las cat son :\n',dict_categorias)
+            for categoria in dict_categorias: # es un diccionario {'nom_cat1':'cod_cat1', 'nom_cat22:'cod_2'... }
+                print('cat:',categoria,'')
+                arbol += '\t-->  ' + categoria +' - Cod: ' + dict_categorias[categoria]+ '\n'
             arbol +='\n'
         print(arbol)
         return arbol
