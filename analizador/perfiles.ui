@@ -13,14 +13,234 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_4">
-   <item row="2" column="1" rowspan="2" colspan="4">
+  <layout class="QGridLayout" name="gridLayout_5">
+   <item row="0" column="0" colspan="2">
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="2">
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>106</width>
+          <height>17</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="4">
+       <widget class="QPushButton" name="btnEdicion">
+        <property name="text">
+         <string>Editar</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="7">
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>105</width>
+          <height>17</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="8">
+       <widget class="QPushButton" name="btnImpPerfil">
+        <property name="text">
+         <string>Importar Perfil</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="3">
+       <widget class="QComboBox" name="combPerfil"/>
+      </item>
+      <item row="0" column="7">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>105</width>
+          <height>17</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="4">
+       <widget class="QPushButton" name="btnNuevoPerfil">
+        <property name="text">
+         <string>Nuevo Perfil</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="8">
+       <widget class="QPushButton" name="btnExpPerfil">
+        <property name="text">
+         <string>Exportar Perfil</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="lblPerfilPrincipal">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>texto</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Perfil cargado actualmente:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5">
+       <widget class="QPushButton" name="btnBorrar">
+        <property name="text">
+         <string>Borrar Perfil</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QPushButton" name="btnGuardar">
+        <property name="text">
+         <string>Guardar</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Parametros</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QLineEdit" name="lnCodeParam">
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>COD</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2" colspan="2">
+       <widget class="QPushButton" name="btnAddParam">
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../Documentos/ingenia/revwin-1-0/analizador/img_default/edit_add.png</normaloff>../Documentos/ingenia/revwin-1-0/analizador/img_default/edit_add.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lnNombreParam">
+        <property name="placeholderText">
+         <string>Nombre de parametro</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="3">
+       <widget class="QTableWidget" name="tblParametros">
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="showDropIndicator" stdset="0">
+         <bool>true</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SingleSelection</enum>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+        <property name="showGrid">
+         <bool>true</bool>
+        </property>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>50</number>
+        </attribute>
+        <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Codigo</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Parametro</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QPushButton" name="btnDelParam">
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../Documentos/ingenia/revwin-1-0/analizador/img_default/edit_remove.png</normaloff>../Documentos/ingenia/revwin-1-0/analizador/img_default/edit_remove.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="1" rowspan="2">
     <widget class="QGroupBox" name="groupBox_3">
      <property name="title">
       <string>Previsualizacion del Perfil</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_3">
-      <item row="0" column="1">
+      <item row="0" column="0">
        <widget class="QTextBrowser" name="lblPerfil">
         <property name="autoFormatting">
          <set>QTextEdit::AutoBulletList</set>
@@ -37,56 +257,12 @@ p, li { white-space: pre-wrap; }
      </layout>
     </widget>
    </item>
-   <item row="1" column="4">
-    <widget class="QPushButton" name="btnExpPerfil">
-     <property name="text">
-      <string>Exportar Perfil</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="1">
-    <spacer name="horizontalSpacer_3">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>93</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="0" column="2">
-    <widget class="QPushButton" name="btnNuevoPerfil">
-     <property name="text">
-      <string>Nuevo Perfil</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="0" rowspan="2">
+   <item row="2" column="0" rowspan="2">
     <widget class="QGroupBox" name="groupBox_2">
      <property name="title">
       <string>Categorias</string>
      </property>
      <layout class="QGridLayout" name="gridLayout">
-      <item row="1" column="3">
-       <widget class="QPushButton" name="btnDelCat">
-        <property name="maximumSize">
-         <size>
-          <width>32</width>
-          <height>32</height>
-         </size>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../Documentos/ingenia/revwin-1-0/analizador/img_default/edit_remove.png</normaloff>../Documentos/ingenia/revwin-1-0/analizador/img_default/edit_remove.png</iconset>
-        </property>
-       </widget>
-      </item>
       <item row="0" column="3">
        <widget class="QPushButton" name="btnAddCat">
         <property name="maximumSize">
@@ -168,110 +344,8 @@ p, li { white-space: pre-wrap; }
         </property>
        </widget>
       </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="0" column="4">
-    <widget class="QPushButton" name="btnImpPerfil">
-     <property name="text">
-      <string>Importar Perfil</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="2">
-    <widget class="QPushButton" name="pushButton">
-     <property name="text">
-      <string>Borrar Perfil</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="3">
-    <spacer name="horizontalSpacer_4">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>36</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="0" column="3">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>36</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="1" column="1">
-    <spacer name="horizontalSpacer_2">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>93</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="1" column="0">
-    <widget class="QComboBox" name="combPerfil"/>
-   </item>
-   <item row="0" column="0">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Perfil Actual</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="0">
-    <widget class="QGroupBox" name="groupBox">
-     <property name="title">
-      <string>Parametros</string>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_2">
-      <item row="0" column="0">
-       <widget class="QLineEdit" name="lnCodeParam">
-        <property name="maximumSize">
-         <size>
-          <width>50</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="placeholderText">
-         <string>COD</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="2" colspan="2">
-       <widget class="QPushButton" name="btnAddParam">
-        <property name="maximumSize">
-         <size>
-          <width>32</width>
-          <height>32</height>
-         </size>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../Documentos/ingenia/revwin-1-0/analizador/img_default/edit_add.png</normaloff>../Documentos/ingenia/revwin-1-0/analizador/img_default/edit_add.png</iconset>
-        </property>
-       </widget>
-      </item>
       <item row="1" column="3">
-       <widget class="QPushButton" name="btnDelParam">
+       <widget class="QPushButton" name="btnDelCat">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -287,64 +361,10 @@ p, li { white-space: pre-wrap; }
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
-       <widget class="QLineEdit" name="lnNombreParam">
-        <property name="placeholderText">
-         <string>Nombre de parametro</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0" colspan="2">
-       <widget class="QTableWidget" name="tblParametros">
-        <property name="editTriggers">
-         <set>QAbstractItemView::NoEditTriggers</set>
-        </property>
-        <property name="showDropIndicator" stdset="0">
-         <bool>true</bool>
-        </property>
-        <property name="selectionMode">
-         <enum>QAbstractItemView::SingleSelection</enum>
-        </property>
-        <property name="selectionBehavior">
-         <enum>QAbstractItemView::SelectRows</enum>
-        </property>
-        <property name="showGrid">
-         <bool>true</bool>
-        </property>
-        <attribute name="horizontalHeaderCascadingSectionResizes">
-         <bool>false</bool>
-        </attribute>
-        <attribute name="horizontalHeaderDefaultSectionSize">
-         <number>50</number>
-        </attribute>
-        <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-         <bool>false</bool>
-        </attribute>
-        <attribute name="horizontalHeaderStretchLastSection">
-         <bool>true</bool>
-        </attribute>
-        <attribute name="verticalHeaderVisible">
-         <bool>false</bool>
-        </attribute>
-        <attribute name="verticalHeaderCascadingSectionResizes">
-         <bool>false</bool>
-        </attribute>
-        <column>
-         <property name="text">
-          <string>Codigo</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Parametro</string>
-         </property>
-        </column>
-       </widget>
-      </item>
      </layout>
     </widget>
    </item>
-   <item row="4" column="4">
+   <item row="3" column="1">
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
