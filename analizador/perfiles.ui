@@ -24,11 +24,18 @@
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>106</width>
+          <width>57</width>
           <height>17</height>
          </size>
         </property>
        </spacer>
+      </item>
+      <item row="1" column="6">
+       <widget class="QPushButton" name="btnGuardar">
+        <property name="text">
+         <string>Guardar</string>
+        </property>
+       </widget>
       </item>
       <item row="1" column="4">
        <widget class="QPushButton" name="btnEdicion">
@@ -37,20 +44,20 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="7">
+      <item row="1" column="8">
        <spacer name="horizontalSpacer_4">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>105</width>
+          <width>63</width>
           <height>17</height>
          </size>
         </property>
        </spacer>
       </item>
-      <item row="0" column="8">
+      <item row="0" column="9">
        <widget class="QPushButton" name="btnImpPerfil">
         <property name="text">
          <string>Importar Perfil</string>
@@ -60,14 +67,14 @@
       <item row="1" column="0" colspan="3">
        <widget class="QComboBox" name="combPerfil"/>
       </item>
-      <item row="0" column="7">
+      <item row="0" column="8">
        <spacer name="horizontalSpacer">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>105</width>
+          <width>63</width>
           <height>17</height>
          </size>
         </property>
@@ -80,7 +87,7 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="8">
+      <item row="1" column="9">
        <widget class="QPushButton" name="btnExpPerfil">
         <property name="text">
          <string>Exportar Perfil</string>
@@ -107,17 +114,10 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="5">
+      <item row="1" column="7">
        <widget class="QPushButton" name="btnBorrar">
         <property name="text">
          <string>Borrar Perfil</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="5">
-       <widget class="QPushButton" name="btnGuardar">
-        <property name="text">
-         <string>Guardar</string>
         </property>
        </widget>
       </item>
@@ -376,6 +376,27 @@ p, li { white-space: pre-wrap; }
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>combPerfil</tabstop>
+  <tabstop>btnNuevoPerfil</tabstop>
+  <tabstop>btnEdicion</tabstop>
+  <tabstop>btnGuardar</tabstop>
+  <tabstop>btnBorrar</tabstop>
+  <tabstop>btnImpPerfil</tabstop>
+  <tabstop>btnExpPerfil</tabstop>
+  <tabstop>lnCodeParam</tabstop>
+  <tabstop>lnNombreParam</tabstop>
+  <tabstop>btnAddParam</tabstop>
+  <tabstop>tblParametros</tabstop>
+  <tabstop>btnDelParam</tabstop>
+  <tabstop>lnCodeCat</tabstop>
+  <tabstop>lnCategorias</tabstop>
+  <tabstop>btnAddCat</tabstop>
+  <tabstop>tblCategorias</tabstop>
+  <tabstop>btnDelCat</tabstop>
+  <tabstop>lblPerfil</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>

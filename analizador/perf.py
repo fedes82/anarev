@@ -182,13 +182,33 @@ class MyWindow(QtWidgets.QDialog):
         self.gridLayout_5.addWidget(self.buttonBox, 3, 1, 1, 1)
 
         self.retranslateUi()
-        self.buttonBox.accepted.connect(self.accept)
+        self.buttonBox.accepted.connect(self.btn_ok)
         self.buttonBox.rejected.connect(self.reject)
         QtCore.QMetaObject.connectSlotsByName(self)
         
 
         
         ###-------------------------------------------------######
+        ##tab order
+        self.setTabOrder(self.combPerfil, self.btnNuevoPerfil)
+        self.setTabOrder(self.btnNuevoPerfil, self.btnEdicion)
+        self.setTabOrder(self.btnEdicion, self.btnGuardar)
+        self.setTabOrder(self.btnGuardar, self.btnBorrar)
+        self.setTabOrder(self.btnBorrar, self.btnImpPerfil)
+        self.setTabOrder(self.btnImpPerfil, self.btnExpPerfil)
+        self.setTabOrder(self.btnExpPerfil, self.lnCodeParam)
+        self.setTabOrder(self.lnCodeParam, self.lnNombreParam)
+        self.setTabOrder(self.lnNombreParam, self.btnAddParam)
+        self.setTabOrder(self.btnAddParam, self.tblParametros)
+        self.setTabOrder(self.tblParametros, self.btnDelParam)
+        self.setTabOrder(self.btnDelParam, self.lnCodeCat)
+        self.setTabOrder(self.lnCodeCat, self.lnCategorias)
+        self.setTabOrder(self.lnCategorias, self.btnAddCat)
+        self.setTabOrder(self.btnAddCat, self.tblCategorias)
+        self.setTabOrder(self.tblCategorias, self.btnDelCat)
+        self.setTabOrder(self.btnDelCat, self.lblPerfil)
+        self.setTabOrder(self.lblPerfil, self.buttonBox)
+        #extras
         self.perfil_ppal = perfil_del_padre
         self.lblPerfilPrincipal.setText(perfil_del_padre)
                 #connects
@@ -256,6 +276,18 @@ class MyWindow(QtWidgets.QDialog):
         self.tblCategorias = QtWidgets.QListView(self.groupBox_2)
         self.combPerfil = QtWidgets.QComboBox(Dialog)
        """
+       
+    def btn_ok(self):
+        if self.MODIFICADO:
+            print('desea sobreescribir sarasa?')
+            mensaje = 'El perfil "{}" ha sido modificado\n¿Desea guardar los cambios antes de salir?'.format(self.combPerfil.currentText())
+            choice = QtWidgets.QMessageBox.question(self, 'Guardar Perfil',
+                                            (mensaje),
+                                            QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No)
+            if choice == QtWidgets.QMessageBox.Yes:
+                self.btn_guardar_cambios()  
+        self.accept()
+        
     def Deshabilitar_edicion(self):
         self.btnAddCat.setEnabled(False)
         self.btnAddParam.setEnabled(False)
@@ -334,8 +366,13 @@ class MyWindow(QtWidgets.QDialog):
 
     def Borrar_Perfil(self):
         if self.combPerfil.currentText() and self.combPerfil.currentText() != 'default.json' :
-            os.remove('perfiles/'+self.combPerfil.currentText())
-            self.combPerfil.removeItem(self.combPerfil.currentIndex())
+            mensaje = 'Está seguro que desea borrar \nel perfil "{}"?'.format(self.combPerfil.currentText())
+            choice = QtWidgets.QMessageBox.question(self, 'Borra Perfil',
+                                            (mensaje),
+                                            QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No)
+            if choice == QtWidgets.QMessageBox.Yes:
+                os.remove('perfiles/'+self.combPerfil.currentText())
+                self.combPerfil.removeItem(self.combPerfil.currentIndex())
             
     def btn_guardar_cambios(self):
         nombre_perfil = self.combPerfil.currentText()
@@ -437,7 +474,7 @@ class MyWindow(QtWidgets.QDialog):
             dict_categorias = dictionary[nom_parametro][1]
             #print( 'las cat son :\n',dict_categorias)
             for categoria in dict_categorias: # es un diccionario {'nom_cat1':'cod_cat1', 'nom_cat22:'cod_2'... }
-                print('cat:',categoria,'')
+                #print('cat:',categoria,'')
                 arbol += '\t-->  ' + categoria +' - Cod: ' + dict_categorias[categoria]+ '\n'
             arbol += '\n'
         #print(arbol)
