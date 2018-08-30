@@ -314,7 +314,7 @@ class DialogPerfiles(QtWidgets.QDialog):
         self.setTabOrder(self.lblPerfil, self.buttonBox)
         #extras
         self.perfil_ppal = perfil_del_padre
-        self.lblPerfilPrincipal.setText(perfil_del_padre)
+        self.lblPerfilPrincipal.setText(self.perfil_ppal)
                 #connects
         self.btnDelCat.clicked.connect(self.btn_DelCat)
         self.btnImpPerfil.clicked.connect(self.btn_ImpPerfil)
@@ -330,10 +330,9 @@ class DialogPerfiles(QtWidgets.QDialog):
         self.btnGuardar.clicked.connect(self.btn_guardar_cambios)
     #cargo el default
 
-       # self.cargar_diccionario('perfiles/default.json')
         
         self.cargar_combo()
-        self.combPerfil.setCurrentIndex(self.combPerfil.findText('default.json'))
+        self.combPerfil.setCurrentIndex(self.combPerfil.findText('default.perfil'))
         self.actualizar_todo()
         self.Deshabilitar_edicion()
         self.MODIFICADO = False
@@ -414,11 +413,11 @@ class DialogPerfiles(QtWidgets.QDialog):
             self.btnGuardar.setEnabled(True)
         
     def btn_ExpPerfil(self):
-        arch_json = QtWidgets.QFileDialog.getSaveFileName(self, 'Ingrese nombre y destino', '/' , filter='*.json')[0]
+        arch_json = QtWidgets.QFileDialog.getSaveFileName(self, 'Ingrese nombre y destino', '/' , filter='*.perfil')[0]
         if arch_json:
-            if not arch_json.lower().endswith('.json'):
-                arch_json += '.json'
-            print('[Exportar Perfil] Guardo .json en archivo {}'.format( arch_json) )
+            if not arch_json.lower().endswith('.perfil'):
+                arch_json += '.perfil'
+            print('[Exportar Perfil] Guardo .perfil en archivo {}'.format( arch_json) )
         else:
             return
         with open(arch_json,'w') as archivo:
@@ -426,12 +425,12 @@ class DialogPerfiles(QtWidgets.QDialog):
             print('exporto a archivo:',arch_json)
         
     def btn_ImpPerfil(self):
-        archivo_perfil = QtWidgets.QFileDialog.getOpenFileName(self, 'Seleccione archivo de perfil', '','*.json')[0]
+        archivo_perfil = QtWidgets.QFileDialog.getOpenFileName(self, 'Seleccione archivo de perfil', '','*.perfil')[0]
         print('anax',archivo_perfil)
         if archivo_perfil:
             path , nombre_arch_perfil = os.path.split(archivo_perfil)
             if os.path.exists('perfiles/'+nombre_arch_perfil):
-                nombre_arch_perfil = nombre_arch_perfil[:-5] + '-copia' + '.json'
+                nombre_arch_perfil = nombre_arch_perfil[:-5] + '-copia' + '.perfil'
             copyfile(archivo_perfil, 'perfiles/'+nombre_arch_perfil)
             self.cargar_diccionario(nombre_arch_perfil)
             print('carguo archivo ','perfiles/'+nombre_arch_perfil)
@@ -442,7 +441,7 @@ class DialogPerfiles(QtWidgets.QDialog):
         text, ok = QtWidgets.QInputDialog.getText(self, 'Crear nuevo´perfil', 'Ingrese nombre del nuevo perfil:')
         if ok:
             if text:
-                nombre_nuevo = text + '.json'
+                nombre_nuevo = text + '.perfil'
                 if nombre_nuevo in  os.listdir('perfiles/'):
                     print('el perfil ya existe') 
                     return
@@ -455,7 +454,7 @@ class DialogPerfiles(QtWidgets.QDialog):
                 self.nombre_perfil = nombre_nuevo
 
     def Borrar_Perfil(self):
-        if self.combPerfil.currentText() and self.combPerfil.currentText() != 'default.json' :
+        if self.combPerfil.currentText() and self.combPerfil.currentText() != 'default.perfil' :
             mensaje = 'Está seguro que desea borrar \nel perfil "{}"?'.format(self.combPerfil.currentText())
             choice = QtWidgets.QMessageBox.question(self, 'Borra Perfil',
                                             (mensaje),
@@ -541,7 +540,7 @@ class DialogPerfiles(QtWidgets.QDialog):
             self.perfil_Actual = json.loads(file.read())
         self.nombre_perfil = archivo
         #path , nombre_arch_perfil = os.path.split(archivo)
-        #        nombre_arch_perfil = nombre_arch_perfil[:-5] + '-copia' + '.json'
+        #        nombre_arch_perfil = nombre_arch_perfil[:-5] + '-copia' + '.perfil'
         #self.perfil_Actual = dict_parametros #sacar depues de debug
         self.MODIFICADO = False
         
@@ -860,9 +859,9 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
         self.lstParametros.currentItemChanged.connect(self.seleccion_parametro)
         
     #### cargo la lista de parametros
-        with open('perfiles/default.json','r') as file:
+        with open('perfiles/default.perfil','r') as file:
             self.dict_parametros = json.loads(file.read())
-            self.archivo_perfil = 'default.json'
+            self.archivo_perfil = 'default.perfil'
         self.cargar_parametros()
     ##  para el menu
         self.actionAbrir.setShortcut('Ctrl+A')
@@ -925,6 +924,7 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
         self.lstParametros.clear()
         for key in self.dict_parametros:
             self.lstParametros.addItem(key)
+        self.lstParametros.setCurrentRow(0)
         
     def Habilitar_botones(self,estado):
         self.btnSiguiente.setEnabled(estado)
@@ -1039,13 +1039,9 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
     
 
     def agregar_evento(self):
-        parametro = str(self.lstParametros.currentItem().text()[0])
-        nombre = self.lstParametros.currentItem().text()
-        categoria = str(self.combCategoria.currentText())
-        if self.lnValor.isEnabled():
-            valor = str(self.lnValor.text())
-        else:
-            valor = ''  
+        parametro = self.dict_parametros[str(self.lstParametros.currentItem().text())][0]
+        categoria = self.dict_parametros[str(self.lstParametros.currentItem().text())][1][str(self.combCategoria.currentText())]
+        valor = str(self.lnValor.text())
         evento = [parametro,categoria,valor]
         self.mojones[self.indice].eventos.append(evento)
         evento_texto = '{}m {},{} -- {} {} {}'.format(self.mojones[self.indice].progresiva,
