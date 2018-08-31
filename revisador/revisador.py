@@ -307,7 +307,7 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
         if not self.validar_coordenadas(self.mojones[self.indice]):
             logger.info( '[GetMap] - Valor de coordenadas no valido para prog: {}'.format(self.mojones[self.indice]) )
             return
-        gmaps = 'http://maps.googleapis.com/maps/api/staticmap?center={},{}&markers={},{}&zoom=17&size=640x360&&maptype=hybrid'.format(
+        gmaps = 'http://maps.googleapis.com/maps/api/staticmap?center={},{}&markers={},{}&zoom=11&size=640x360&&maptype=hybrid'.format(
             self.mojones[self.indice].latitud,
             self.mojones[self.indice].longitud,
             self.mojones[self.indice].latitud,
@@ -321,7 +321,7 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
             arch.write(url.read())
         
         self.mojones[self.indice].mapas[1] = self.mojones[self.indice].progresiva + 'maph.png'
-        gmaps = 'http://maps.googleapis.com/maps/api/staticmap?center={},{}&markers={},{}&zoom=17&size=640x360&&maptype=roadmap'.format(
+        gmaps = 'http://maps.googleapis.com/maps/api/staticmap?center={},{}&markers={},{}&zoom=11&size=640x360&&maptype=roadmap'.format(
             self.mojones[self.indice].latitud,
             self.mojones[self.indice].longitud,
             self.mojones[self.indice].latitud,

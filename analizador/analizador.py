@@ -371,7 +371,7 @@ class DialogPerfiles(QtWidgets.QDialog):
             mensaje = 'El perfil "{}" ha sido modificado\n¿Desea guardar los cambios antes de salir?'.format(self.combPerfil.currentText())
             choice = QtWidgets.QMessageBox.question(self, 'Guardar Perfil',
                                             (mensaje),
-                                            QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No)
+                                            QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No |QtWidgets.QMessageBox.Cancel)
             if choice == QtWidgets.QMessageBox.Yes:
                 self.btn_guardar_cambios()  
         self.accept()
@@ -583,10 +583,10 @@ class DialogPerfiles(QtWidgets.QDialog):
 ### VER PARA CERRAR Y DEVOLVER EL PATH  
 ###  https://stackoverflow.com/questions/11544800/pyqt4-closing-a-dialog-window-exec-not-working
 #class MyWindow(QtGui.QWidget):
-class MyWindow(QtWidgets.QDialog):
+class Browser_preview(QtWidgets.QDialog):
     def __init__(self, parent=None):
        # global app
-        super(MyWindow, self).__init__(parent)
+        super(Browser_preview, self).__init__(parent)
         self.resize(1024, 600)
      #   self.move(app.desktop().screen().rect().center() - main.rect().center())
         self.pathRoot = QtCore.QDir.rootPath()
@@ -918,6 +918,7 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
                 self.dict_parametros = json.loads(file.read())
                 self.archivo_perfil = dialogo.nombre_perfil
             self.cargar_parametros()
+            self.cargar_mojon_gui(self.indice)
             
     
     def cargar_parametros(self):
@@ -978,7 +979,7 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
             self.msg.setText('info.txt:\n'+self.info)
         else:
             self.msg.setText('No se encontró el archivo "info.txt"') 
-        self.msg.setInformativeText('Path de la sesión: \n'+ self.dirsesion+'\nNro Observaciones:\n'+str(obs))
+        self.msg.setInformativeText('Path de la sesión: \n'+ self.dirsesion+'\nNro Observaciones:\n'+str(obs)+'\nArchivo Perfil:\n'+str(self.archivo_perfil))
         self.msg.setWindowTitle('Información de la sesión')
         #msg.setDetailedText("The details are as follows:")
         self.msg.setStandardButtons(QtWidgets.QMessageBox.Ok )
@@ -1040,7 +1041,10 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
 
     def agregar_evento(self):
         parametro = self.dict_parametros[str(self.lstParametros.currentItem().text())][0]
-        categoria = self.dict_parametros[str(self.lstParametros.currentItem().text())][1][str(self.combCategoria.currentText())]
+        if str(self.combCategoria.currentText()):
+            categoria = self.dict_parametros[str(self.lstParametros.currentItem().text())][1][str(self.combCategoria.currentText())]
+        else:
+            categoria = '*'
         valor = str(self.lnValor.text())
         evento = [parametro,categoria,valor]
         self.mojones[self.indice].eventos.append(evento)
@@ -1117,7 +1121,7 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
         logger.info('[play] Desactivo avance automatico')
         
     def abrir_sesion2(self):
-        dialogo_abrir = MyWindow()
+        dialogo_abrir = Browser_preview()
         if  dialogo_abrir.exec_(): # Si accept, devuelve 1, si cancel devuelve 0
             self.dirsesion = dialogo_abrir.filePath_selected
             print( 'tengo despues de abrir: ',self.dirsesion)
@@ -1219,7 +1223,8 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
         self.lblimg1.actualizar(imagenes[self.pos1])
         self.lblimg2.actualizar(imagenes[self.pos2])
         self.lblimg3.actualizar(imagenes[self.pos3])
-        self.setWindowTitle('ANALIZADOR PAVIMENTOS -- REFOCA -- {} -- {}m - Lat:{} Long:{}'.format(self.dirsesion,
+        self.setWindowTitle('ANALIZADOR PAVIMENTOS -- REFOCA -- Perfil: "{}" -- {} -- {}m - Lat:{} Long:{}'.format(self.archivo_perfil,
+            self.dirsesion,
             self.mojones[indice].progresiva,
             self.mojones[indice].latitud,
             self.mojones[indice].longitud))
