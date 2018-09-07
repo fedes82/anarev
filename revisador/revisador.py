@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-
+version = '1.0'
 ##PARA EL GUI
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import QPixmap,QIcon
@@ -31,8 +31,9 @@ handler.setLevel(logging.INFO)
 formatter = logging.Formatter('%(asctime)s - %(processName)s - %(levelname)s - %(message)s')
 handler.setFormatter(formatter)
 
-###para sacar el traceback por el logger
+
 def handle_exception(exc_type, exc_value, exc_traceback):
+    """para sacar el traceback por el logger"""
     if issubclass(exc_type, KeyboardInterrupt):
         sys.__excepthook__(exc_type, exc_value, exc_traceback)
         return
@@ -81,6 +82,7 @@ IMG_DEFAULT = 'img_default/imgDefault.jpg'
 
 
 class Mojon:
+    """Objeto base mojon, contine la info de cada uno"""
     def __init__(self,progresiva):
         self.progresiva = progresiva
         self.latitud = ''
@@ -100,26 +102,26 @@ class Mojon:
         return self.progresiva == otro
 
 def parsear_nombre(nom_img):
-        """toma el nombre como parametro y devuelve
-        progresiva,latitud,longitud,camara"""
-        progresiva = nom_img[:6]
-        #por compatibilidad hacia atras
-        nom_img = nom_img.split('.jpg')[0]
-        nom_img = nom_img.split('MARCA')[0]
-        try:    
-            if nom_img.split('GPS_')[1].startswith('Sin'):
-                lat = '-'
-                long = '-'
-            else:
-                lat = nom_img.split('GPS_')[1][:-4].split(',')[0]
-                long = nom_img.split('GPS_')[1][:-4].split(',')[1]
-        except IndexError:
-            lat = 'e'
-            long = 'e'
-        if '__c1__' in nom_img: cam = 0
-        elif '__c2__' in nom_img: cam = 1
-        else: cam = 2
-        return progresiva,lat,long,cam
+    """toma el nombre como parametro y devuelve
+    progresiva,latitud,longitud,camara"""
+    progresiva = nom_img[:6]
+    #por compatibilidad hacia atras
+    nom_img = nom_img.split('.jpg')[0]
+    nom_img = nom_img.split('MARCA')[0]
+    try:    
+        if nom_img.split('GPS_')[1].startswith('Sin'):
+            lat = '-'
+            long = '-'
+        else:
+            lat = nom_img.split('GPS_')[1][:-4].split(',')[0]
+            long = nom_img.split('GPS_')[1][:-4].split(',')[1]
+    except IndexError:
+        lat = 'e'
+        long = 'e'
+    if '__c1__' in nom_img: cam = 0
+    elif '__c2__' in nom_img: cam = 1
+    else: cam = 2
+    return progresiva,lat,long,cam
 
         
         #serializo lista de objetos
@@ -154,6 +156,7 @@ def deserializo_y_cargo(arch_fuente, delimitador='\n'):
 
 class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
     global DEBUG   
+    global version
     eventos_sesion = defaultdict(list)
     indice =0
     mojones = []
@@ -186,6 +189,7 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
         self.actionExportar_Img.triggered.connect(self.exportar_img)
         self.actionExportar_CSV.triggered.connect(self.exportar_csv)
         self.actionExportar_Todo.triggered.connect(self.exportar_todo)
+        self.actionAcerca_de.triggered.connect(self.mostrar_version)
         #self.abrir_sesion('fede.anax')
         self.MODIFICADO = False
         self.setWindowTitle('VISUALIZADOR -- REFOCA')
@@ -302,12 +306,21 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
             return False
         else:
             return True
-    
+    def mostrar_version(self):
+        msg = QtWidgets.QMessageBox()
+        msg.setIcon(QtWidgets.QMessageBox.Information)
+        info = 'Version: ' + version
+        info += '\nContacto: fedes82@gmail.com'
+        msg.setText(info)
+        msg.setWindowTitle("Acerca de Refoca - Revisador")
+        msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+        msg.exec_()
+        
     def btn_GetMap(self):
         if not self.validar_coordenadas(self.mojones[self.indice]):
             logger.info( '[GetMap] - Valor de coordenadas no valido para prog: {}'.format(self.mojones[self.indice]) )
             return
-        gmaps = 'http://maps.googleapis.com/maps/api/staticmap?center={},{}&markers={},{}&zoom=11&size=640x360&&maptype=hybrid'.format(
+        gmaps = 'http://maps.googleapis.com/maps/api/staticmap?center={},{}&markers={},{}&zoom=12&size=640x360&&maptype=hybrid'.format(
             self.mojones[self.indice].latitud,
             self.mojones[self.indice].longitud,
             self.mojones[self.indice].latitud,
@@ -321,7 +334,7 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
             arch.write(url.read())
         
         self.mojones[self.indice].mapas[1] = self.mojones[self.indice].progresiva + 'maph.png'
-        gmaps = 'http://maps.googleapis.com/maps/api/staticmap?center={},{}&markers={},{}&zoom=11&size=640x360&&maptype=roadmap'.format(
+        gmaps = 'http://maps.googleapis.com/maps/api/staticmap?center={},{}&markers={},{}&zoom=12&size=640x360&&maptype=roadmap'.format(
             self.mojones[self.indice].latitud,
             self.mojones[self.indice].longitud,
             self.mojones[self.indice].latitud,

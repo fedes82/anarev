@@ -108,7 +108,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../Documentos/ingenia/revwin-1-0/analizador/img_default/1leftarrow.png</normaloff>../Documentos/ingenia/revwin-1-0/analizador/img_default/1leftarrow.png</iconset>
+          <normaloff>img_default/1leftarrow.png</normaloff>img_default/1leftarrow.png</iconset>
         </property>
        </widget>
       </item>
@@ -125,7 +125,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../Documentos/ingenia/revwin-1-0/analizador/img_default/player_play.png</normaloff>../Documentos/ingenia/revwin-1-0/analizador/img_default/player_play.png</iconset>
+          <normaloff>img_default/player_play.png</normaloff>img_default/player_play.png</iconset>
         </property>
        </widget>
       </item>
@@ -189,7 +189,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../Documentos/ingenia/revwin-1-0/analizador/img_default/1rightarrow.png</normaloff>../Documentos/ingenia/revwin-1-0/analizador/img_default/1rightarrow.png</iconset>
+          <normaloff>img_default/1rightarrow.png</normaloff>img_default/1rightarrow.png</iconset>
         </property>
        </widget>
       </item>
@@ -231,7 +231,14 @@
      </widget>
     </item>
     <item row="1" column="2">
-     <widget class="QComboBox" name="combCategoria"/>
+     <widget class="QComboBox" name="combCategoria">
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>0</height>
+       </size>
+      </property>
+     </widget>
     </item>
     <item row="1" column="4" rowspan="2">
      <widget class="QListWidget" name="lstEventos"/>
@@ -243,7 +250,7 @@
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../Documentos/ingenia/revwin-1-0/analizador/img_default/edit_remove.png</normaloff>../Documentos/ingenia/revwin-1-0/analizador/img_default/edit_remove.png</iconset>
+        <normaloff>img_default/edit_remove.png</normaloff>img_default/edit_remove.png</iconset>
       </property>
      </widget>
     </item>
@@ -283,6 +290,9 @@
         <height>25</height>
        </size>
       </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
       <property name="placeholderText">
        <string>0-999</string>
       </property>
@@ -295,7 +305,7 @@
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../Documentos/ingenia/revwin-1-0/analizador/img_default/edit_add.png</normaloff>../Documentos/ingenia/revwin-1-0/analizador/img_default/edit_add.png</iconset>
+        <normaloff>img_default/edit_add.png</normaloff>img_default/edit_add.png</iconset>
       </property>
      </widget>
     </item>
@@ -305,8 +315,6 @@
    <zorder>lstParametros</zorder>
    <zorder>lnValor</zorder>
    <zorder>sldrPosicion</zorder>
-   <zorder>lblvelocidad</zorder>
-   <zorder>lblvelocidad</zorder>
    <zorder>combCategoria</zorder>
    <zorder>btnAgregarEvento</zorder>
   </widget>
@@ -316,7 +324,7 @@
      <x>0</x>
      <y>0</y>
      <width>1254</width>
-     <height>27</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuArchivo">
@@ -338,8 +346,15 @@
     <addaction name="actionCambiar_Editar_Perfil"/>
     <addaction name="actionInfo"/>
    </widget>
+   <widget class="QMenu" name="menuAcerca_de">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="actionAcerca_de"/>
+   </widget>
    <addaction name="menuArchivo"/>
    <addaction name="menuVer"/>
+   <addaction name="menuAcerca_de"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionAbrir">
@@ -385,6 +400,11 @@
   <action name="actionCambiar_Editar_Perfil">
    <property name="text">
     <string>Cambiar/Editar Perfil</string>
+   </property>
+  </action>
+  <action name="actionAcerca_de">
+   <property name="text">
+    <string>Acerca de </string>
    </property>
   </action>
  </widget>

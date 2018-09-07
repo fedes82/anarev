@@ -87,38 +87,6 @@ logger.addHandler(handler)
 ####---------------------------------------------------FIN LOGGEAR
 
 
-class Info():
-    def __init__(self):
-        self.operador = 'ND'
-        self.fecha = 'ND'
-        self.ruta='ND'
-        self.sentido='ND'
-        self.dist_inicial='ND'
-        self.dist_final='ND'
-    def cargar_info(self,archivo):
-        if os.path.exists(archivo):
-            with open(archivo,'r') as arch:
-                info = arch.readlines()
-                self.operador = info.pop()[:-2]
-                self.fecha = info.pop()
-                self.ruta=info[0]
-                self.sentido=info[0]
-                self.dist_inicial=info[0]
-                
-                self.dist_final='ND'
-            logger.info( '[leer_info] la info de la sesion es:{}'.format( self.info))
-        else:
-            logger.info('[leer_info] no se encontro info.txt')
-    
-    def reset(self):
-        self.operador = 'ND'
-        self.fecha = 'ND'
-        self.ruta='ND'
-        self.sentido='ND'
-        self.dist_inicial='ND'
-        self.dist_final='ND'
-
-
 
         
 ##esto es el dialogo para elegir el perfile
@@ -127,7 +95,6 @@ class Info():
 
 class DialogPerfiles(QtWidgets.QDialog):
     """Los perfiles son diccionarios el, default es
-    dict_parametros = {'Exudacion':[False,['A','M','B']],'Bacheo':[False,['S','P','R']],'Fisuras':[True,['1','2','3','4','5']]}
     o sea, de la forma { 'Nombre_de_Parametro1':['cod_param1',['nombre_cat1':'cod_Cat','nombre_cat2':'cod_cat2']}
     """
     def __init__(self, perfil_del_padre ,parent=None):
@@ -674,7 +641,7 @@ class Browser_preview(QtWidgets.QDialog):
         print('ok')
         print( self.fileName_selected)
         print( self.filePath_selected)
-        super(MyWindow, self).accept()
+        super(Browser_preview, self).accept()
     
     def boton_cancel(self):
         print ('cancel')
@@ -706,7 +673,7 @@ class Browser_preview(QtWidgets.QDialog):
             archivos = os.listdir(self.filePath_selected)
             random.shuffle(archivos)
             for archivo in archivos:
-                if 'c1' in archivo and archivo.endswith('.jpg'):
+                if '__c1__' in archivo and archivo.endswith('.jpg'):
                     print( 'es imagen, la cargo :',self.filePath_selected)
                     self.lblImg.setPixmap(QtGui.QPixmap(os.path.join(self.filePath_selected, archivo)).scaled(
                         520, 320,
@@ -809,8 +776,8 @@ E = ['A','M','B']
 
 
 class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
-    global DEBUG
     global archivo_perfil
+    global version
     #defaultdict me permite crear un diccionario del tipo
     # 'key':[lista]
     #medio facilito
@@ -878,6 +845,7 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
         self.actionExportar_ANAX.setStatusTip('Exportar aechivo ANAX, para ser utilizado con el soft Analizador')
         self.actionExportar_CSV.setStatusTip('Exportar aechivo CSV, para ser utilizado con soft de planilla de cálculo (Excel o similar)')     
         self.actionExportar_CSV.triggered.connect(self.exportar_csv)
+        self.actionAcerca_de.triggered.connect(self.mostrar_version)
         self.btnSiguiente.setStatusTip('Siguiente hito')
         self.btnAnterior.setStatusTip('Anterior hito')
         self.btnEventSig.setStatusTip('Siguiente hito con observaciones')
@@ -908,6 +876,15 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
     def closeEvent(self, event):
         print( "User has clicked the red x on the main window")
         self.salir()
+    def mostrar_version(self):
+        msg = QtWidgets.QMessageBox()
+        msg.setIcon(QtWidgets.QMessageBox.Information)
+        info = 'Version: ' + version
+        info += '\nContacto: fedes82@gmail.com'
+        msg.setText(info)
+        msg.setWindowTitle("Acerca de Refoca - Revisador")
+        msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+        msg.exec_()
 
     def administrar_perfil(self):
         dialogo = DialogPerfiles(self.archivo_perfil)
@@ -979,7 +956,8 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
             self.msg.setText('info.txt:\n'+self.info)
         else:
             self.msg.setText('No se encontró el archivo "info.txt"') 
-        self.msg.setInformativeText('Path de la sesión: \n'+ self.dirsesion+'\nNro Observaciones:\n'+str(obs)+'\nArchivo Perfil:\n'+str(self.archivo_perfil))
+        texto = 'Path de la sesión: \n'+ self.dirsesion+'\nNro Observaciones:\n'+str(obs)+'\nArchivo Perfil:\n'+str(self.archivo_perfil)
+        self.msg.setInformativeText(texto)
         self.msg.setWindowTitle('Información de la sesión')
         #msg.setDetailedText("The details are as follows:")
         self.msg.setStandardButtons(QtWidgets.QMessageBox.Ok )

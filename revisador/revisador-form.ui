@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>697</width>
+    <width>786</width>
     <height>551</height>
    </rect>
   </property>
@@ -259,7 +259,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>697</width>
+     <width>786</width>
      <height>27</height>
     </rect>
    </property>
@@ -283,8 +283,15 @@
     <addaction name="separator"/>
     <addaction name="actionExportar_Todo"/>
    </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="actionAcerca_de"/>
+   </widget>
    <addaction name="menuArchivo"/>
    <addaction name="menuSesion"/>
+   <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionAbrir">
@@ -320,6 +327,11 @@
   <action name="actionExportar_Todo">
    <property name="text">
     <string>Exportar Todo</string>
+   </property>
+  </action>
+  <action name="actionAcerca_de">
+   <property name="text">
+    <string>Acerca de</string>
    </property>
   </action>
  </widget>
