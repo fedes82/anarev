@@ -8,3 +8,7 @@ analizador/perfiles-prueba/panchon.perfil
 analizador/perfiles-prueba/senal.perfil
 analizador/perfiles-prueba/señalectica.perfil
 revisador/visual.log
+analizador/dist/analizador
+analizador/build/
+revisador/build
+revisador/dist/revisador

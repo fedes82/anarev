@@ -4,9 +4,9 @@ block_cipher = None
 
 
 a = Analysis(['analizador.py'],
-             pathex=['C:\\Users\\fedeprueba\\Documents\\analizador'],
+             pathex=['C:\\Users\\fedeprueba\\Documents\\GitHub\\anarev\\analizador'],
              binaries=[],
-             datas=[('img_default','img_default'),],
+             datas=[('img_default','img_default'),('perfiles','perfiles')],
              hiddenimports=['PyQt5.sip'],
              hookspath=[],
              runtime_hooks=[],
@@ -23,7 +23,7 @@ exe = EXE(pyz,
           debug=False,
           strip=False,
           upx=True,
-          console=False , icon='img_default\\icono.ico')
+          console=False , icon='img_default\\icono.ico' )
 coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,

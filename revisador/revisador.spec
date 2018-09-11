@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['revisador.py'],
-             pathex=['E:\\Documentos\\ingenia\\revwin-1-0\\revisador'],
+             pathex=['C:\\Users\\fedeprueba\\Documents\\GitHub\\anarev\\revisador'],
              binaries=[],
              datas=[('img_default','img_default'),],
              hiddenimports=['PyQt5.sip'],
@@ -23,7 +23,7 @@ exe = EXE(pyz,
           debug=False,
           strip=False,
           upx=True,
-          console=False , icon='img_default\\icono.ico')
+          console=False , icon='img_default\\icono.ico' )
 coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,
