@@ -1,4 +1,10 @@
 
 *.log
-analizador/bitacora.log
-*.log
+analizador/perfiles-prueba/fedefe.perfil
+analizador/perfiles-prueba/insano.perfil
+analizador/perfiles-prueba/masmasmodificao-copia.perfil
+analizador/perfiles-prueba/otro.perfil
+analizador/perfiles-prueba/panchon.perfil
+analizador/perfiles-prueba/senal.perfil
+analizador/perfiles-prueba/señalectica.perfil
+revisador/visual.log

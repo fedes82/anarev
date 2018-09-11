@@ -1,6 +1,15 @@
 # -*- coding: UTF-8 -*-
 version = '1.0'
 
+##GRAL
+import sys
+import os
+import os.path
+import json
+import csv
+import zipfile
+import random
+
 #import sip
 #sip.setapi('QString', 2)
 #sip.setapi('QVariant', 1)
@@ -23,19 +32,15 @@ from PyQt5.QtGui import QRegExpValidator
 ####  pyuic5 analizador-form-1-0.ui -o interface.py
 #### con analizador-form-1-0.ui es el archivo qtdesigner
 #### y interface.py el que importo en el main
-import sys
+
 import interface
 
-##GRAL
-import os
-import os.path
-from os.path import expanduser
-import random
-
+    #defaultdict me permite crear un diccionario del tipo
+    # 'key':[lista]
+    #medio facilito
+    #ver https://docs.python.org/2/library/collections.html#defaultdict-examples
 from collections import defaultdict
-import json
-import csv
-import zipfile
+
 try:
     import zlib
     compression = zipfile.ZIP_DEFLATED
@@ -46,13 +51,9 @@ from PIL import Image as PILImage
 from PIL import ImageFont as PILImageFont
 from PIL import ImageDraw as PILImageDraw
 
-#import cPickle as pickle
 from pathlib2 import Path ##importanchi
 
-
-
-
-
+from os.path import expanduser
 
 ###---------------------------------------------------PARA LOGGEAR
 
@@ -86,21 +87,19 @@ logger.addHandler(handler)
 
 ####---------------------------------------------------FIN LOGGEAR
 
-
-
-        
+      
 ##esto es el dialogo para elegir el perfile
 ## esta creado desde el archvio perfil.py, genereado con perfiles.ui
 ## y lo meti todo aca por que era mas facilito
 
 class DialogPerfiles(QtWidgets.QDialog):
     """Los perfiles son diccionarios el, default es
-    o sea, de la forma { 'Nombre_de_Parametro1':['cod_param1',['nombre_cat1':'cod_Cat','nombre_cat2':'cod_cat2']}
+    o sea, de la forma
+    { 'Nombre_de_Parametro1':['cod_param1',['nombre_cat1':'cod_Cat','nombre_cat2':'cod_cat2']}
     """
     def __init__(self, perfil_del_padre ,parent=None):
        # global app
         super(DialogPerfiles, self).__init__(parent)
-        self.resize(754, 583)
         self.resize(754, 583)
         self.gridLayout_5 = QtWidgets.QGridLayout(self)
         self.gridLayout_5.setObjectName("gridLayout_5")
@@ -247,7 +246,7 @@ class DialogPerfiles(QtWidgets.QDialog):
         self.gridLayout.addWidget(self.btnDelCat, 1, 3, 1, 1)
         self.gridLayout_5.addWidget(self.groupBox_2, 2, 0, 2, 1)
         self.buttonBox = QtWidgets.QDialogButtonBox(self)
-        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
+        self.buttonBox.setOrientation(Qt.Horizontal)
         self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
         self.buttonBox.setObjectName("buttonBox")
         self.gridLayout_5.addWidget(self.buttonBox, 3, 1, 1, 1)
@@ -279,6 +278,7 @@ class DialogPerfiles(QtWidgets.QDialog):
         self.setTabOrder(self.tblCategorias, self.btnDelCat)
         self.setTabOrder(self.btnDelCat, self.lblPerfil)
         self.setTabOrder(self.lblPerfil, self.buttonBox)
+        
         #extras
         self.perfil_ppal = perfil_del_padre
         self.lblPerfilPrincipal.setText(self.perfil_ppal)
@@ -297,7 +297,6 @@ class DialogPerfiles(QtWidgets.QDialog):
         self.btnGuardar.clicked.connect(self.btn_guardar_cambios)
     #cargo el default
 
-        
         self.cargar_combo()
         self.combPerfil.setCurrentIndex(self.combPerfil.findText('default.perfil'))
         self.actualizar_todo()
@@ -464,10 +463,6 @@ class DialogPerfiles(QtWidgets.QDialog):
                 self.MODIFICADO = True
                 self.btnGuardar.setEnabled(True)
         
-      #  parametro = str(self.tblParametros.currentItem().text()[0])
-      #  nombre = self.tblParametros.currentItem().text()
-      #  categoria = str(self.combValorParam.currentText())
-        
     def seleccion_parametro(self):
         self.cargar_categorias()
     
@@ -481,11 +476,8 @@ class DialogPerfiles(QtWidgets.QDialog):
     def cargar_categorias(self):
         self.tblCategorias.clearContents()
         self.tblCategorias.setRowCount(0)
-        #self.tblParametros.setRowCount(len(self.perfil_Actual))
         if self.tblParametros.currentItem():
             parametro_seleccionado = self.tblParametros.item(self.tblParametros.currentRow(),1).text()
-          #  print(dir(self.tblParametros.currentItem()))
-          #  print (self.tblParametros.currentItem())
             dic_cat=self.perfil_Actual[parametro_seleccionado][1]
             for i, nom_categoria in enumerate(dic_cat):
                 #parsear evento
@@ -501,17 +493,12 @@ class DialogPerfiles(QtWidgets.QDialog):
             nombre = os.path.split(perfil)[1]
             self.combPerfil.addItem(nombre)
         
-    
     def cargar_diccionario(self,archivo):
         with open('perfiles/'+archivo,'r') as file:
             self.perfil_Actual = json.loads(file.read())
         self.nombre_perfil = archivo
-        #path , nombre_arch_perfil = os.path.split(archivo)
-        #        nombre_arch_perfil = nombre_arch_perfil[:-5] + '-copia' + '.perfil'
-        #self.perfil_Actual = dict_parametros #sacar depues de debug
         self.MODIFICADO = False
         
-        #self.lblPerfilPrincipal =self.perfil_ppal.text()
         
     def cargar_parametros(self):
         self.tblParametros.clearContents()
@@ -525,16 +512,12 @@ class DialogPerfiles(QtWidgets.QDialog):
     
     def crear_Arbol(self,dictionary):
         arbol=''
-        #print('el dic es: \n',dictionary)
         for nom_parametro in dictionary:
             arbol += nom_parametro +' - Cod: '+ str(dictionary[nom_parametro][0])+'\n' #el codigo del param
             dict_categorias = dictionary[nom_parametro][1]
-            #print( 'las cat son :\n',dict_categorias)
             for categoria in dict_categorias: # es un diccionario {'nom_cat1':'cod_cat1', 'nom_cat22:'cod_2'... }
-                #print('cat:',categoria,'')
                 arbol += '\t-->  ' + categoria +' - Cod: ' + dict_categorias[categoria]+ '\n'
             arbol += '\n'
-        #print(arbol)
         return arbol
         
     def actualizar_arbol(self):
@@ -552,10 +535,8 @@ class DialogPerfiles(QtWidgets.QDialog):
 #class MyWindow(QtGui.QWidget):
 class Browser_preview(QtWidgets.QDialog):
     def __init__(self, parent=None):
-       # global app
         super(Browser_preview, self).__init__(parent)
         self.resize(1024, 600)
-     #   self.move(app.desktop().screen().rect().center() - main.rect().center())
         self.pathRoot = QtCore.QDir.rootPath()
 
         self.model = QtWidgets.QFileSystemModel(self)
@@ -586,12 +567,6 @@ class Browser_preview(QtWidgets.QDialog):
 
         self.lineEditFilePath = QtWidgets.QLineEdit(self)
         
-        # self.btnOK = QtWidgets.QPushButton(self)
-        # self.btnOK.setText('Aceptar')
-        # self.btnOK.clicked.connect(self.boton_ok)
-        # self.btnCancel = QtWidgets.QPushButton(self)
-        # self.btnCancel.setText('Cancelar')
-        # self.btnCancel.clicked.connect(self.boton_cancel)
         self.buttons = QDialogButtonBox(
             QDialogButtonBox.Ok | QDialogButtonBox.Cancel,
             Qt.Horizontal, self)
@@ -603,18 +578,13 @@ class Browser_preview(QtWidgets.QDialog):
         self.gridLayout.addWidget(self.lineEditFileName, 0, 1)
         self.gridLayout.addWidget(self.labelFilePath, 1, 0)
         self.gridLayout.addWidget(self.lineEditFilePath, 1, 1)
-       # self.gridLayout.addWidget(self.btnCancel,2,0)
-       # self.gridLayout.addWidget(self.btnOK,2,1)
-        
 
-        #self.lblImgPreview = ScaledLabel()
-        #self.lblImgPreview.setObjectName(("lblImgPreview"))
+
         self.lblImg = QtWidgets.QLabel(self)
         self.lblImg.setPixmap(QtGui.QPixmap(IMG_DEFAULT).scaled(
             520, 320,
-            QtCore.Qt.KeepAspectRatio))
+            Qt.KeepAspectRatio))
         
-        #self.lblImg.setPixmap(self._pixmap.
         self.lblInfo = QtWidgets.QLabel(self)
         self.lblInfo.setText('No se encontro archivo info.txt')
         
@@ -667,7 +637,7 @@ class Browser_preview(QtWidgets.QDialog):
                 print ('encontre info')
                 with open(os.path.join(self.filePath_selected,'info.txt'),'r') as info:
                     self.lblInfo.setText(info.read())
-                    self.lblInfo.setAlignment(QtCore.Qt.AlignCenter | QtCore.Qt.AlignVCenter)
+                    self.lblInfo.setAlignment(Qt.AlignCenter | Qt.AlignVCenter)
             else:
                 self.lblInfo.setText('No se encontró archivo info.txt')
             archivos = os.listdir(self.filePath_selected)
@@ -677,16 +647,14 @@ class Browser_preview(QtWidgets.QDialog):
                     print( 'es imagen, la cargo :',self.filePath_selected)
                     self.lblImg.setPixmap(QtGui.QPixmap(os.path.join(self.filePath_selected, archivo)).scaled(
                         520, 320,
-                        QtCore.Qt.KeepAspectRatio))
+                        Qt.KeepAspectRatio))
                     return
             self.lblImg.setPixmap(QtGui.QPixmap(IMG_DEFAULT).scaled(
                 520, 320,
-                QtCore.Qt.KeepAspectRatio))
+                Qt.KeepAspectRatio))
         else:
             print( self.filePath_selected, ' NO es dir')
                 
-        
-        
 
 class Mojon:
     def __init__(self,progresiva):
@@ -708,7 +676,7 @@ class Mojon:
         return self.progresiva == otro
 
 def parsear_nombre(nom_img):
-        """toma el nombre como parametro y devuelve
+        """toma el nombre del archivo imagen como parametro y devuelve
         progresiva,latitud,longitud,camara"""
         progresiva = nom_img[:6]
         #por compatibilidad hacia atras
@@ -738,8 +706,7 @@ def serializo_y_guardo(lista_de_objetos, arch_destino, delimitador ='\n'):
         q = q + linea + delimitador
     with open(arch_destino,'w') as f:
         f.write(q)
-    
-        
+
 
 def deserializo_y_cargo(arch_fuente, delimitador='\n'):
     with open(arch_fuente,'r') as f:
@@ -778,10 +745,6 @@ E = ['A','M','B']
 class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
     global archivo_perfil
     global version
-    #defaultdict me permite crear un diccionario del tipo
-    # 'key':[lista]
-    #medio facilito
-    #ver https://docs.python.org/2/library/collections.html#defaultdict-examples
     eventos_sesion_modificado = False
     pos1 = 0
     pos2 = 1
@@ -833,7 +796,7 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
     ##  para el menu
         self.actionAbrir.setShortcut('Ctrl+A')
         self.actionAbrir.setStatusTip('Abrir sesión')
-        self.actionAbrir.triggered.connect(self.abrir_sesion2)
+        self.actionAbrir.triggered.connect(self.abrir_sesion)
         self.actionSalir.setShortcut('Ctrl+Q')
         self.actionSalir.setStatusTip('Salir de la aplicación')
         self.actionSalir.triggered.connect(self.salir)
@@ -876,13 +839,14 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
     def closeEvent(self, event):
         print( "User has clicked the red x on the main window")
         self.salir()
+        
     def mostrar_version(self):
         msg = QtWidgets.QMessageBox()
         msg.setIcon(QtWidgets.QMessageBox.Information)
         info = 'Version: ' + version
         info += '\nContacto: fedes82@gmail.com'
         msg.setText(info)
-        msg.setWindowTitle("Acerca de Refoca - Revisador")
+        msg.setWindowTitle("Acerca de Analizador de Pavimentos ")
         msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
         msg.exec_()
 
@@ -956,10 +920,11 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
             self.msg.setText('info.txt:\n'+self.info)
         else:
             self.msg.setText('No se encontró el archivo "info.txt"') 
-        texto = 'Path de la sesión: \n'+ self.dirsesion+'\nNro Observaciones:\n'+str(obs)+'\nArchivo Perfil:\n'+str(self.archivo_perfil)
+        texto = 'Path de la sesión: \n'+ self.dirsesion
+        texto +='\nNro Observaciones:\n'+str(obs)
+        texto +='\nArchivo Perfil:\n'+str(self.archivo_perfil)
         self.msg.setInformativeText(texto)
         self.msg.setWindowTitle('Información de la sesión')
-        #msg.setDetailedText("The details are as follows:")
         self.msg.setStandardButtons(QtWidgets.QMessageBox.Ok )
         self.msg.exec_()
         
@@ -1098,7 +1063,7 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
         self.tbtnPlay.setStatusTip('Comenzar avance automático')
         logger.info('[play] Desactivo avance automatico')
         
-    def abrir_sesion2(self):
+    def abrir_sesion(self):
         dialogo_abrir = Browser_preview()
         if  dialogo_abrir.exec_(): # Si accept, devuelve 1, si cancel devuelve 0
             self.dirsesion = dialogo_abrir.filePath_selected
@@ -1124,28 +1089,6 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
             self.MODIFICADO = False
             self.Habilitar_botones(True)
             self.cargar_info(os.path.join(self.dirsesion,'info.txt'))
-    
-    def abrir_sesion(self):
-        dirname = str(QtWidgets.QFileDialog.getExistingDirectory(self, 
-                    caption='Seleccionar Sesión',
-                    options=QtWidgets.QFileDialog.ShowDirsOnly))
-        self.dirsesion = dirname + '/'
-        logger.info( '[Abrir Sesion] - Abro carpeta: {}'.format(self.dirsesion))
-        if not self.cargar_pickle(self.dirsesion):
-            self.mojones = self.crear_lista_mojones(self.dirsesion)
-        self.sldrPosicion.setMaximum (len(self.mojones)-1)
-        self.sldrPosicion.setMinimum(0)
-        #REINICIAR VISTAS
-        #REINICIAR AUTOMATICO
-        self.stop_automatico()
-        #REINICIAR INDICE
-        self.indice = 0
-        self.cargar_mojon_gui(self.indice)
-        #REINICIAR MODIFICADO SESIONE
-        self.MODIFICADO = False
-        self.Habilitar_botones(True)
-        self.info.cargar_info(os.path.join(self.dirsesion,'info.txt'))
-        #
     
     def cargar_pickle(self,carpeta):
         if os.path.exists(os.path.join(carpeta,'sesion.pkl')):
