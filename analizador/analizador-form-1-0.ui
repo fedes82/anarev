@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>665</height>
+    <width>1254</width>
+    <height>654</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -24,120 +24,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="2" column="5" rowspan="3">
-     <widget class="QListWidget" name="lstEventos"/>
-    </item>
-    <item row="3" column="4">
-     <widget class="QPushButton" name="btnAgregarEvento">
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>img_default/edit_add.png</normaloff>img_default/edit_add.png</iconset>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="6">
-     <widget class="QPushButton" name="btnElimEvento">
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>img_default/edit_remove.png</normaloff>img_default/edit_remove.png</iconset>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1" rowspan="3">
-     <widget class="QListWidget" name="lstParametros">
-      <item>
-       <property name="text">
-        <string>Exudacion</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Bacheo</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Fisuras</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="2" column="2">
-     <widget class="QComboBox" name="combValorParam">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>60</width>
-        <height>25</height>
-       </size>
-      </property>
-      <item>
-       <property name="text">
-        <string>B</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>M</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>A</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="4" column="2">
-     <widget class="QLineEdit" name="lnValorParam">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>60</width>
-        <height>25</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>60</width>
-        <height>25</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QSlider" name="sldrPosicion">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="tickPosition">
-       <enum>QSlider::TicksAbove</enum>
-      </property>
-      <property name="tickInterval">
-       <number>10</number>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0" colspan="7">
+    <item row="0" column="0" colspan="6">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -193,7 +80,7 @@
       </item>
      </layout>
     </item>
-    <item row="2" column="0">
+    <item row="1" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
        <widget class="QPushButton" name="btnAnterior">
@@ -324,15 +211,120 @@
       </item>
      </layout>
     </item>
+    <item row="1" column="1" rowspan="2">
+     <widget class="QListWidget" name="lstParametros">
+      <item>
+       <property name="text">
+        <string>Exudacion</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bacheo</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fisuras</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QComboBox" name="combCategoria">
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>0</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="4" rowspan="2">
+     <widget class="QListWidget" name="lstEventos"/>
+    </item>
+    <item row="1" column="5" rowspan="2">
+     <widget class="QPushButton" name="btnElimEvento">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>img_default/edit_remove.png</normaloff>img_default/edit_remove.png</iconset>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QSlider" name="sldrPosicion">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="tickPosition">
+       <enum>QSlider::TicksAbove</enum>
+      </property>
+      <property name="tickInterval">
+       <number>10</number>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QLineEdit" name="lnValor">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>60</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string>0-999</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QPushButton" name="btnAgregarEvento">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>img_default/edit_add.png</normaloff>img_default/edit_add.png</iconset>
+      </property>
+     </widget>
+    </item>
    </layout>
+   <zorder>lstEventos</zorder>
+   <zorder>btnElimEvento</zorder>
+   <zorder>lstParametros</zorder>
+   <zorder>lnValor</zorder>
+   <zorder>sldrPosicion</zorder>
+   <zorder>combCategoria</zorder>
+   <zorder>btnAgregarEvento</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1280</width>
-     <height>27</height>
+     <width>1254</width>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuArchivo">
@@ -349,12 +341,20 @@
    </widget>
    <widget class="QMenu" name="menuVer">
     <property name="title">
-     <string>Ver</string>
+     <string>Sesion</string>
     </property>
+    <addaction name="actionCambiar_Editar_Perfil"/>
     <addaction name="actionInfo"/>
+   </widget>
+   <widget class="QMenu" name="menuAcerca_de">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="actionAcerca_de"/>
    </widget>
    <addaction name="menuArchivo"/>
    <addaction name="menuVer"/>
+   <addaction name="menuAcerca_de"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionAbrir">
@@ -395,6 +395,16 @@
   <action name="actionExportar_CSV">
    <property name="text">
     <string>Exportar CSV (Excel)</string>
+   </property>
+  </action>
+  <action name="actionCambiar_Editar_Perfil">
+   <property name="text">
+    <string>Cambiar/Editar Perfil</string>
+   </property>
+  </action>
+  <action name="actionAcerca_de">
+   <property name="text">
+    <string>Acerca de </string>
    </property>
   </action>
  </widget>
