@@ -47,6 +47,7 @@ logger.addHandler(handler)
 
 ####---------------------------------------------------FIN LOGGEAR
 
+LLAVE =  'AIzaSyAFfF3xgDP9cGm6ETk0U1hpcHBg4z61Fn0'
 
 ##GRAL
 import os
@@ -67,6 +68,7 @@ except:
 from PIL import Image as PILImage
 from shutil import rmtree, copy2
 from urllib.request import urlopen
+import urllib.request
 
 DEBUG = True
 
@@ -330,24 +332,30 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
         if not self.validar_coordenadas(self.mojones[self.indice]):
             logger.info( '[GetMap] - Valor de coordenadas no valido para prog: {}'.format(self.mojones[self.indice]) )
             return
-        gmaps = 'http://maps.googleapis.com/maps/api/staticmap?center={},{}&markers={},{}&zoom=12&size=640x360&&maptype=hybrid'.format(
+        gmaps = 'http://maps.googleapis.com/maps/api/staticmap?center={},{}&markers={},{}&zoom=12&size=640x360&&maptype=hybrid&key={}'.format(
             self.mojones[self.indice].latitud,
             self.mojones[self.indice].longitud,
             self.mojones[self.indice].latitud,
-            self.mojones[self.indice].longitud)
+            self.mojones[self.indice].longitud,
+            LLAVE)
         logging.info(' [btn_GetMap] descargo {}'.format(gmaps))
-        url = urlopen(gmaps)
+        req = urllib.request.Request(gmaps, headers={'User-Agent': 'Mozilla/5.0'})
+        url = urllib.request.urlopen(req)
+        #url = urlopen(gmaps)
         nombre = os.path.join(self.dirtemp,self.mojones[self.indice].progresiva+'maph.png')
         with open(nombre,'wb') as arch:
             arch.write(url.read())
         
         self.mojones[self.indice].mapas[1] = self.mojones[self.indice].progresiva + 'maph.png'
-        gmaps = 'http://maps.googleapis.com/maps/api/staticmap?center={},{}&markers={},{}&zoom=12&size=640x360&&maptype=roadmap'.format(
+        gmaps = 'http://maps.googleapis.com/maps/api/staticmap?center={},{}&markers={},{}&zoom=12&size=640x360&&maptype=roadmap&key={}'.format(
             self.mojones[self.indice].latitud,
             self.mojones[self.indice].longitud,
             self.mojones[self.indice].latitud,
-            self.mojones[self.indice].longitud)
-        url = urlopen(gmaps)
+            self.mojones[self.indice].longitud,
+            LLAVE)
+        req = urllib.request.Request(gmaps, headers={'User-Agent': 'Mozilla/5.0'})
+        url = urllib.request.urlopen(req)
+        #url = urlopen(gmaps)
         nombre = os.path.join(self.dirtemp,self.mojones[self.indice].progresiva+'map.png')
         with open(nombre,'wb') as arch:
             arch.write(url.read())

@@ -685,3 +685,705 @@ AttributeError: 'NoneType' object has no attribute 'text'
 2018-08-22 19:28:04,535 - INFO - [agregar_evento] Agregue evento 000020m DEBUG-34.8393662657,-55.48595 -- E A 
 2018-08-22 19:47:38,452 - INFO - [agregar_evento] Agregue evento 000030m DEBUG-34.8393662657,-55.48595 -- E A 
 2018-08-22 19:47:42,328 - INFO - [eliminar_evento] Elimino en prog 000030 - evento ['E', 'A', '']
+2018-08-23 18:16:09,215 - INFO - [salir] Cierro programa
+2018-08-28 17:29:16,727 - INFO - ---------------------------------------------------
+2018-08-28 17:29:16,727 - INFO - Inicio Programa Revisador
+2018-08-28 17:29:41,992 - INFO - hab botones e n fun Habilitar_botones
+2018-08-28 17:30:03,453 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 485, in focoenventana1
+    self.cargar_mojon_gui(self.indice)
+  File "analizador.py", line 746, in cargar_mojon_gui
+    if os.path.isfile(os.path.join(self.dirsesion,self.mojones[indice].archivos_img[0])):
+IndexError: list index out of range
+2018-08-28 17:30:18,614 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/etbtrebth
+2018-08-28 17:30:18,617 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-28 17:30:18,622 - INFO - [crear_lista_mojones] Cargue 12 mojones
+2018-08-28 17:30:18,635 - INFO - [play] Desactivo avance automatico
+2018-08-28 17:30:18,690 - INFO - hab botones e n fun Habilitar_botones
+2018-08-28 17:30:20,145 - INFO - No hay eventos - btnEventSig
+2018-08-28 17:30:26,002 - INFO - [agregar_evento] Agregue evento 000010m DEBUG-34.4557621896,-54.929977 -- E Alto 32
+2018-08-28 17:30:48,578 - INFO - [salir] Cierro programa
+2018-08-29 15:30:05,059 - INFO - ---------------------------------------------------
+2018-08-29 15:30:05,059 - INFO - Inicio Programa Revisador
+2018-08-29 15:30:07,840 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 843, in <module>
+    main()
+  File "analizador.py", line 837, in main
+    form = RevisadorApp()
+  File "analizador.py", line 386, in __init__
+    self.lnValorParam.setValidator(validator)
+AttributeError: 'RevisadorApp' object has no attribute 'lnValorParam'
+2018-08-29 15:31:05,505 - INFO - ---------------------------------------------------
+2018-08-29 15:31:05,505 - INFO - Inicio Programa Revisador
+2018-08-29 15:31:06,708 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 843, in <module>
+    main()
+  File "analizador.py", line 837, in main
+    form = RevisadorApp()
+  File "analizador.py", line 428, in __init__
+    self.combValorParam.setStatusTip('Seleccione categoria')
+AttributeError: 'RevisadorApp' object has no attribute 'combValorParam'
+2018-08-29 15:31:57,976 - INFO - ---------------------------------------------------
+2018-08-29 15:31:57,976 - INFO - Inicio Programa Revisador
+2018-08-29 15:31:58,085 - INFO - hab botones e n fun Habilitar_botones
+2018-08-29 15:33:20,991 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 480, in focoenventana1
+    self.cargar_mojon_gui(self.indice)
+  File "analizador.py", line 742, in cargar_mojon_gui
+    if os.path.isfile(os.path.join(self.dirsesion,self.mojones[indice].archivos_img[0])):
+IndexError: list index out of range
+2018-08-29 15:33:48,200 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/dddd
+2018-08-29 15:33:48,220 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-29 15:34:02,965 - INFO - [crear_lista_mojones] Cargue 5449 mojones
+2018-08-29 15:34:03,185 - INFO - [play] Desactivo avance automatico
+2018-08-29 15:34:03,918 - INFO - hab botones e n fun Habilitar_botones
+2018-08-29 15:34:09,423 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 582, in agregar_evento
+    self.self.lnValor.setText('')
+AttributeError: 'RevisadorApp' object has no attribute 'self'
+2018-08-29 15:34:25,944 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 582, in agregar_evento
+    self.self.lnValor.setText('')
+AttributeError: 'RevisadorApp' object has no attribute 'self'
+2018-08-29 15:34:39,229 - INFO - [salir] Cierro programa
+2018-08-29 15:34:56,007 - INFO - ---------------------------------------------------
+2018-08-29 15:34:56,007 - INFO - Inicio Programa Revisador
+2018-08-29 15:34:56,116 - INFO - hab botones e n fun Habilitar_botones
+2018-08-29 15:35:11,975 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/cdsc
+2018-08-29 15:35:11,986 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-29 15:35:12,217 - INFO - [crear_lista_mojones] Cargue 681 mojones
+2018-08-29 15:35:12,219 - INFO - [play] Desactivo avance automatico
+2018-08-29 15:35:12,259 - INFO - hab botones e n fun Habilitar_botones
+2018-08-29 15:35:17,471 - INFO - [agregar_evento] Agregue evento 000000m DEBUG-33.9541649582,-55.102820 -- E Alto 344
+2018-08-29 15:35:22,457 - INFO - [agregar_evento] Agregue evento 000000m DEBUG-33.9541649582,-55.102820 -- F 2 232
+2018-08-29 15:48:36,091 - INFO - [salir] Cierro programa
+2018-08-29 16:08:27,262 - INFO - ---------------------------------------------------
+2018-08-29 16:08:27,262 - INFO - Inicio Programa Revisador
+2018-08-29 16:08:27,370 - INFO - hab botones e n fun Habilitar_botones
+2018-08-29 16:09:35,431 - INFO - [salir] Cierro programa
+2018-08-30 13:44:40,898 - INFO - ---------------------------------------------------
+2018-08-30 13:44:40,898 - INFO - Inicio Programa Revisador
+2018-08-30 13:44:41,039 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1321, in <module>
+    main()
+  File "analizador.py", line 1315, in main
+    form = RevisadorApp()
+  File "analizador.py", line 891, in __init__
+    self.actionCambiar_Editar_Perfil.triggered.connect(administrar_perfil)
+NameError: name 'administrar_perfil' is not defined
+2018-08-30 13:45:26,100 - INFO - ---------------------------------------------------
+2018-08-30 13:45:26,100 - INFO - Inicio Programa Revisador
+2018-08-30 13:45:26,209 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 13:45:33,345 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 925, in administrar_perfil
+    dialogo = DialogPerfiles()
+TypeError: __init__() missing 1 required positional argument: 'perfil_del_padre'
+2018-08-30 13:45:40,862 - INFO - [salir] Cierro programa
+2018-08-30 13:46:27,428 - INFO - ---------------------------------------------------
+2018-08-30 13:46:27,443 - INFO - Inicio Programa Revisador
+2018-08-30 13:46:27,537 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 13:46:39,077 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 958, in focoenventana1
+    self.cargar_mojon_gui(self.indice)
+  File "analizador.py", line 1220, in cargar_mojon_gui
+    if os.path.isfile(os.path.join(self.dirsesion,self.mojones[indice].archivos_img[0])):
+IndexError: list index out of range
+2018-08-30 13:46:41,123 - INFO - [salir] Cierro programa
+2018-08-30 13:47:59,442 - INFO - ---------------------------------------------------
+2018-08-30 13:47:59,457 - INFO - Inicio Programa Revisador
+2018-08-30 13:47:59,551 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 13:48:11,789 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 972, in focoenventana3
+    self.cargar_mojon_gui(self.indice)
+  File "analizador.py", line 1222, in cargar_mojon_gui
+    if os.path.isfile(os.path.join(self.dirsesion,self.mojones[indice].archivos_img[0])):
+IndexError: list index out of range
+2018-08-30 13:48:15,214 - INFO - [salir] Cierro programa
+2018-08-30 13:48:20,948 - INFO - ---------------------------------------------------
+2018-08-30 13:48:20,948 - INFO - Inicio Programa Revisador
+2018-08-30 13:48:21,057 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 13:55:28,172 - INFO - [salir] Cierro programa
+2018-08-30 13:55:31,567 - INFO - ---------------------------------------------------
+2018-08-30 13:55:31,567 - INFO - Inicio Programa Revisador
+2018-08-30 13:55:31,676 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 13:55:41,840 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 914, in administrar_perfil
+    print('sali del dialogo con :',dialogo.nombre_perfil)
+AttributeError: 'DialogPerfiles' object has no attribute 'nombre_perfil'
+2018-08-30 13:56:04,349 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 914, in administrar_perfil
+    print('sali del dialogo con :',dialogo.nombre_perfil)
+AttributeError: 'DialogPerfiles' object has no attribute 'nombre_perfil'
+2018-08-30 13:56:05,529 - INFO - [salir] Cierro programa
+2018-08-30 13:57:57,930 - INFO - ---------------------------------------------------
+2018-08-30 13:57:57,930 - INFO - Inicio Programa Revisador
+2018-08-30 13:57:58,039 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 13:58:54,138 - INFO - [salir] Cierro programa
+2018-08-30 14:02:26,632 - INFO - ---------------------------------------------------
+2018-08-30 14:02:26,632 - INFO - Inicio Programa Revisador
+2018-08-30 14:02:26,741 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 14:02:29,055 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 912, in administrar_perfil
+    dialogo = DialogPerfiles(archivo_perfil)
+UnboundLocalError: local variable 'archivo_perfil' referenced before assignment
+2018-08-30 14:03:08,335 - INFO - [salir] Cierro programa
+2018-08-30 14:03:10,616 - INFO - ---------------------------------------------------
+2018-08-30 14:03:10,616 - INFO - Inicio Programa Revisador
+2018-08-30 14:03:10,726 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 14:03:15,132 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 912, in administrar_perfil
+    dialogo = DialogPerfiles(archivo_perfil)
+UnboundLocalError: local variable 'archivo_perfil' referenced before assignment
+2018-08-30 14:09:13,781 - INFO - [salir] Cierro programa
+2018-08-30 14:09:15,125 - INFO - ---------------------------------------------------
+2018-08-30 14:09:15,125 - INFO - Inicio Programa Revisador
+2018-08-30 14:09:15,235 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 14:09:17,022 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 913, in administrar_perfil
+    dialogo = DialogPerfiles(archivo_perfil)
+UnboundLocalError: local variable 'archivo_perfil' referenced before assignment
+2018-08-30 14:09:22,460 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 954, in focoenventana1
+    self.cargar_mojon_gui(self.indice)
+  File "analizador.py", line 1216, in cargar_mojon_gui
+    if os.path.isfile(os.path.join(self.dirsesion,self.mojones[indice].archivos_img[0])):
+IndexError: list index out of range
+2018-08-30 14:09:23,286 - INFO - [salir] Cierro programa
+2018-08-30 14:11:52,666 - INFO - ---------------------------------------------------
+2018-08-30 14:11:52,666 - INFO - Inicio Programa Revisador
+2018-08-30 14:11:52,776 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1317, in <module>
+    main()
+  File "analizador.py", line 1311, in main
+    form = RevisadorApp()
+  File "analizador.py", line 863, in __init__
+    self.cargar_parametros()
+  File "analizador.py", line 925, in cargar_parametros
+    for key in self.dict_parametros:
+AttributeError: 'RevisadorApp' object has no attribute 'dict_parametros'
+2018-08-30 14:12:52,182 - INFO - ---------------------------------------------------
+2018-08-30 14:12:52,182 - INFO - Inicio Programa Revisador
+2018-08-30 14:12:52,291 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 14:12:54,274 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 914, in administrar_perfil
+    dialogo = DialogPerfiles(archivo_perfil)
+UnboundLocalError: local variable 'archivo_perfil' referenced before assignment
+2018-08-30 14:13:27,960 - INFO - [salir] Cierro programa
+2018-08-30 14:13:29,335 - INFO - ---------------------------------------------------
+2018-08-30 14:13:29,335 - INFO - Inicio Programa Revisador
+2018-08-30 14:13:29,444 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 14:13:36,642 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 918, in administrar_perfil
+    with open('perfiles/'+dialogo.accepted,'r') as file:
+TypeError: must be str, not PyQt5.QtCore.pyqtBoundSignal
+2018-08-30 14:14:52,092 - INFO - [salir] Cierro programa
+2018-08-30 14:14:56,099 - INFO - ---------------------------------------------------
+2018-08-30 14:14:56,099 - INFO - Inicio Programa Revisador
+2018-08-30 14:14:56,209 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 14:15:11,056 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1088, in seleccion_parametro
+    self.actualizar_parametros(self.lstParametros.currentItem().text())
+  File "analizador.py", line 1099, in actualizar_parametros
+    for parametro in dict_parametros[item][1]:
+NameError: name 'dict_parametros' is not defined
+2018-08-30 14:15:11,773 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1088, in seleccion_parametro
+    self.actualizar_parametros(self.lstParametros.currentItem().text())
+  File "analizador.py", line 1099, in actualizar_parametros
+    for parametro in dict_parametros[item][1]:
+NameError: name 'dict_parametros' is not defined
+2018-08-30 14:15:56,951 - INFO - [salir] Cierro programa
+2018-08-30 14:15:59,779 - INFO - ---------------------------------------------------
+2018-08-30 14:15:59,779 - INFO - Inicio Programa Revisador
+2018-08-30 14:15:59,889 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 14:18:26,776 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/r4
+2018-08-30 14:18:26,819 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-30 14:18:26,820 - INFO - [play] Desactivo avance automatico
+2018-08-30 14:18:26,960 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 14:18:29,781 - INFO - [agregar_evento] Agregue evento 000000m DEBUG-34.0290657391,-55.301897 -- q wq 42
+2018-08-30 14:18:49,326 - INFO - [agregar_evento] Agregue evento 000000m DEBUG-34.0290657391,-55.301897 -- 1  3
+2018-08-30 14:19:00,588 - INFO - [agregar_evento] Agregue evento 000000m DEBUG-34.0290657391,-55.301897 -- 4  
+2018-08-30 14:19:38,776 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1087, in seleccion_parametro
+    parametro = self.lstParametros.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-08-30 14:19:44,464 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1042, in agregar_evento
+    parametro = str(self.lstParametros.currentItem().text()[0])
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-08-30 14:19:53,129 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1042, in agregar_evento
+    parametro = str(self.lstParametros.currentItem().text()[0])
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-08-30 14:20:22,836 - INFO - [agregar_evento] Agregue evento 000020m DEBUG-34.2973821395,-55.925576 -- F Ruta 32
+2018-08-30 14:25:55,467 - INFO - [guardar_sesion] Ya existe el archivo sesion.pkl, lo sobreescribo
+2018-08-30 14:25:55,469 - INFO - [salir] Cierro programa
+2018-08-30 14:25:58,905 - INFO - ---------------------------------------------------
+2018-08-30 14:25:58,905 - INFO - Inicio Programa Revisador
+2018-08-30 14:25:58,989 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 14:26:15,515 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/r4
+2018-08-30 14:26:15,525 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-30 14:26:15,528 - INFO - [play] Desactivo avance automatico
+2018-08-30 14:26:15,571 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 14:27:24,984 - INFO - [salir] Cierro programa
+2018-08-30 14:27:27,375 - INFO - ---------------------------------------------------
+2018-08-30 14:27:27,375 - INFO - Inicio Programa Revisador
+2018-08-30 14:27:27,484 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 14:27:38,960 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/r4
+2018-08-30 14:27:38,968 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-30 14:27:38,970 - INFO - [play] Desactivo avance automatico
+2018-08-30 14:27:39,011 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 14:28:04,820 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1088, in seleccion_parametro
+    parametro = self.lstParametros.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-08-30 14:28:10,281 - INFO - [agregar_evento] Agregue evento 001610m DEBUG-33.9290127339,-55.660999 -- F 1 
+2018-08-30 14:28:14,338 - INFO - [agregar_evento] Agregue evento 001610m DEBUG-33.9290127339,-55.660999 -- F 1 
+2018-08-30 14:35:40,707 - INFO - [guardar_sesion] Ya existe el archivo sesion.pkl, lo sobreescribo
+2018-08-30 14:35:40,708 - INFO - [salir] Cierro programa
+2018-08-30 14:35:43,271 - INFO - ---------------------------------------------------
+2018-08-30 14:35:43,271 - INFO - Inicio Programa Revisador
+2018-08-30 14:35:43,381 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1318, in <module>
+    main()
+  File "analizador.py", line 1312, in main
+    form = RevisadorApp()
+  File "analizador.py", line 862, in __init__
+    with open('perfiles/default.perfil','r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'perfiles/default.perfil'
+2018-08-30 14:37:23,111 - INFO - ---------------------------------------------------
+2018-08-30 14:37:23,111 - INFO - Inicio Programa Revisador
+2018-08-30 14:37:23,210 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 14:37:49,337 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1087, in seleccion_parametro
+    parametro = self.lstParametros.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-08-30 14:38:08,676 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/r4
+2018-08-30 14:38:08,689 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-30 14:38:08,690 - INFO - [play] Desactivo avance automatico
+2018-08-30 14:38:08,743 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 14:38:22,692 - INFO - [agregar_evento] Agregue evento 001190m DEBUG-33.7002735076,-54.128965 -- r dwqdwq 34
+2018-08-30 14:38:46,805 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1087, in seleccion_parametro
+    parametro = self.lstParametros.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-08-30 14:38:51,137 - INFO - [agregar_evento] Agregue evento 001190m DEBUG-33.7002735076,-54.128965 -- B Superficial 45
+2018-08-30 14:41:25,020 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1087, in seleccion_parametro
+    parametro = self.lstParametros.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-08-30 14:58:18,542 - INFO - [guardar_sesion] Ya existe el archivo sesion.pkl, lo sobreescribo
+2018-08-30 14:58:18,543 - INFO - [salir] Cierro programa
+2018-08-30 14:58:20,682 - INFO - ---------------------------------------------------
+2018-08-30 14:58:20,682 - INFO - Inicio Programa Revisador
+2018-08-30 14:58:20,791 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 14:58:33,670 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/r4
+2018-08-30 14:58:33,674 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-30 14:58:33,676 - INFO - [play] Desactivo avance automatico
+2018-08-30 14:58:33,717 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 14:58:39,854 - INFO - [agregar_evento] Agregue evento 001320m DEBUG-33.2883744722,-54.039104 -- B S 21
+2018-08-30 14:58:46,463 - INFO - [agregar_evento] Agregue evento 001320m DEBUG-33.2883744722,-54.039104 -- F 4 112
+2018-08-30 14:59:07,571 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1084, in seleccion_parametro
+    parametro = self.lstParametros.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-08-30 14:59:14,604 - INFO - [agregar_evento] Agregue evento 001320m DEBUG-33.2883744722,-54.039104 -- F R 32
+2018-08-30 14:59:20,658 - INFO - [agregar_evento] Agregue evento 001320m DEBUG-33.2883744722,-54.039104 -- F P 23
+2018-08-30 14:59:24,199 - INFO - [agregar_evento] Agregue evento 001320m DEBUG-33.2883744722,-54.039104 -- F M 43
+2018-08-30 14:59:37,150 - INFO - [eliminar_evento] Elimino en prog 001320 - evento ['F', '4', '112']
+2018-08-30 15:00:02,833 - INFO - [Exportar ANAX] Guardo .anax en archivo C:/Users/fedeprueba/Desktop/nuevoperfil.anax
+2018-08-30 15:00:15,244 - INFO - [guardar_sesion] Ya existe el archivo sesion.pkl, lo sobreescribo
+2018-08-30 15:00:15,244 - INFO - [salir] Cierro programa
+2018-08-30 16:28:08,799 - INFO - ---------------------------------------------------
+2018-08-30 16:28:08,799 - INFO - Inicio Programa Revisador
+2018-08-30 16:28:08,946 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 16:28:34,353 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/Cno_de_la_Costa_Brava_Term_Zarate
+2018-08-30 16:28:34,391 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-30 16:28:34,391 - INFO - [play] Desactivo avance automatico
+2018-08-30 16:28:34,636 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 16:28:51,874 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1083, in seleccion_parametro
+    parametro = self.lstParametros.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-08-30 16:29:44,480 - INFO - [salir] Cierro programa
+2018-08-30 16:29:55,244 - INFO - ---------------------------------------------------
+2018-08-30 16:29:55,244 - INFO - Inicio Programa Revisador
+2018-08-30 16:29:55,363 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 16:30:11,514 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/r4
+2018-08-30 16:30:11,527 - INFO - [cargar_pickle]Existe archivo sesion.pkl, tonces lo cargo
+2018-08-30 16:30:11,533 - INFO - [play] Desactivo avance automatico
+2018-08-30 16:30:11,583 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 16:30:22,430 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1084, in seleccion_parametro
+    parametro = self.lstParametros.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-08-30 16:30:37,722 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1044, in agregar_evento
+    categoria = self.dict_parametros[str(self.lstParametros.currentItem().text())][1][str(self.combCategoria.currentText())]
+KeyError: ''
+2018-08-30 16:30:40,134 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1044, in agregar_evento
+    categoria = self.dict_parametros[str(self.lstParametros.currentItem().text())][1][str(self.combCategoria.currentText())]
+KeyError: ''
+2018-08-30 16:30:44,660 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1044, in agregar_evento
+    categoria = self.dict_parametros[str(self.lstParametros.currentItem().text())][1][str(self.combCategoria.currentText())]
+KeyError: ''
+2018-08-30 16:39:46,273 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/32432
+2018-08-30 16:39:46,275 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-30 16:39:46,283 - INFO - [crear_lista_mojones] Cargue 16 mojones
+2018-08-30 16:39:46,285 - INFO - [play] Desactivo avance automatico
+2018-08-30 16:39:46,452 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 16:39:57,108 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1084, in seleccion_parametro
+    parametro = self.lstParametros.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-08-30 16:40:42,471 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1084, in seleccion_parametro
+    parametro = self.lstParametros.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-08-30 16:40:47,894 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1044, in agregar_evento
+    categoria = self.dict_parametros[str(self.lstParametros.currentItem().text())][1][str(self.combCategoria.currentText())]
+KeyError: ''
+2018-08-30 16:41:48,056 - INFO - [salir] Cierro programa
+2018-08-30 16:45:50,221 - INFO - ---------------------------------------------------
+2018-08-30 16:45:50,221 - INFO - Inicio Programa Revisador
+2018-08-30 16:45:50,345 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 16:46:12,762 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/dadadada
+2018-08-30 16:46:12,770 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-30 16:46:12,845 - INFO - [crear_lista_mojones] Cargue 201 mojones
+2018-08-30 16:46:12,845 - INFO - [play] Desactivo avance automatico
+2018-08-30 16:46:14,131 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 16:46:19,830 - INFO - No hay eventos - btnEventSig
+2018-08-30 16:46:38,547 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1084, in seleccion_parametro
+    parametro = self.lstParametros.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-08-30 16:46:41,213 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1044, in agregar_evento
+    categoria = self.dict_parametros[str(self.lstParametros.currentItem().text())][1][str(self.combCategoria.currentText())]
+KeyError: ''
+2018-08-30 16:46:44,413 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1044, in agregar_evento
+    categoria = self.dict_parametros[str(self.lstParametros.currentItem().text())][1][str(self.combCategoria.currentText())]
+KeyError: ''
+2018-08-30 16:48:08,021 - INFO - [salir] Cierro programa
+2018-08-30 16:48:25,210 - INFO - ---------------------------------------------------
+2018-08-30 16:48:25,210 - INFO - Inicio Programa Revisador
+2018-08-30 16:48:25,313 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 16:48:36,878 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/4324
+2018-08-30 16:48:36,882 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-08-30 16:48:36,891 - INFO - [crear_lista_mojones] Cargue 14 mojones
+2018-08-30 16:48:36,895 - INFO - [play] Desactivo avance automatico
+2018-08-30 16:48:37,202 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 16:48:45,619 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1087, in seleccion_parametro
+    parametro = self.lstParametros.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-08-30 16:48:49,107 - INFO - [agregar_evento] Agregue evento 000000m DEBUG-33.2569150243,-54.440973 -- ee * 
+2018-08-30 16:48:58,844 - INFO - [agregar_evento] Agregue evento 000000m DEBUG-33.2569150243,-54.440973 -- ee * 32
+2018-08-30 16:49:26,227 - INFO - [Exportar ANAX] Guardo .anax en archivo C:/Users/fedeprueba/Desktop/raro.anax
+2018-08-30 16:49:33,046 - INFO - [salir] Cierro programa
+2018-08-30 20:39:29,564 - INFO - ---------------------------------------------------
+2018-08-30 20:39:29,564 - INFO - Inicio Programa Revisador
+2018-08-30 20:39:29,673 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 21:48:43,482 - INFO - [salir] Cierro programa
+2018-08-30 21:48:49,582 - INFO - ---------------------------------------------------
+2018-08-30 21:48:49,582 - INFO - Inicio Programa Revisador
+2018-08-30 21:48:49,694 - INFO - hab botones e n fun Habilitar_botones
+2018-08-30 23:31:48,316 - INFO - [salir] Cierro programa
+2018-08-31 14:35:46,081 - INFO - ---------------------------------------------------
+2018-08-31 14:35:46,081 - INFO - Inicio Programa Revisador
+2018-08-31 14:35:47,350 - INFO - hab botones e n fun Habilitar_botones
+2018-09-04 19:51:29,533 - INFO - [salir] Cierro programa
+2018-09-04 19:51:33,549 - INFO - ---------------------------------------------------
+2018-09-04 19:51:33,549 - INFO - Inicio Programa Revisador
+2018-09-04 19:51:33,658 - INFO - hab botones e n fun Habilitar_botones
+2018-09-04 19:51:45,361 - INFO - [salir] Cierro programa
+2018-09-04 19:51:54,389 - INFO - ---------------------------------------------------
+2018-09-04 19:51:54,389 - INFO - Inicio Programa Revisador
+2018-09-04 19:51:54,497 - INFO - hab botones e n fun Habilitar_botones
+2018-09-04 19:53:24,071 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 648, in boton_cancel
+    super(MyWindow, self).reject()
+NameError: name 'MyWindow' is not defined
+2018-09-04 19:53:25,890 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 648, in boton_cancel
+    super(MyWindow, self).reject()
+NameError: name 'MyWindow' is not defined
+2018-09-04 19:53:26,777 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 648, in boton_cancel
+    super(MyWindow, self).reject()
+NameError: name 'MyWindow' is not defined
+2018-09-04 19:53:51,060 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1057, in seleccion_parametro
+    parametro = self.lstParametros.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-09-04 19:53:51,063 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 888, in administrar_perfil
+    self.cargar_mojon_gui(self.indice)
+  File "analizador.py", line 1187, in cargar_mojon_gui
+    if os.path.isfile(os.path.join(self.dirsesion,self.mojones[indice].archivos_img[0])):
+IndexError: list index out of range
+2018-09-04 19:54:08,293 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1057, in seleccion_parametro
+    parametro = self.lstParametros.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-09-04 19:54:08,296 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 888, in administrar_perfil
+    self.cargar_mojon_gui(self.indice)
+  File "analizador.py", line 1187, in cargar_mojon_gui
+    if os.path.isfile(os.path.join(self.dirsesion,self.mojones[indice].archivos_img[0])):
+IndexError: list index out of range
+2018-09-04 19:55:09,415 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 648, in boton_cancel
+    super(MyWindow, self).reject()
+NameError: name 'MyWindow' is not defined
+2018-09-04 19:55:10,078 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 648, in boton_cancel
+    super(MyWindow, self).reject()
+NameError: name 'MyWindow' is not defined
+2018-09-04 19:55:11,161 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 648, in boton_cancel
+    super(MyWindow, self).reject()
+NameError: name 'MyWindow' is not defined
+2018-09-04 19:55:11,826 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 648, in boton_cancel
+    super(MyWindow, self).reject()
+NameError: name 'MyWindow' is not defined
+2018-09-04 19:55:13,448 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 648, in boton_cancel
+    super(MyWindow, self).reject()
+NameError: name 'MyWindow' is not defined
+2018-09-04 19:55:14,050 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 648, in boton_cancel
+    super(MyWindow, self).reject()
+NameError: name 'MyWindow' is not defined
+2018-09-04 19:55:14,915 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 644, in boton_ok
+    super(MyWindow, self).accept()
+NameError: name 'MyWindow' is not defined
+2018-09-04 19:55:15,552 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 648, in boton_cancel
+    super(MyWindow, self).reject()
+NameError: name 'MyWindow' is not defined
+2018-09-04 19:55:16,577 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 648, in boton_cancel
+    super(MyWindow, self).reject()
+NameError: name 'MyWindow' is not defined
+2018-09-04 19:55:17,067 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 644, in boton_ok
+    super(MyWindow, self).accept()
+NameError: name 'MyWindow' is not defined
+2018-09-04 19:55:17,605 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 644, in boton_ok
+    super(MyWindow, self).accept()
+NameError: name 'MyWindow' is not defined
+2018-09-04 19:55:18,304 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 648, in boton_cancel
+    super(MyWindow, self).reject()
+NameError: name 'MyWindow' is not defined
+2018-09-04 19:56:52,513 - INFO - [salir] Cierro programa
+2018-09-04 19:56:57,160 - INFO - ---------------------------------------------------
+2018-09-04 19:56:57,160 - INFO - Inicio Programa Revisador
+2018-09-04 19:56:57,271 - INFO - hab botones e n fun Habilitar_botones
+2018-09-04 19:57:05,883 - INFO - [salir] Cierro programa
+2018-09-04 20:01:39,581 - INFO - ---------------------------------------------------
+2018-09-04 20:01:39,581 - INFO - Inicio Programa Revisador
+2018-09-04 20:01:39,690 - INFO - hab botones e n fun Habilitar_botones
+2018-09-04 20:01:44,892 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1057, in seleccion_parametro
+    parametro = self.lstParametros.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-09-04 20:01:44,905 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 888, in administrar_perfil
+    self.cargar_mojon_gui(self.indice)
+  File "analizador.py", line 1187, in cargar_mojon_gui
+    if os.path.isfile(os.path.join(self.dirsesion,self.mojones[indice].archivos_img[0])):
+IndexError: list index out of range
+2018-09-04 20:01:53,951 - INFO - [salir] Cierro programa
+2018-09-04 20:06:02,959 - INFO - ---------------------------------------------------
+2018-09-04 20:06:02,959 - INFO - Inicio Programa Revisador
+2018-09-04 20:06:03,068 - INFO - hab botones e n fun Habilitar_botones
+2018-09-04 20:06:13,422 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1057, in seleccion_parametro
+    parametro = self.lstParametros.currentItem().text()
+AttributeError: 'NoneType' object has no attribute 'text'
+2018-09-04 20:06:13,433 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 888, in administrar_perfil
+    self.cargar_mojon_gui(self.indice)
+  File "analizador.py", line 1187, in cargar_mojon_gui
+    if os.path.isfile(os.path.join(self.dirsesion,self.mojones[indice].archivos_img[0])):
+IndexError: list index out of range
+2018-09-04 20:06:33,007 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/e32e32e
+2018-09-04 20:06:33,010 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-09-04 20:06:33,054 - INFO - [crear_lista_mojones] Cargue 89 mojones
+2018-09-04 20:06:33,055 - INFO - [play] Desactivo avance automatico
+2018-09-04 20:06:33,222 - INFO - hab botones e n fun Habilitar_botones
+2018-09-04 20:07:30,164 - INFO - [salir] Cierro programa
+2018-09-06 23:13:42,522 - INFO - ---------------------------------------------------
+2018-09-06 23:13:42,522 - INFO - Inicio Programa Revisador
+2018-09-06 23:13:42,632 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "analizador.py", line 1297, in <module>
+    main()
+  File "analizador.py", line 1291, in main
+    form = RevisadorApp()
+  File "analizador.py", line 848, in __init__
+    self.actionAcerca_de.triggered.connect(self.mostrar_version)
+AttributeError: 'RevisadorApp' object has no attribute 'actionAcerca_de'
+2018-09-06 23:15:03,002 - INFO - ---------------------------------------------------
+2018-09-06 23:15:03,002 - INFO - Inicio Programa Revisador
+2018-09-06 23:15:03,252 - INFO - hab botones e n fun Habilitar_botones
+2018-09-06 23:15:39,556 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/dq2dqdwq
+2018-09-06 23:15:39,558 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-09-06 23:15:39,566 - INFO - [crear_lista_mojones] Cargue 8 mojones
+2018-09-06 23:15:39,570 - INFO - [play] Desactivo avance automatico
+2018-09-06 23:15:39,787 - INFO - hab botones e n fun Habilitar_botones
+2018-09-06 23:38:22,096 - INFO - [salir] Cierro programa
+2018-09-06 23:39:03,204 - INFO - ---------------------------------------------------
+2018-09-06 23:39:03,204 - INFO - Inicio Programa Revisador
+2018-09-06 23:39:03,313 - INFO - hab botones e n fun Habilitar_botones
+2018-09-06 23:40:56,511 - INFO - [salir] Cierro programa
+2018-09-06 23:41:06,276 - INFO - ---------------------------------------------------
+2018-09-06 23:41:06,276 - INFO - Inicio Programa Revisador
+2018-09-06 23:41:06,463 - INFO - hab botones e n fun Habilitar_botones
+2018-09-06 23:41:13,804 - INFO - [salir] Cierro programa
+2018-09-09 15:48:42,055 - INFO - ---------------------------------------------------
+2018-09-09 15:48:42,055 - INFO - Inicio Programa Revisador
+2018-09-09 15:48:42,202 - INFO - hab botones e n fun Habilitar_botones
+2018-09-09 15:48:58,241 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/fefededefefe
+2018-09-09 15:48:58,243 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-09-09 15:48:58,246 - INFO - [crear_lista_mojones] Cargue 2 mojones
+2018-09-09 15:48:58,247 - INFO - [play] Desactivo avance automatico
+2018-09-09 15:48:58,327 - INFO - hab botones e n fun Habilitar_botones
+2018-09-09 16:51:01,827 - INFO - [salir] Cierro programa
+2018-09-10 20:44:11,305 - INFO - ---------------------------------------------------
+2018-09-10 20:44:11,305 - INFO - Inicio Programa Revisador
+2018-09-10 20:44:11,436 - INFO - hab botones e n fun Habilitar_botones
+2018-09-10 20:44:18,444 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\fedeprueba\Documents\GitHub\anarev\analizador\analizador.py", line 929, in focoenventana1
+    self.cargar_mojon_gui(self.indice)
+  File "C:\Users\fedeprueba\Documents\GitHub\anarev\analizador\analizador.py", line 1191, in cargar_mojon_gui
+    if os.path.isfile(os.path.join(self.dirsesion,self.mojones[indice].archivos_img[0])):
+IndexError: list index out of range
+2018-09-10 20:44:28,728 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/r3232
+2018-09-10 20:44:28,729 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-09-10 20:44:28,732 - INFO - [crear_lista_mojones] Cargue 16 mojones
+2018-09-10 20:44:28,733 - INFO - [play] Desactivo avance automatico
+2018-09-10 20:44:28,913 - INFO - hab botones e n fun Habilitar_botones
+2018-09-10 20:46:56,230 - INFO - [salir] Cierro programa
+2018-09-10 20:47:57,185 - INFO - ---------------------------------------------------
+2018-09-10 20:47:57,185 - INFO - Inicio Programa Revisador
+2018-09-10 20:47:57,301 - INFO - hab botones e n fun Habilitar_botones
+2018-09-10 20:48:18,995 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/32432
+2018-09-10 20:48:18,998 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-09-10 20:48:19,004 - INFO - [crear_lista_mojones] Cargue 16 mojones
+2018-09-10 20:48:19,005 - INFO - [play] Desactivo avance automatico
+2018-09-10 20:48:19,154 - INFO - hab botones e n fun Habilitar_botones
+2018-09-10 20:48:28,631 - INFO - [salir] Cierro programa
+2018-09-10 20:51:45,019 - INFO - ---------------------------------------------------
+2018-09-10 20:51:45,019 - INFO - Inicio Programa Revisador
+2018-09-10 20:51:45,132 - INFO - hab botones e n fun Habilitar_botones
+2018-09-10 20:52:09,443 - INFO - [salir] Cierro programa
+2018-09-10 20:52:11,519 - INFO - ---------------------------------------------------
+2018-09-10 20:52:11,519 - INFO - Inicio Programa Revisador
+2018-09-10 20:52:11,690 - INFO - hab botones e n fun Habilitar_botones
+2018-09-10 20:52:23,943 - INFO - [salir] Cierro programa
+2018-09-10 20:56:00,456 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\fedeprueba\Documents\GitHub\anarev\analizador\analizador.py", line 549, in <module>
+    class Browser_preview(QtWidgets.QDialog):
+  File "C:\Users\fedeprueba\Documents\GitHub\anarev\analizador\analizador.py", line 648, in Browser_preview
+    @QtCore.pyqtSlot(QtCore.QModelIndex)
+NameError: name 'QtCore' is not defined
+2018-09-10 20:56:13,635 - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\fedeprueba\Documents\GitHub\anarev\analizador\analizador.py", line 549, in <module>
+    class Browser_preview(QtWidgets.QDialog):
+  File "C:\Users\fedeprueba\Documents\GitHub\anarev\analizador\analizador.py", line 648, in Browser_preview
+    @QtCore.pyqtSlot(QtCore.QModelIndex)
+NameError: name 'QtCore' is not defined
+2018-09-10 21:00:26,860 - INFO - ---------------------------------------------------
+2018-09-10 21:00:26,860 - INFO - Inicio Programa Revisador
+2018-09-10 21:00:26,969 - INFO - hab botones e n fun Habilitar_botones
+2018-09-10 21:00:29,235 - INFO - [salir] Cierro programa
+2018-09-10 21:03:21,984 - INFO - ---------------------------------------------------
+2018-09-10 21:03:21,984 - INFO - Inicio Programa Revisador
+2018-09-10 21:03:22,109 - INFO - hab botones e n fun Habilitar_botones
+2018-09-10 21:03:37,950 - INFO - [Abrir Sesion] - Abro carpeta: E:/Escritorio/SESIONES/f54f54
+2018-09-10 21:03:37,951 - INFO - [cargar_pickle] No existe archivo sesion.pkl
+2018-09-10 21:03:38,256 - INFO - [crear_lista_mojones] Cargue 230 mojones
+2018-09-10 21:03:38,256 - INFO - [play] Desactivo avance automatico
+2018-09-10 21:03:38,602 - INFO - hab botones e n fun Habilitar_botones
+2018-09-10 21:03:41,557 - INFO - [play] Activo avance automatico
+2018-09-10 21:04:16,243 - INFO - [play] Desactivo avance automatico
+2018-09-10 21:04:23,571 - INFO - No hay eventos - btnEventSig
+2018-09-10 21:06:44,237 - INFO - [salir] Cierro programa

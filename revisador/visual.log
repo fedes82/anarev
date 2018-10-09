@@ -92,3 +92,247 @@ NameError: name 'QtGui' is not defined
 2018-08-07 00:10:22,092 - MainProcess - INFO - ---------------------------------------------------
 2018-08-07 00:10:22,092 - MainProcess - INFO - Inicio Programa Revisador
 2018-08-07 00:10:22,248 - MainProcess - INFO - __init__ ok
+2018-08-28 17:31:00,123 - MainProcess - INFO - cargar_mojon_gui ok
+2018-08-28 17:31:00,133 - MainProcess - INFO - ---------------------------------------------------
+2018-08-28 17:31:00,133 - MainProcess - INFO - Inicio Programa Revisador
+2018-08-28 17:31:01,476 - MainProcess - INFO - __init__ ok
+2018-08-28 17:31:31,450 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-08-28 17:31:32,903 - MainProcess - INFO - abrir_sesion ok
+2018-08-30 15:00:30,310 - MainProcess - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "revisador.py", line 155, in <module>
+    class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
+AttributeError: module 'interface' has no attribute 'Ui_MainWindow'
+2018-08-30 15:02:46,690 - MainProcess - INFO - cargar_mojon_gui ok
+2018-08-30 15:02:46,690 - MainProcess - INFO - ---------------------------------------------------
+2018-08-30 15:02:46,690 - MainProcess - INFO - Inicio Programa Revisador
+2018-08-30 15:02:47,205 - MainProcess - INFO - __init__ ok
+2018-08-30 15:02:55,323 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-08-30 15:02:55,401 - MainProcess - INFO - abrir_sesion ok
+2018-08-30 15:19:06,300 - MainProcess - INFO - cargar_mojon_gui ok
+2018-08-30 15:19:06,300 - MainProcess - INFO - ---------------------------------------------------
+2018-08-30 15:19:06,300 - MainProcess - INFO - Inicio Programa Revisador
+2018-08-30 15:19:06,409 - MainProcess - INFO - __init__ ok
+2018-08-30 15:20:00,867 - MainProcess - INFO - cargar_mojon_gui ok
+2018-08-30 15:20:00,867 - MainProcess - INFO - ---------------------------------------------------
+2018-08-30 15:20:00,867 - MainProcess - INFO - Inicio Programa Revisador
+2018-08-30 15:20:00,976 - MainProcess - INFO - __init__ ok
+2018-08-30 15:36:32,820 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-08-30 15:36:32,898 - MainProcess - INFO - abrir_sesion ok
+2018-08-30 15:37:08,126 - MainProcess - INFO - cargar_mojon_gui ok
+2018-08-30 15:37:08,126 - MainProcess - INFO - ---------------------------------------------------
+2018-08-30 15:37:08,126 - MainProcess - INFO - Inicio Programa Revisador
+2018-08-30 15:37:08,246 - MainProcess - INFO - __init__ ok
+2018-08-30 15:37:15,540 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-08-30 15:37:15,634 - MainProcess - INFO - abrir_sesion ok
+2018-08-30 16:49:51,584 - MainProcess - INFO - cargar_mojon_gui ok
+2018-08-30 16:49:51,584 - MainProcess - INFO - ---------------------------------------------------
+2018-08-30 16:49:51,584 - MainProcess - INFO - Inicio Programa Revisador
+2018-08-30 16:49:51,717 - MainProcess - INFO - __init__ ok
+2018-08-30 16:49:58,520 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-08-30 16:49:58,967 - MainProcess - INFO - abrir_sesion ok
+2018-08-30 17:03:31,872 - MainProcess - INFO - cargar_mojon_gui ok
+2018-08-30 17:03:31,872 - MainProcess - INFO - ---------------------------------------------------
+2018-08-30 17:03:31,872 - MainProcess - INFO - Inicio Programa Revisador
+2018-08-30 17:03:31,984 - MainProcess - INFO - __init__ ok
+2018-08-30 17:03:39,597 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-08-30 17:03:40,804 - MainProcess - INFO - abrir_sesion ok
+2018-08-30 20:33:20,566 - MainProcess - INFO - cargar_mojon_gui ok
+2018-08-30 20:33:20,566 - MainProcess - INFO - ---------------------------------------------------
+2018-08-30 20:33:20,566 - MainProcess - INFO - Inicio Programa Revisador
+2018-08-30 20:33:20,691 - MainProcess - INFO - __init__ ok
+2018-08-30 20:33:27,749 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-08-30 20:33:28,890 - MainProcess - INFO - abrir_sesion ok
+2018-08-30 20:39:13,048 - MainProcess - INFO - cargar_mojon_gui ok
+2018-08-30 20:39:13,048 - MainProcess - INFO - ---------------------------------------------------
+2018-08-30 20:39:13,048 - MainProcess - INFO - Inicio Programa Revisador
+2018-08-30 20:39:13,173 - MainProcess - INFO - __init__ ok
+2018-09-04 19:58:20,345 - MainProcess - INFO - cargar_mojon_gui ok
+2018-09-04 19:58:20,345 - MainProcess - INFO - ---------------------------------------------------
+2018-09-04 19:58:20,345 - MainProcess - INFO - Inicio Programa Revisador
+2018-09-04 19:58:20,455 - MainProcess - INFO - __init__ ok
+2018-09-06 22:24:04,189 - MainProcess - INFO - cargar_mojon_gui ok
+2018-09-06 22:24:04,189 - MainProcess - INFO - ---------------------------------------------------
+2018-09-06 22:24:04,189 - MainProcess - INFO - Inicio Programa Revisador
+2018-09-06 22:24:06,079 - MainProcess - INFO - __init__ ok
+2018-09-06 22:24:19,893 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-09-06 22:24:20,643 - MainProcess - INFO - abrir_sesion ok
+2018-09-06 22:25:53,828 - MainProcess - INFO - cargar_mojon_gui ok
+2018-09-06 22:25:53,828 - MainProcess - INFO - ---------------------------------------------------
+2018-09-06 22:25:53,828 - MainProcess - INFO - Inicio Programa Revisador
+2018-09-06 22:25:53,938 - MainProcess - INFO - __init__ ok
+2018-09-06 22:26:00,026 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-09-06 22:26:00,448 - MainProcess - INFO - abrir_sesion ok
+2018-09-06 22:26:36,558 - MainProcess - INFO - cargar_mojon_gui ok
+2018-09-06 22:26:36,558 - MainProcess - INFO - ---------------------------------------------------
+2018-09-06 22:26:36,558 - MainProcess - INFO - Inicio Programa Revisador
+2018-09-06 22:26:36,667 - MainProcess - INFO - __init__ ok
+2018-09-06 22:26:50,831 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-09-06 22:26:51,409 - MainProcess - INFO - abrir_sesion ok
+2018-09-06 22:33:23,562 - MainProcess - INFO - cargar_mojon_gui ok
+2018-09-06 22:33:23,562 - MainProcess - INFO - ---------------------------------------------------
+2018-09-06 22:33:23,562 - MainProcess - INFO - Inicio Programa Revisador
+2018-09-06 22:33:23,671 - MainProcess - INFO - __init__ ok
+2018-09-06 22:33:32,165 - MainProcess - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "revisador.py", line 197, in sel_img1
+    if os.path.isfile(os.path.join(self.dirtemp ,  self.mojones[self.indice].archivos_img[0])):
+AttributeError: 'RevisadorApp' object has no attribute 'dirtemp'
+2018-09-06 22:33:33,169 - MainProcess - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "revisador.py", line 308, in mostrar_version
+    msg = QMessageBox()
+NameError: name 'QMessageBox' is not defined
+2018-09-06 22:33:38,259 - MainProcess - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "revisador.py", line 211, in sel_img3
+    if os.path.isfile(os.path.join(self.dirtemp ,  self.mojones[self.indice].archivos_img[2])):
+AttributeError: 'RevisadorApp' object has no attribute 'dirtemp'
+2018-09-06 22:34:47,940 - MainProcess - INFO - cargar_mojon_gui ok
+2018-09-06 22:34:47,940 - MainProcess - INFO - ---------------------------------------------------
+2018-09-06 22:34:47,940 - MainProcess - INFO - Inicio Programa Revisador
+2018-09-06 22:34:48,050 - MainProcess - INFO - __init__ ok
+2018-09-06 22:36:08,930 - MainProcess - INFO - [Exportar CSV] Guardo .csv en archivo C:/Users/fedeprueba/Desktop/42.csv
+2018-09-07 00:14:36,896 - MainProcess - INFO - cargar_mojon_gui ok
+2018-09-07 00:14:36,927 - MainProcess - INFO - ---------------------------------------------------
+2018-09-07 00:14:36,927 - MainProcess - INFO - Inicio Programa Revisador
+2018-09-07 00:14:37,286 - MainProcess - INFO - __init__ ok
+2018-09-07 00:27:38,667 - MainProcess - INFO - cargar_mojon_gui ok
+2018-09-07 00:27:38,667 - MainProcess - INFO - ---------------------------------------------------
+2018-09-07 00:27:38,667 - MainProcess - INFO - Inicio Programa Revisador
+2018-09-07 00:27:38,816 - MainProcess - INFO - __init__ ok
+2018-09-07 00:27:55,631 - MainProcess - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\fedeprueba\Documents\GitHub\anarev\revisador\revisador.py", line 197, in sel_img1
+    if os.path.isfile(os.path.join(self.dirtemp ,  self.mojones[self.indice].archivos_img[0])):
+AttributeError: 'RevisadorApp' object has no attribute 'dirtemp'
+2018-09-07 00:27:56,407 - MainProcess - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\fedeprueba\Documents\GitHub\anarev\revisador\revisador.py", line 308, in mostrar_version
+    msg = QtWidgets.QMessageBox2()
+AttributeError: module 'PyQt5.QtWidgets' has no attribute 'QMessageBox2'
+2018-09-07 00:28:05,825 - MainProcess - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\fedeprueba\Documents\GitHub\anarev\revisador\revisador.py", line 308, in mostrar_version
+    msg = QtWidgets.QMessageBox2()
+AttributeError: module 'PyQt5.QtWidgets' has no attribute 'QMessageBox2'
+2018-09-07 00:34:45,013 - MainProcess - INFO - cargar_mojon_gui ok
+2018-09-07 00:34:45,013 - MainProcess - INFO - ---------------------------------------------------
+2018-09-07 00:34:45,013 - MainProcess - INFO - Inicio Programa Revisador
+2018-09-07 00:34:45,317 - MainProcess - INFO - __init__ ok
+2018-09-10 20:55:13,225 - MainProcess - INFO - cargar_mojon_gui ok
+2018-09-10 20:55:13,225 - MainProcess - INFO - ---------------------------------------------------
+2018-09-10 20:55:13,225 - MainProcess - INFO - Inicio Programa Revisador
+2018-09-10 20:55:13,366 - MainProcess - INFO - __init__ ok
+2018-09-10 21:58:56,310 - MainProcess - INFO - cargar_mojon_gui ok
+2018-09-10 21:58:56,310 - MainProcess - INFO - ---------------------------------------------------
+2018-09-10 21:58:56,310 - MainProcess - INFO - Inicio Programa Revisador
+2018-09-10 21:58:56,420 - MainProcess - INFO - __init__ ok
+2018-09-10 22:00:23,764 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-09-10 22:00:23,764 - MainProcess - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\fedeprueba\Documents\GitHub\anarev\revisador\revisador.py", line 249, in abrir_sesion
+    msg.setIcon(QtWidgets.QMessageBox.Error)
+AttributeError: type object 'QMessageBox' has no attribute 'Error'
+2018-09-10 22:01:01,397 - MainProcess - INFO - cargar_mojon_gui ok
+2018-09-10 22:01:01,397 - MainProcess - INFO - ---------------------------------------------------
+2018-09-10 22:01:01,397 - MainProcess - INFO - Inicio Programa Revisador
+2018-09-10 22:01:01,532 - MainProcess - INFO - __init__ ok
+2018-09-10 22:01:13,836 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-09-10 22:11:48,842 - MainProcess - INFO - cargar_mojon_gui ok
+2018-09-10 22:11:48,842 - MainProcess - INFO - ---------------------------------------------------
+2018-09-10 22:11:48,842 - MainProcess - INFO - Inicio Programa Revisador
+2018-09-10 22:11:48,952 - MainProcess - INFO - __init__ ok
+2018-09-10 23:09:39,058 - MainProcess - INFO - cargar_mojon_gui ok
+2018-09-10 23:09:39,058 - MainProcess - INFO - ---------------------------------------------------
+2018-09-10 23:09:39,058 - MainProcess - INFO - Inicio Programa Revisador
+2018-09-10 23:09:39,205 - MainProcess - INFO - __init__ ok
+2018-09-10 23:09:45,867 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-09-10 23:09:47,390 - MainProcess - INFO - [cargar_pickle] Existe archivo sesion.pkl en carpeta: C:\Users\FEDEPR~1\AppData\Local\Temp\tmpwwlr56b0/ tonces lo cargo
+2018-09-10 23:09:47,534 - MainProcess - INFO - abrir_sesion ok
+2018-09-10 23:12:54,399 - MainProcess - INFO -  [btn_GetMap] descargo http://maps.googleapis.com/maps/api/staticmap?center=-34.082826513,-59.05565&markers=-34.082826513,-59.05565&zoom=12&size=640x360&&maptype=hybrid
+2018-09-10 23:13:05,124 - MainProcess - INFO -  [btn_GetMap] descargo http://maps.googleapis.com/maps/api/staticmap?center=-34.08165889,-59.05730&markers=-34.08165889,-59.05730&zoom=12&size=640x360&&maptype=hybrid
+2018-09-10 23:13:34,921 - MainProcess - INFO - cargar_mojon_gui ok
+2018-09-10 23:13:34,921 - MainProcess - INFO - ---------------------------------------------------
+2018-09-10 23:13:34,921 - MainProcess - INFO - Inicio Programa Revisador
+2018-09-10 23:13:35,036 - MainProcess - INFO - __init__ ok
+2018-09-10 23:13:44,968 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-09-10 23:13:45,144 - MainProcess - INFO - [cargar_pickle] Existe archivo sesion.pkl en carpeta: C:\Users\FEDEPR~1\AppData\Local\Temp\tmplp9z6btf/ tonces lo cargo
+2018-09-10 23:13:45,249 - MainProcess - INFO - abrir_sesion ok
+2018-09-10 23:16:08,834 - MainProcess - INFO -  [btn_GetMap] descargo http://maps.googleapis.com/maps/api/staticmap?center=-34.080524237,-59.05118&markers=-34.080524237,-59.05118&zoom=12&size=640x360&&maptype=hybrid
+2018-09-11 00:45:24,062 - MainProcess - INFO - cargar_mojon_gui ok
+2018-09-11 00:45:24,062 - MainProcess - INFO - ---------------------------------------------------
+2018-09-11 00:45:24,062 - MainProcess - INFO - Inicio Programa Revisador
+2018-09-11 00:45:24,170 - MainProcess - INFO - __init__ ok
+2018-10-09 19:14:30,371 - MainProcess - INFO - cargar_mojon_gui ok
+2018-10-09 19:14:30,402 - MainProcess - INFO - ---------------------------------------------------
+2018-10-09 19:14:30,402 - MainProcess - INFO - Inicio Programa Revisador
+2018-10-09 19:14:30,840 - MainProcess - INFO - __init__ ok
+2018-10-09 19:14:43,551 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-10-09 19:14:43,910 - MainProcess - INFO - [cargar_pickle] Existe archivo sesion.pkl en carpeta: C:\Users\FEDEPR~1\AppData\Local\Temp\tmpbefcbr88/ tonces lo cargo
+2018-10-09 19:14:44,098 - MainProcess - INFO - abrir_sesion ok
+2018-10-09 19:14:48,677 - MainProcess - INFO -  [btn_GetMap] descargo http://maps.googleapis.com/maps/api/staticmap?center=-34.078370631,-59.04899&markers=-34.078370631,-59.04899&zoom=12&size=640x360&&maptype=hybrid
+2018-10-09 19:14:49,951 - MainProcess - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "revisador.py", line 350, in btn_GetMap
+    url = urlopen(gmaps)
+  File "C:\Users\fedeprueba\AppData\Local\Programs\Python\Python36\lib\urllib\request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\fedeprueba\AppData\Local\Programs\Python\Python36\lib\urllib\request.py", line 532, in open
+    response = meth(req, response)
+  File "C:\Users\fedeprueba\AppData\Local\Programs\Python\Python36\lib\urllib\request.py", line 642, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "C:\Users\fedeprueba\AppData\Local\Programs\Python\Python36\lib\urllib\request.py", line 570, in error
+    return self._call_chain(*args)
+  File "C:\Users\fedeprueba\AppData\Local\Programs\Python\Python36\lib\urllib\request.py", line 504, in _call_chain
+    result = func(*args)
+  File "C:\Users\fedeprueba\AppData\Local\Programs\Python\Python36\lib\urllib\request.py", line 650, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+2018-10-09 19:34:44,718 - MainProcess - INFO - cargar_mojon_gui ok
+2018-10-09 19:34:44,718 - MainProcess - INFO - ---------------------------------------------------
+2018-10-09 19:34:44,718 - MainProcess - INFO - Inicio Programa Revisador
+2018-10-09 19:34:46,906 - MainProcess - INFO - __init__ ok
+2018-10-09 19:35:40,574 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-10-09 19:35:42,495 - MainProcess - INFO - [cargar_pickle] Existe archivo sesion.pkl en carpeta: C:\Users\FEDEPR~1\AppData\Local\Temp\tmpdyc0yf6n/ tonces lo cargo
+2018-10-09 19:35:42,652 - MainProcess - INFO - abrir_sesion ok
+2018-10-09 19:35:46,432 - MainProcess - INFO -  [btn_GetMap] descargo http://maps.googleapis.com/maps/api/staticmap?center=-34.078370631,-59.04899&markers=-34.078370631,-59.04899&zoom=12&size=640x360&&maptype=hybrid
+2018-10-09 19:35:47,469 - MainProcess - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "revisador.py", line 341, in btn_GetMap
+    url = urllib.request.urlopen(req).read()
+  File "C:\Users\fedeprueba\AppData\Local\Programs\Python\Python36\lib\urllib\request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\fedeprueba\AppData\Local\Programs\Python\Python36\lib\urllib\request.py", line 532, in open
+    response = meth(req, response)
+  File "C:\Users\fedeprueba\AppData\Local\Programs\Python\Python36\lib\urllib\request.py", line 642, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "C:\Users\fedeprueba\AppData\Local\Programs\Python\Python36\lib\urllib\request.py", line 570, in error
+    return self._call_chain(*args)
+  File "C:\Users\fedeprueba\AppData\Local\Programs\Python\Python36\lib\urllib\request.py", line 504, in _call_chain
+    result = func(*args)
+  File "C:\Users\fedeprueba\AppData\Local\Programs\Python\Python36\lib\urllib\request.py", line 650, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+2018-10-09 20:08:56,917 - MainProcess - INFO - cargar_mojon_gui ok
+2018-10-09 20:08:56,933 - MainProcess - INFO - ---------------------------------------------------
+2018-10-09 20:08:56,933 - MainProcess - INFO - Inicio Programa Revisador
+2018-10-09 20:09:04,713 - MainProcess - INFO - __init__ ok
+2018-10-09 20:09:22,170 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-10-09 20:09:25,819 - MainProcess - INFO - [cargar_pickle] Existe archivo sesion.pkl en carpeta: C:\Users\FEDEPR~1\AppData\Local\Temp\tmppn3zvwzd/ tonces lo cargo
+2018-10-09 20:09:26,129 - MainProcess - INFO - abrir_sesion ok
+2018-10-09 20:09:30,738 - MainProcess - INFO -  [btn_GetMap] descargo http://maps.googleapis.com/maps/api/staticmap?center=-34.078370631,-59.04899&markers=-34.078370631,-59.04899&zoom=12&size=640x360&&maptype=hybrid&key=AIzaSyAFfF3xgDP9cGm6ETk0U1hpcHBg4z61Fn0
+2018-10-09 20:09:32,430 - MainProcess - CRITICAL - Uncaught exception
+Traceback (most recent call last):
+  File "revisador.py", line 347, in btn_GetMap
+    arch.write(url.read())
+AttributeError: 'bytes' object has no attribute 'read'
+2018-10-09 20:12:09,334 - MainProcess - INFO - cargar_mojon_gui ok
+2018-10-09 20:12:09,334 - MainProcess - INFO - ---------------------------------------------------
+2018-10-09 20:12:09,334 - MainProcess - INFO - Inicio Programa Revisador
+2018-10-09 20:12:09,443 - MainProcess - INFO - __init__ ok
+2018-10-09 20:12:14,836 - MainProcess - INFO - [Abrir sesion] Abro archivo 
+2018-10-09 20:12:15,258 - MainProcess - INFO - [cargar_pickle] Existe archivo sesion.pkl en carpeta: C:\Users\FEDEPR~1\AppData\Local\Temp\tmpm6cbevz9/ tonces lo cargo
+2018-10-09 20:12:15,398 - MainProcess - INFO - abrir_sesion ok
+2018-10-09 20:12:17,307 - MainProcess - INFO -  [btn_GetMap] descargo http://maps.googleapis.com/maps/api/staticmap?center=-34.078370631,-59.04899&markers=-34.078370631,-59.04899&zoom=12&size=640x360&&maptype=hybrid&key=AIzaSyAFfF3xgDP9cGm6ETk0U1hpcHBg4z61Fn0
+2018-10-09 20:21:53,841 - MainProcess - INFO -  [btn_GetMap] descargo http://maps.googleapis.com/maps/api/staticmap?center=-34.081601064,-59.05321&markers=-34.081601064,-59.05321&zoom=12&size=640x360&&maptype=hybrid&key=AIzaSyAFfF3xgDP9cGm6ETk0U1hpcHBg4z61Fn0
