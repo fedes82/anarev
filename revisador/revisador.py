@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-version = '1.0'
+version = '1.1'
 ##PARA EL GUI
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import QPixmap,QIcon
