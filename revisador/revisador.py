@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-version = '1.1'
+version = '1.2'
 ##PARA EL GUI
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import QPixmap,QIcon
@@ -10,7 +10,7 @@ import sys
 import interface
 #### para crear el python que hace falta para cargar el archivo que crea 
 #### el qtdesigner usar:
-####  pyuic4 test.ui -o interface.py
+####  pyuic5 test.ui -o interface.py
 #### con test.ui es el archivo qtdesigner
 #### y interface.py el que importo en el main
     
@@ -23,7 +23,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 # create a file handler
-handler = logging.FileHandler('visual.log')
+handler = logging.FileHandler('revisador.log')
 handler_traceback = logging.StreamHandler(stream=sys.stdout)
 handler.setLevel(logging.INFO)
 
@@ -47,7 +47,6 @@ logger.addHandler(handler)
 
 ####---------------------------------------------------FIN LOGGEAR
 
-LLAVE =  'AIzaSyAFfF3xgDP9cGm6ETk0U1hpcHBg4z61Fn0'
 
 ##GRAL
 import os
@@ -69,6 +68,7 @@ from PIL import Image as PILImage
 from shutil import rmtree, copy2
 from urllib.request import urlopen
 import urllib.request
+from urllib.error import URLError, HTTPError
 
 DEBUG = True
 
@@ -81,6 +81,162 @@ DEBUG = True
 
 
 IMG_DEFAULT = 'img_default/imgDefault.jpg'
+JSON_MAPAS = 'maps.json'
+
+     
+##esto es el dialogo para Configurar servidor/llave/zoom de los mapas
+## esta creado desde el archvio maps.py, genereado con maps.ui
+## y lo meti todo aca por que era mas facilito
+## - puse el __init__ a mano y 
+##  cambie algunas cosas, comparar para ver q.
+class DialogoConfMapas(QtWidgets.QDialog):
+
+    def __init__(self, ConfMapas ,parent=None):
+        super(DialogoConfMapas, self).__init__(parent)
+        self.ConfMapas = ConfMapas
+        self.setObjectName("diagConfMapas")
+        self.resize(559, 249)
+        self.verticalLayout = QtWidgets.QVBoxLayout(self)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.horizontalLayout_3.addLayout(self.verticalLayout_3)
+        self.groupBox = QtWidgets.QGroupBox(self)
+        self.groupBox.setObjectName("groupBox")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.groupBox)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.rbBING = QtWidgets.QRadioButton(self.groupBox)
+        self.rbBING.setObjectName("rbBING")
+        self.verticalLayout_2.addWidget(self.rbBING)
+        self.rbGMAPS = QtWidgets.QRadioButton(self.groupBox)
+        self.rbGMAPS.setObjectName("rbGMAPS")
+        self.verticalLayout_2.addWidget(self.rbGMAPS)
+        self.label = QtWidgets.QLabel(self.groupBox)
+        self.label.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setObjectName("label")
+        self.verticalLayout_2.addWidget(self.label)
+        self.lnKEY = QtWidgets.QLineEdit(self.groupBox)
+        self.lnKEY.setText("")
+        self.lnKEY.setPlaceholderText("")
+        self.lnKEY.setObjectName("lnKEY")
+        self.verticalLayout_2.addWidget(self.lnKEY)
+        self.rbGMAPS.raise_()
+        self.lnKEY.raise_()
+        self.label.raise_()
+        self.rbBING.raise_()
+        self.horizontalLayout_3.addWidget(self.groupBox)
+        self.btnGuardar = QtWidgets.QPushButton(self)
+        self.btnGuardar.setEnabled(False)
+        self.btnGuardar.setCheckable(False)
+        self.btnGuardar.setFlat(False)
+        self.btnGuardar.setObjectName("btnGuardar")
+        self.horizontalLayout_3.addWidget(self.btnGuardar)
+        self.verticalLayout.addLayout(self.horizontalLayout_3)
+        self.groupBox_2 = QtWidgets.QGroupBox(self)
+        self.groupBox_2.setTitle("")
+        self.groupBox_2.setObjectName("groupBox_2")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.groupBox_2)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.label_2 = QtWidgets.QLabel(self.groupBox_2)
+        self.label_2.setObjectName("label_2")
+        self.horizontalLayout.addWidget(self.label_2)
+        self.sBoxZoom = QtWidgets.QSpinBox(self.groupBox_2)
+        self.sBoxZoom.setMaximumSize(QtCore.QSize(40, 16777215))
+        self.sBoxZoom.setMaximum = 20
+        self.sBoxZoom.setMinimum = 1
+        self.sBoxZoom.setObjectName("sBoxZoom")
+        self.horizontalLayout.addWidget(self.sBoxZoom)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem)
+        self.sBoxZoom.raise_()
+        self.label_2.raise_()
+        self.sBoxZoom.raise_()
+        self.label_2.raise_()
+        self.verticalLayout.addWidget(self.groupBox_2)
+        self.buttonBox = QtWidgets.QDialogButtonBox(self)
+        self.buttonBox.setLocale(QtCore.QLocale(QtCore.QLocale.Spanish, QtCore.QLocale.Argentina))
+        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
+        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Ok)
+        self.buttonBox.setCenterButtons(True)
+        self.buttonBox.setObjectName("buttonBox")
+        self.verticalLayout.addWidget(self.buttonBox)
+        self.retranslateUi()
+        
+        
+        #Cargo datos
+        with open(JSON_MAPAS,'r') as archivo_conf_maps:
+            temp = json.loads(archivo_conf_maps.read())
+        if self.ConfMapas['llave'] ==  temp['llave']:
+            self.lnKEY.setPlaceholderText(self.ConfMapas['llave'])
+        else:
+            self.lnKEY.setText(self.ConfMapas['llave'])
+            self.btnGuardar.setEnabled(True)
+            
+        if self.ConfMapas['servicio']=='BING':
+            self.rbBING.setChecked(True)
+        if self.ConfMapas['servicio']=='GoogleMaps':
+            self.rbGMAPS.setChecked(True)
+        self.sBoxZoom.setValue(int(self.ConfMapas['zoom']))
+        
+        # CONNECTS
+        self.buttonBox.accepted.connect(self.accept)
+        self.buttonBox.rejected.connect(self.reject)
+        self.sBoxZoom.valueChanged.connect(self.cambio_zoom)
+        self.lnKEY.textEdited.connect(self.edite_la_key)
+        self.btnGuardar.clicked.connect(self.guardar_configuracion)
+        self.rbBING.toggled.connect(self.cambio_server)
+        QtCore.QMetaObject.connectSlotsByName(self)
+    
+    def cambio_server(self):
+        self.btnGuardar.setEnabled(True)
+        if self.rbBING.isChecked():
+            self.ConfMapas['servicio'] = 'BING'
+        if self.rbGMAPS.isChecked():
+            self.ConfMapas['servicio'] = 'GoogleMaps'
+        
+    def edite_la_key(self):
+        self.btnGuardar.setEnabled(True)
+        self.ConfMapas['llave']=self.lnKEY.text()
+    
+    def guardar_configuracion(self):
+        with open(JSON_MAPAS,'r') as archivo_conf_maps:
+            temp = json.loads(archivo_conf_maps.read())
+        if self.ConfMapas['llave'] !=  temp['llave']:
+            msg = QtWidgets.QMessageBox()
+            msg.setIcon(QtWidgets.QMessageBox.Warning)
+            msg.setText("¡Está seguro que desea sobreescribir\nlos datos del servicio?")
+            msg.setInformativeText("Este cambio no se podra deshacer")
+            msg.setWindowTitle("Confirmar")
+            msg.setStandardButtons(QtWidgets.QMessageBox.Ok | QtWidgets.QMessageBox.Cancel)
+            retval = msg.exec_()
+            if retval == QtWidgets.QMessageBox.Ok:
+                with open(JSON_MAPAS,'w') as arch:
+                    arch.write(json.dumps(self.ConfMapas))
+                logger.info('[CONF_MAPAS] Guardo nueva configuracion (KEY) en maps.json: {}'.format(self.ConfMapas))
+        else:
+            with open(JSON_MAPAS,'w') as arch:
+                arch.write(json.dumps(self.ConfMapas))
+            logger.info('[CONF_MAPAS] Guardo nueva configuracion (NO KEY) en maps.json: {}'.format(self.ConfMapas))
+        self.btnGuardar.setEnabled(False)
+    
+    def cambio_zoom(self):  
+        self.btnGuardar.setEnabled(True)
+        self.ConfMapas['zoom'] = str(self.sBoxZoom.value())
+        
+    
+    
+    def retranslateUi(self):
+        _translate = QtCore.QCoreApplication.translate
+        self.setWindowTitle(_translate("diagConfMapas", "Configuracion del servidor de mapas"))
+        self.groupBox.setTitle(_translate("diagConfMapas", "Proveedor"))
+        self.rbBING.setText(_translate("diagConfMapas", "BING Maps"))
+        self.rbGMAPS.setText(_translate("diagConfMapas", "Google Maps"))
+        self.label.setText(_translate("diagConfMapas", "Llave (API KEY)"))
+        self.btnGuardar.setText(_translate("diagConfMapas", "Guardar Cambios"))
+        self.label_2.setText(_translate("diagConfMapas", "Zoom Predeterminado"))
 
 
 class Mojon:
@@ -182,6 +338,7 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
         self.btnAnterior.clicked.connect(self.btn_Anterior)
         self.btnSiguiente.clicked.connect(self.btn_Siguiente)
         self.btnGetMap.clicked.connect(self.btn_GetMap)
+        self.spinBoxZoom.valueChanged.connect(self.cambio_zoom)
         self.actionSalir.setStatusTip('Salir de la aplicacion')
         self.actionSalir.triggered.connect(self.salir)
         self.actionAbrir.setShortcut('Ctrl+A')
@@ -191,9 +348,24 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
         self.actionExportar_Img.triggered.connect(self.exportar_img)
         self.actionExportar_CSV.triggered.connect(self.exportar_csv)
         self.actionExportar_Todo.triggered.connect(self.exportar_todo)
+        self.actionConfigurarMapas.triggered.connect(self.configurar_mapa)
         self.actionAcerca_de.triggered.connect(self.mostrar_version)
         self.MODIFICADO = False
         self.setWindowTitle('VISUALIZADOR -- REFOCA')
+        #cargo configuracion de descarga de mapas
+        if os.path.exists(JSON_MAPAS):
+            with open(JSON_MAPAS,'r') as archivo_conf_maps:
+                self.conf_maps = json.loads(archivo_conf_maps.read())
+            self.spinBoxZoom.setValue(int(self.conf_maps['zoom']))
+            self.MAPS_JSON_NO_ENCONTRADO = False
+        else:
+            self.conf_maps ={"servicio": "BING", "llave": "Ingrese LLAVE", "zoom": 17} 
+            with open(JSON_MAPAS,'w') as archivo_conf_maps:
+                archivo_conf_maps.write(json.dumps(self.conf_maps))
+            self.spinBoxZoom.setValue(int(self.conf_maps['zoom']))
+            logger.warning('[ init__RevisadorAPP] No se encontro maps.json. Se crea uno con valores por defecto')
+            self.MAPS_JSON_NO_ENCONTRADO = True
+            
         logger.info('__init__ ok')
     
     def sel_img1(self,event):
@@ -235,14 +407,14 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
     def abrir_sesion(self):
         #antes de abrir ver si hay que borrar tempdir
         archivo_anax = QtWidgets.QFileDialog.getOpenFileName(self, 'Seleccione archivo ANAX', '','*.anax')[0]
-        print('anax',archivo_anax)
+        print('anax: ',archivo_anax)
         if archivo_anax:
-            logger.info('[Abrir sesion] Abro archivo '.format( archivo_anax ))
+            logger.info('[Abrir sesion] Abro archivo {}'.format( archivo_anax ))
         else:
             return
         self.archivo_anax = archivo_anax
         self.dirtemp = tempfile.mkdtemp() + '/'
-        print ('cree el dir temporal: ',self.dirtemp)
+        print ('Cree el dir temporal: ',self.dirtemp)
         #abrir el anax
         if zipfile.is_zipfile(archivo_anax):
             zip = zipfile.ZipFile(archivo_anax)
@@ -280,6 +452,11 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
         
     
     def crear_lista_mojones(self,carpeta):
+        """Crea Lista de Objetos Mojon:
+            lista todos los archivos (path) de 'carpeta' y remueve
+            los que NO terminan en .jpg y los que NO comienzan con
+            '__c1__' , '__c2__' , '__c3__' 
+        """
         print( 'entre en crear lista mojones')
         archivos = os.listdir(carpeta)
         #borro los q no son imagenes
@@ -314,6 +491,7 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
             return False
         else:
             return True
+    
     def mostrar_version(self):
         msg = QtWidgets.QMessageBox()
         msg.setIcon(QtWidgets.QMessageBox.Information)
@@ -323,45 +501,143 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
         msg.setWindowTitle("Acerca de Refoca - Revisador")
         msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
         msg.exec_()
+     
+    def cambio_zoom(self):
+        self.conf_maps['zoom'] = self.spinBoxZoom.value()
         
     def btn_GetMap(self):
-        """Descarga dos mapas desde google maps
-        el parametro zoom de la url aumenta/disminuye el doble/la mitad (potencias de 2)
-        los guarda en un archivo de nombre 0010map.png y 0010maph.png , para 0010m de progresiva)
+        """Descarga dos mapas desde GMaps o BING (diagrama y imagen satelital).
+        agrega en el header del request 'req' que se identifica como 'Mozilla/5.0',
+        por compatibilidad con GMaps.
+        los guarda en un archivo de nombre 0010map.png y 0010maph.png , para 0010m de progresiva).
         """
+        ERRORSERVER = False
+        ERRORKEY = False
+        
         if not self.validar_coordenadas(self.mojones[self.indice]):
-            logger.info( '[GetMap] - Valor de coordenadas no valido para prog: {}'.format(self.mojones[self.indice]) )
+                logger.info( '[GetMap] - Valor de coordenadas no valido para prog: {}'.format(self.mojones[self.indice]) )
+                return
+                
+        if self.conf_maps['servicio'] == 'GoogleMaps':
+            gmaps = 'http://maps.googleapis.com/maps/api/staticmap?center={},{}&markers={},{}&zoom=12&size=640x360&&maptype=hybrid&key={}'.format(
+                self.mojones[self.indice].latitud,
+                self.mojones[self.indice].longitud,
+                self.mojones[self.indice].latitud,
+                self.mojones[self.indice].longitud,
+                self.conf_maps['llave'])
+            logging.info(' [btn_GetMap] descargo {}'.format(gmaps))
+            req = urllib.request.Request(gmaps, headers={'User-Agent': 'Mozilla/5.0'})
+            try:
+                url = urllib.request.urlopen(gmaps)
+                nombre = os.path.join(self.dirtemp,self.mojones[self.indice].progresiva+'maph.png')
+                with open(nombre,'wb') as arch:
+                    arch.write(url.read())
+                
+                self.mojones[self.indice].mapas[1] = self.mojones[self.indice].progresiva + 'maph.png'
+            except HTTPError as e:
+                logger.warning('[btn_GetMap] {}'.format(gmaps))
+                logger.warning('[btn_GetMap] The server couldn\'t fulfill the request.Error code: {}'.format(e.code))
+                ERRORKEY = True
+            except URLError as e:
+                logger.warning('[btn_GetMap] {}'.format(gmaps))
+                logger.warning('[btn_GetMap] We failed to reach a server.Reason: {}'.format( e.reason))
+                ERRORSERVER = True
+            
+            gmaps = 'http://maps.googleapis.com/maps/api/staticmap?center={},{}&markers={},{}&zoom=12&size=640x360&&maptype=roadmap&key={}'.format(
+                self.mojones[self.indice].latitud,
+                self.mojones[self.indice].longitud,
+                self.mojones[self.indice].latitud,
+                self.mojones[self.indice].longitud,
+                self.conf_maps['llave'])
+            req = urllib.request.Request(gmaps, headers={'User-Agent': 'Mozilla/5.0'})
+            try:
+                url = urllib.request.urlopen(req)
+                nombre = os.path.join(self.dirtemp,self.mojones[self.indice].progresiva+'map.png')
+                with open(nombre,'wb') as arch:
+                    arch.write(url.read())
+                self.mojones[self.indice].mapas[0] = self.mojones[self.indice].progresiva + 'map.png'
+                print( 'tengo mapa guardado en:',self.mojones[self.indice].mapas[0])
+            except HTTPError as e:
+                logger.warning('[btn_GetMap] {}'.format(gmaps))
+                logger.warning('[btn_GetMap] The server couldn\'t fulfill the request.Error code: {}'.format(e.code))
+                ERRORKEY = True
+            except URLError as e:
+                logger.warning('[btn_GetMap] {}'.format(gmaps))
+                logger.warning('[btn_GetMap] We failed to reach a server.Reason: {}'.format( e.reason))
+                ERRORSERVER = True
+
+        
+        if self.conf_maps['servicio']  == 'BING':
+            gmaps = "http://dev.virtualearth.net/REST/v1/Imagery/Map/Road/{},{}/{}?ms=640,360&pp={},{};127&mapLayer=Basemap,Buildings&fmt=png&key={}".format(
+                self.mojones[self.indice].latitud,
+                self.mojones[self.indice].longitud,
+                self.conf_maps['zoom'],
+                self.mojones[self.indice].latitud,
+                self.mojones[self.indice].longitud,
+                self.conf_maps['llave'] )
+            print( gmaps)
+            req = urllib.request.Request(gmaps, headers={'User-Agent': 'Mozilla/5.0'})
+            try:
+                url = urllib.request.urlopen(req)
+                nombre = os.path.join(self.dirtemp,self.mojones[self.indice].progresiva+'map.png')
+                with open(nombre,'wb') as arch:
+                    arch.write(url.read())
+                self.mojones[self.indice].mapas[1] = self.mojones[self.indice].progresiva + 'maph.png'
+                
+                
+            except HTTPError as e:
+                logger.warning('[btn_GetMap] {}'.format(gmaps))
+                logger.warning('[btn_GetMap] The server couldn\'t fulfill the request.Error code: {}'.format(e.code))
+                ERRORKEY = True
+            except URLError as e:
+                logger.warning('[btn_GetMap] {}'.format(gmaps))
+                logger.warning('[btn_GetMap] We failed to reach a server.Reason: {}'.format( e.reason))
+                ERRORSERVER = True
+            
+            gmaps = "http://dev.virtualearth.net/REST/v1/Imagery/Map/AerialWithLabels/{},{}/{}?ms=640,360&zoomLevel=10&pp={},{};127&mapLayer=Basemap,Buildings&fmt=png&key={}".format(
+                self.mojones[self.indice].latitud,
+                self.mojones[self.indice].longitud,
+                self.conf_maps['zoom'],
+                self.mojones[self.indice].latitud,
+                self.mojones[self.indice].longitud,
+                self.conf_maps['llave'] )
+            req = urllib.request.Request(gmaps, headers={'User-Agent': 'Mozilla/5.0'})
+            try:
+                url = urllib.request.urlopen(req)
+                nombre = os.path.join(self.dirtemp,self.mojones[self.indice].progresiva+'maph.png')
+                with open(nombre,'wb') as arch:
+                    arch.write(url.read())
+                self.mojones[self.indice].mapas[0] = self.mojones[self.indice].progresiva + 'map.png'
+                print( 'tengo mapa guardado en:',self.mojones[self.indice].mapas[0])
+                
+            except HTTPError as e:
+                logger.warning('[btn_GetMap] {}'.format(gmaps))
+                logger.warning('[btn_GetMap] The server couldn\'t fulfill the request.Error code: {}'.format(e.code))
+                ERRORKEY = True
+            except URLError as e:
+                logger.warning('[btn_GetMap] {}'.format(gmaps))
+                logger.warning('[btn_GetMap] We failed to reach a server.Reason: {}'.format( e.reason))
+                ERRORSERVER = True
+                
+        if ERRORKEY:
+            msg = QtWidgets.QMessageBox()
+            msg.setIcon(QtWidgets.QMessageBox.Warning)
+            msg.setText("No se pudo descargar mapa")
+            msg.setInformativeText("El servidor no puede responder.\n Verifique la llave (API KEY).\n")
+            msg.setWindowTitle("Descargar mapa")
+            msg.setStandardButtons(QtWidgets.QMessageBox.Ok )
+            retval = msg.exec_()
             return
-        gmaps = 'http://maps.googleapis.com/maps/api/staticmap?center={},{}&markers={},{}&zoom=12&size=640x360&&maptype=hybrid&key={}'.format(
-            self.mojones[self.indice].latitud,
-            self.mojones[self.indice].longitud,
-            self.mojones[self.indice].latitud,
-            self.mojones[self.indice].longitud,
-            LLAVE)
-        logging.info(' [btn_GetMap] descargo {}'.format(gmaps))
-        req = urllib.request.Request(gmaps, headers={'User-Agent': 'Mozilla/5.0'})
-        url = urllib.request.urlopen(req)
-        #url = urlopen(gmaps)
-        nombre = os.path.join(self.dirtemp,self.mojones[self.indice].progresiva+'maph.png')
-        with open(nombre,'wb') as arch:
-            arch.write(url.read())
+        if ERRORSERVER:
+            msg = QtWidgets.QMessageBox()
+            msg.setIcon(QtWidgets.QMessageBox.Warning)
+            msg.setText("No se pudo descargar mapa")
+            msg.setInformativeText("El servidor no puede ser encontrado.\nVerifique su conexion a Internet.")
+            msg.setWindowTitle("Descargar mapa")
+            msg.setStandardButtons(QtWidgets.QMessageBox.Ok )
+            retval = msg.exec_()
+            return
         
-        self.mojones[self.indice].mapas[1] = self.mojones[self.indice].progresiva + 'maph.png'
-        gmaps = 'http://maps.googleapis.com/maps/api/staticmap?center={},{}&markers={},{}&zoom=12&size=640x360&&maptype=roadmap&key={}'.format(
-            self.mojones[self.indice].latitud,
-            self.mojones[self.indice].longitud,
-            self.mojones[self.indice].latitud,
-            self.mojones[self.indice].longitud,
-            LLAVE)
-        req = urllib.request.Request(gmaps, headers={'User-Agent': 'Mozilla/5.0'})
-        url = urllib.request.urlopen(req)
-        #url = urlopen(gmaps)
-        nombre = os.path.join(self.dirtemp,self.mojones[self.indice].progresiva+'map.png')
-        with open(nombre,'wb') as arch:
-            arch.write(url.read())
-        
-        self.mojones[self.indice].mapas[0] = self.mojones[self.indice].progresiva + 'map.png'
-        print( 'tengo mapa guardado en:',self.mojones[self.indice].mapas[0])
         self.cargar_mojon_gui(self.indice)
         self.MODIFICADO = True
         
@@ -410,7 +686,7 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
             self.tablaEventos.setItem(i, 4, QTableWidgetItem(categoria))
             self.tablaEventos.setItem(i, 5, QTableWidgetItem(valor))
         
-        self.setWindowTitle('VISUALIZADOR -- REFOCA -- {}m - Lat:{} Long:{} \t\tObservacion {} de {}'.format(prog,lat,long,indice+1,len(self.mojones)))
+        self.setWindowTitle('VISUALIZADOR -- REFOCA -- {}m - Lat: {} Long: {} \t\tObservacion {} de {}'.format(prog,lat,long,indice+1,len(self.mojones)))
     logger.info('cargar_mojon_gui ok')
     
     def parsear_nombre(self,nom_img):
@@ -568,6 +844,13 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
                     copy2(os.path.join(self.dirtemp,imagen),dirdest_todo)
                 #cierro popup
     
+    def configurar_mapa(self):
+        dialogo = DialogoConfMapas(self.conf_maps)
+        dialogo.exec_()
+        if dialogo.accepted:
+            print('cambie config, acepte')
+            self.spinBoxZoom.setValue(int(self.conf_maps['zoom']))
+    
     def closeEvent(self, event):
         print( "User has clicked the red x on the main window")
         self.salir()
@@ -594,8 +877,19 @@ def main():
     app = QtWidgets.QApplication(sys.argv)
     form = RevisadorApp()
     form.showMaximized()
+    if form.MAPS_JSON_NO_ENCONTRADO:
+        msg = QtWidgets.QMessageBox()
+        msg.setIcon(QtWidgets.QMessageBox.Information)
+        msg.setText("No se encontro el archivo 'maps.json'")
+        msg.setInformativeText("Se crea archivo por defecto.\nIngrese los datos en el menu COnfigurar Mapa")
+        msg.setWindowTitle("Configura Mapa")
+        msg.setStandardButtons(QtWidgets.QMessageBox.Ok )
+        msg.exec_()
     print( form.size())
+    
     app.exec_()
 
 if __name__ == '__main__':
     main()
+    logger.info('Cierro Programa Revisador')
+    logger.info('*/*/*/*/*/*/*/*/*/*/*/*/*//*/*/*/*/*/*/*/*/*/***/*/')

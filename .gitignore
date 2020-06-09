@@ -12,3 +12,4 @@ analizador/dist/analizador
 analizador/build/
 revisador/build
 revisador/dist/revisador
+*.pyc

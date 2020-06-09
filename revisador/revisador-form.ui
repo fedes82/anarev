@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>786</width>
-    <height>551</height>
+    <height>550</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -93,7 +93,24 @@
            </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacer">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Zoom</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBoxZoom">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>20</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -260,7 +277,7 @@
      <x>0</x>
      <y>0</y>
      <width>786</width>
-     <height>27</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuArchivo">
@@ -289,8 +306,15 @@
     </property>
     <addaction name="actionAcerca_de"/>
    </widget>
+   <widget class="QMenu" name="menuMapas">
+    <property name="title">
+     <string>Mapas</string>
+    </property>
+    <addaction name="actionConfigurarMapas"/>
+   </widget>
    <addaction name="menuArchivo"/>
    <addaction name="menuSesion"/>
+   <addaction name="menuMapas"/>
    <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -332,6 +356,11 @@
   <action name="actionAcerca_de">
    <property name="text">
     <string>Acerca de</string>
+   </property>
+  </action>
+  <action name="actionConfigurarMapas">
+   <property name="text">
+    <string>Configurar</string>
    </property>
   </action>
  </widget>

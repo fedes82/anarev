@@ -1,0 +1,11 @@
+- ejecutar
+pyinstaller analizador.py --hidden-import PyQt5.sip
+
+- editar analizador.spec, agregando las carpetas con datos ('source', 'destino') en linea datas en lista Analisis
+datas=[('img_default','img_default'),('perfiles','perfiles')],
+
+- agruegar icono y sacar consola en linea console del grupe EXE
+console=False , icon='img_default\\icono.ico')
+
+- ejecutar
+pyinstaller analizador.spec
