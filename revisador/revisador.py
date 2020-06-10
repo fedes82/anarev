@@ -359,7 +359,7 @@ class RevisadorApp(QtWidgets.QMainWindow, interface.Ui_MainWindow):
             self.spinBoxZoom.setValue(int(self.conf_maps['zoom']))
             self.MAPS_JSON_NO_ENCONTRADO = False
         else:
-            self.conf_maps ={"servicio": "BING", "llave": "Ingrese LLAVE", "zoom": 17} 
+            self.conf_maps ={"servicio": "BING", "llave": "Ingrese_LLAVE", "zoom": 17} 
             with open(JSON_MAPAS,'w') as archivo_conf_maps:
                 archivo_conf_maps.write(json.dumps(self.conf_maps))
             self.spinBoxZoom.setValue(int(self.conf_maps['zoom']))
